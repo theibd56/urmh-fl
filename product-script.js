@@ -616,16 +616,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// product__add-to-cart
-
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtn = document.querySelector('.product__add-to-cart');
-    
-    addToCartBtn?.addEventListener('click', () => {
-        addToCartBtn.classList.toggle('active');
-     
-    })
-})
 
 // product__add-to-cart
 
@@ -678,4 +668,24 @@ document.addEventListener('DOMContentLoaded', function() {
             cartIcon.classList.toggle('active');
         }
     });
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartBtns = document.querySelectorAll('.product__popular-cart');
+    
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+        })
+    })
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartBtns = document.querySelectorAll('.product__spares-cart');
+    
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+        })
+    })
 })
