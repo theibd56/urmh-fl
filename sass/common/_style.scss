@@ -100,7 +100,7 @@ body {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 34px;
 }
 
 .main {
@@ -149,7 +149,7 @@ p{
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  padding: 32px 0;
+  padding: 36px 0 8px 0;
   width: auto;
   color: #70828A;
   font-size: 13px;
@@ -167,7 +167,7 @@ p{
     transition: all .2s ease;
     height: 24px;
     &:hover {
-      opacity: 0.7;
+      background-color: #E1E1E5;
     }
   
     }
@@ -259,7 +259,7 @@ p{
   font-size: 20px;
  }
   .kroshki {
-    padding: 8px 0;
+    padding: 12px 0 8px 0;
   }
   
 }
@@ -301,9 +301,6 @@ p{
     padding: 10px 20px;
     line-height: normal;
     height: 40px;
-  }
-  .kroshki{
-    margin: 8px 0;
   }
 }
 

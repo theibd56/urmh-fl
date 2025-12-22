@@ -51,11 +51,17 @@
         font-size: 14px;
       }
     }
+  .catalog_card-img {
+    padding: 16px;
+  }
   .catalog_cards {
     row-gap: 20px;
-    margin-bottom: 0;
+    margin: 0;
     column-gap: 8px;
   }
+}
+
+@media (max-width: 480px) {
   .catalog_banner-ads {
     height: 80px;
     margin-bottom: 0;
