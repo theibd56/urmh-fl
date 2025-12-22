@@ -1,8 +1,8 @@
 @use "blocks/media/header";
 @use "blocks/media/footer";
 
-@import "blocks/media/burger";
-@import "blocks/media/catalog-menu";
-@import "blocks/media/contacts";
-@import "blocks/media/dropdown";
-@import "blocks/media/product";
+@use "blocks/media/burger";
+@use "blocks/media/catalog-menu";
+@use "blocks/media/contacts";
+@use "blocks/media/dropdown";
+@use "blocks/media/producs-card";

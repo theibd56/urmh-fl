@@ -387,26 +387,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.product__card-swiper').forEach((slider) => {
+            const container = slider.closest('.product__card-slider');
 
-   document.addEventListener('DOMContentLoaded', () => {    
-        const productPopularSlider = new Swiper('.product__popular-swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            loop: true,
-            navigation: {
-                nextEl: '.product__popular-next',
-                prevEl: '.product__popular-prev',
-            },
-            breakpoints: {
-                0: {
-                    spaceBetween: 8,
+            new Swiper(slider, {
+                slidesPerView: 'auto',
+                spaceBetween: 13,
+                loop: true,
+                navigation: {
+                    nextEl: container.querySelector('.product__card-next'),
+                    prevEl: container.querySelector('.product__card-prev'),
                 },
-                768: {
-                    spaceBetween: 16,
+                breakpoints: {
+                    0: { spaceBetween: 8 },
+                    768: { spaceBetween: 13 }
                 }
-            }
-        })
-    })
+            });
+        });
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
         const productAddToCompare = document.querySelectorAll('.product__add-to-compare');
         productAddToCompare.forEach(item => {
@@ -423,8 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
     document.addEventListener('DOMContentLoaded', () => {
-        const compareBtns = document.querySelectorAll('.product__popular-compare');
-        const favoriteBtns = document.querySelectorAll('.product__popular-favorite');
+        const compareBtns = document.querySelectorAll('.product__card-compare');
+        const favoriteBtns = document.querySelectorAll('.product__card-favorite');
 
         compareBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -437,7 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.toggle('active');
             })
         })
-
     })
 
 
@@ -458,8 +457,6 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     productCheaperCloseFormBtn.addEventListener('click', () => {
-
-        console.log('click')
         productCheaperForm.reset()
         productCheaperPopup.classList.remove('active')
         document.body.classList.remove('no-scroll')
@@ -671,7 +668,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtns = document.querySelectorAll('.product__popular-cart');
+    const addToCartBtns = document.querySelectorAll('.product__card-cart');
     
     addToCartBtns.forEach(btn => {
         btn.addEventListener('click', () => {

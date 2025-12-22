@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="sass/subcategories/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+  </head>
+  <body>
+    {{> _header}}
+
+    <main class="main page-content">
+      <div class="container">
+        <div class="kroshki">
+          <a href="/public" title="Главная"> Главная </a>
+        </div>
+        <section class="catalog">
+          <div class="catalog_header">
+            <h2>Каталог</h2>
+          </div>
+          <div class="catalog-content">
+            <div class="catalog-wrapper">
+                <a href="#" class="catalog-adv">
+                  <img src="/images/catalog/adversing-banner.png" alt="">
+                </a>
+                <div class="catalog-top">
+                    <h2 class="product__card-title catalog-top__title">Топ модели</h2>
+                    <div class="catalog-top__slider swiper">
+                        <div class="catalog-top__wrapper swiper-wrapper">
+                            <a href="#" class="catalog-top__item swiper-slide">
+                                <div class="catalog-top__item_content">
+                                    <img src="/images/popular-product-1.png" alt="">
+                                    <span class="catalog-top__item_title">Поступление вакуумного массажёра GRKL-2500</span>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog-top__item swiper-slide">
+                                <div class="catalog-top__item_content">
+                                    <img src="/images/popular-product-1.png" alt="">
+                                    <span class="catalog-top__item_title">Поступление вакуумного массажёра GRKL-2500</span>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog-top__item swiper-slide">
+                                <div class="catalog-top__item_content">
+                                    <img src="/images/popular-product-1.png" alt="">
+                                    <span class="catalog-top__item_title">Поступление вакуумного массажёра GRKL-2500</span>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog-top__item swiper-slide">
+                                <div class="catalog-top__item_content">
+                                    <img src="/images/popular-product-1.png" alt="">
+                                    <span class="catalog-top__item_title">Поступление вакуумного массажёра GRKL-2500</span>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog-top__item swiper-slide">
+                                <div class="catalog-top__item_content">
+                                    <img src="/images/popular-product-1.png" alt="">
+                                    <span class="catalog-top__item_title">Поступление вакуумного массажёра GRKL-2500</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-wrapper__categories">
+                    <a href="#" class="active">Упаковочное оборудование</a>
+                    <a href="#">Пищевое оборудование</a>
+                    <a href="#">Маркировочное и этикетировочное оборудование</a>
+                    <a href="#">Пищевое оборудование</a>
+                    <a href="#">Мясоперерабатывающее оборудование</a>
+                    <a href="#">Пищевое оборудование</a>
+                    <a href="#">Фасовочно-упаковочное оборудование</a>
+                </div>
+                <div class="catalog-wrapper__action">
+                  <div class="catalog-sort js-catalog-sort">
+                    <div class="catalog-sort__shadow"></div>
+                    <div class="catalog-sort__current">
+                      <span class="catalog-sort__value">по цене</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                        <path d="M6.5 0.5L3.5 3.05L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+
+                    <div class="catalog-sort__options">
+                      <div class="catalog-sort__option" data-value="price">по цене</div>
+                      <div class="catalog-sort__option" data-value="popular">по популярности</div>
+                      <div class="catalog-sort__option" data-value="new">по новизне</div>
+                    </div>
+                  </div>
+                  <div class="catalog-view">
+                    <button type="button" class="catalog-view__grid js-catalog-view-grid active">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0H1.5C0.67 0 0 0.67 0 1.5V6.5C0 7.33 0.67 8 1.5 8H6.5C7.33 8 8 7.33 8 6.5V1.5C8 0.67 7.33 0 6.5 0ZM6 6H2V2H6V6Z" fill="#2C3336"/>
+                        <path d="M16.5 0H11.5C10.67 0 10 0.67 10 1.5V6.5C10 7.33 10.67 8 11.5 8H16.5C17.33 8 18 7.33 18 6.5V1.5C18 0.67 17.33 0 16.5 0ZM16 6H12V2H16V6Z" fill="#2C3336"/>
+                        <path d="M6.5 10H1.5C0.67 10 0 10.67 0 11.5V16.5C0 17.33 0.67 18 1.5 18H6.5C7.33 18 8 17.33 8 16.5V11.5C8 10.67 7.33 10 6.5 10ZM6 16H2V12H6V16Z" fill="#2C3336"/>
+                        <path d="M16.5 10H11.5C10.67 10 10 10.67 10 11.5V16.5C10 17.33 10.67 18 11.5 18H16.5C17.33 18 18 17.33 18 16.5V11.5C18 10.67 17.33 10 16.5 10ZM16 16H12V12H16V16Z" fill="#2C3336"/>
+                      </svg>
+                    </button>
+                    <button type="button" class="catalog-view__row js-catalog-view-row">
+                      <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 5H14V7H0V5ZM0 0H14V2H0V0ZM0 10H8V12H0V10ZM10 10H18V12H10V10Z" fill="#2C3336"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <button type="button" class="catalog-filter__mobile-toggle">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0H18V2H0V0Z" fill="#2C3336"/>
+                      <path d="M3 5H15V7H3V5Z" fill="#2C3336"/>
+                      <path d="M6 10H12V12H6V10Z" fill="#2C3336"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog-wrapper__products grid">
+                  <div class="product__card">
+                      <a href="#" class="product__card-image">
+                          <img src="/images/popular-product-1.png"
+                               alt="Поступление вакуумного массажёра GRKL-2500">
+                      </a>
+                      <div class="product__card-content">
+                        <a href="#" class="product__card-info">
+                          <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                          <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                        </a>
+                        <div class="product__card-footer">
+                          <div class="product__card-price sale">
+                            <div class="price-new">6 160 224 <span>₽</span></div>
+                            <div class="price-old">9 160 224 <span>₽</span></div>
+                          </div>
+                          <div class="product__card-actions">
+                            <button class="product__card-compare" type="button" aria-label="Сравнить">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                              </svg>
+                            </button>
+                            <button class="product__card-favorite" type="button" aria-label="В избранное">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                    fill="currentColor" />
+                              </svg>
+                            </button>
+                            <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                              <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                    fill="currentColor" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="product__card">
+                      <a href="#" class="product__card-image">
+                          <img src="/images/popular-product-1.png"
+                               alt="Поступление вакуумного массажёра GRKL-2500">
+                      </a>
+                      <div class="product__card-content">
+                        <a href="#" class="product__card-info">
+                          <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                          <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                        </a>
+                        <div class="product__card-footer">
+                          <div class="product__card-price">6 160 224 <span>₽</span></div>
+                          <div class="product__card-actions">
+                            <button class="product__card-compare" type="button" aria-label="Сравнить">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                              </svg>
+                            </button>
+                            <button class="product__card-favorite" type="button" aria-label="В избранное">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                    fill="currentColor" />
+                              </svg>
+                            </button>
+                            <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                              <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                    fill="currentColor" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price sale">
+                          <div class="price-new">6 160 224 <span>₽</span></div>
+                          <div class="price-old">9 160 224 <span>₽</span></div>
+                        </div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price sale">
+                          <div class="price-new">6 160 224 <span>₽</span></div>
+                          <div class="price-old">9 160 224 <span>₽</span></div>
+                        </div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price sale">
+                          <div class="price-new">6 160 224 <span>₽</span></div>
+                          <div class="price-old">9 160 224 <span>₽</span></div>
+                        </div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__card">
+                    <a href="#" class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </a>
+                    <div class="product__card-content">
+                      <a href="#" class="product__card-info">
+                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                      </a>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-wrapper__pagger">
+                  <ul>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                  </ul>
+                  <a class="active" href="#">Показать еще</a>
+                </div>
+
+            </div>
+            <aside class="catalog-aside">
+              <div class="catalog-filter">
+                <div class="catalog-filter__title">
+                    Фильтр
+                </div>
+                <div class="catalog-filter__search">
+                  <input type="text" name="catalogSearch" placeholder="Поиск фильтра">
+                  <button class="catalog-filter__search_submit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.6977 18.3945C12.4055 18.3941 14.0642 17.8224 15.4096 16.7704L19.6394 21L21 19.6395L16.7701 15.4099C17.8228 14.0645 18.3949 12.4055 18.3953 10.6972C18.3953 6.45318 14.9419 3 10.6977 3C6.45336 3 3 6.45318 3 10.6972C3 14.9413 6.45336 18.3945 10.6977 18.3945ZM10.6977 4.92431C13.8816 4.92431 16.4709 7.51347 16.4709 10.6972C16.4709 13.881 13.8816 16.4702 10.6977 16.4702C7.51371 16.4702 4.92441 13.881 4.92441 10.6972C4.92441 7.51347 7.51371 4.92431 10.6977 4.92431Z" fill="#2C3336"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog-filter__wrapper">
+                  <div class="catalog-filter__item">
+                    <div class="catalog-filter__item_header">
+                      <span class="catalog-filter__item_title">Наличие</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0.5L3.5 3.05078L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="catalog-filter__item_options">
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        до 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 180
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 350
+                      </label>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__item active">
+                      <div class="catalog-filter__item_header">
+                      <span class="catalog-filter__item_title">Мощность, вт</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0.5L3.5 3.05078L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="catalog-filter__item_options">
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1"  checked="checked">
+                        до 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1"  checked="checked">
+                        макс. 180
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 350
+                      </label>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__item">
+                    <div class="catalog-filter__item_header">
+                      <span class="catalog-filter__item_title">Ширина плёнки, мм</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0.5L3.5 3.05078L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="catalog-filter__item_options">
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        до 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 180
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 350
+                      </label>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__item">
+                    <div class="catalog-filter__item_header">
+                      <span class="catalog-filter__item_title">Мощность, вт</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0.5L3.5 3.05078L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="catalog-filter__item_options">
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        до 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 180
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 350
+                      </label>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__item">
+                    <div class="catalog-filter__item_header">
+                      <span class="catalog-filter__item_title">Наличие</span>
+                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0.5L3.5 3.05078L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="catalog-filter__item_options">
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        до 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 180
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 250
+                      </label>
+                      <label>
+                        <input type="checkbox" name="catalogFilter" value="1">
+                        макс. 350
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button class="catalog-filter__reset">
+                  Сбросить
+                </button>
+                <button class="catalog-filter__close js-filter-modal-close">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z" fill="#70828A"/>
+                  </svg>
+                </button>
+
+              </div>
+              <a href="#" class="catalog-aside__ads">
+                  <img src="/images/catalog/catalog-aside__ads.png" alt="">
+              </a>
+            </aside>
+          </div>
+          <div class="catalog-divider"></div>
+          <div class="product__card-slider catalog-products__slider">
+                <div class="product__card-header">
+                    <h2 class="product__card-title">Популярные товары в этой категории</h2>
+                    <div class="product__card-nav">
+                        <button class="product__card-nav-btn product__card-prev" type="button"
+                                aria-label="Предыдущий">
+                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 8L7 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="product__card-nav-btn product__card-next" type="button"
+                                aria-label="Следующий">
+                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 8L1 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__card-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                         alt="Поступление вакуумного массажёра GRKL-2500">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-2.png" alt="Вакуумный массажер GRZK1000">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">1 012 482 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-2.png" alt="Вакуумный массажер GRZK1000">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">1 012 482 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-3.png"
+                                         alt="Поступление вакуумного массажёра GRKL-2500">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">853 195 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-4.png" alt="Вакуумный массажер GRZK1000">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">703 691 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                         alt="Поступление вакуумного массажёра GRKL-2500">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product__card">
+                                <div class="product__card-image">
+                                    <img src="/images/popular-product-6.png"
+                                         alt="Поступление вакуумного массажёра GRKL-2500">
+                                </div>
+                                <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                    <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                                </div>
+                                <div class="product__card-footer">
+                                    <div class="product__card-price">1 893 655 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                        <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                        fill="currentColor" />
+                                                <path
+                                                        d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                        fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="catalog-divider"></div>
+          <div class="product__card-slider catalog-products__slider">
+            <div class="product__card-header">
+                <h2 class="product__card-title">Новинки в этой категории</h2>
+                <div class="product__card-nav">
+                    <button class="product__card-nav-btn product__card-prev" type="button"
+                            aria-label="Предыдущий">
+                        <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 1L1 8L7 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="product__card-nav-btn product__card-next" type="button"
+                            aria-label="Следующий">
+                        <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L7 8L1 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product__card-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-1.png"
+                                     alt="Поступление вакуумного массажёра GRKL-2500">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-2.png" alt="Вакуумный массажер GRZK1000">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">1 012 482 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-2.png" alt="Вакуумный массажер GRZK1000">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">1 012 482 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-3.png"
+                                     alt="Поступление вакуумного массажёра GRKL-2500">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">853 195 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-4.png" alt="Вакуумный массажер GRZK1000">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Вакуумный массажер GRZK1000 (механическая панель)</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">703 691 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-1.png"
+                                     alt="Поступление вакуумного массажёра GRKL-2500">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product__card">
+                            <div class="product__card-image">
+                                <img src="/images/popular-product-6.png"
+                                     alt="Поступление вакуумного массажёра GRKL-2500">
+                            </div>
+                            <div class="product__card-info">
+                                <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                                <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                            </div>
+                            <div class="product__card-footer">
+                                <div class="product__card-price">1 893 655 <span>₽</span></div>
+                                <div class="product__card-actions">
+                                    <button class="product__card-compare" type="button" aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-favorite" type="button" aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                    fill="currentColor" />
+                                            <path
+                                                    d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                    fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="catalog-divider"></div>
+          <div class="catalog-categories__info js-collapsible">
+            <div class="catalog-categories__content">
+                <h3>Вакуумные упаковщики</h3>
+
+                <p>
+                    Основная специализация Hualian Machinery — упаковочное оснащение. В линейке
+                    выпускаемого вакуум-упаковочного оборудования присутствует три варианта исполнения:
+                </p>
+
+                <ul>
+                    <li>
+                        Корпус из окрашенного металла (камера из высококачественной нержавеющей стали).
+                    </li>
+                    <li>
+                        Полностью из нержавеющей стали. Вакуум-упаковочные машины данного типа предназначены
+                        для использования в условиях повышенной влажности. Их популярность обусловлена
+                        высокой износостойкостью.
+                    </li>
+                    <li>
+                        Исполнение из нержавеющей стали с опцией газозамещения. Такие вакуумные упаковщики
+                        имеют максимальные функциональные возможности.
+                    </li>
+                </ul>
+
+                <p>
+                    Вы можете купить аппарат для вакуумной упаковки продуктов, выполненный в любом из
+                    описанных вариантов. Для быстрого просмотра характеристик заходите на страницы товаров
+                    в каталоге. Агрегаты различных серий могут применяться на производстве в составе
+                    технологических линий, дополняться транспортерами и другим оснащением. Установки
+                    оснащаются цифровой панелью для удобства использования.
+                </p>
+
+                <p>
+                    На все оборудование предоставляется гарантия. Также у нас доступны услуги доставки,
+                    монтажа и настройки аппаратов. Самовывоз техники Хуалянь возможен в нескольких городах:
+                    Москве, Екатеринбурге, Ростове-на-Дону, Новосибирске и Барнауле.
+                </p>
+
+                <h3>Сферы применения вакуум-упаковочных машин</h3>
+
+                <p>
+                    Вакуум-упаковочные машины применяются в пищевой, фармацевтической, химической и
+                    производственной сферах. Они используются для упаковки мяса, рыбы, сыра, полуфабрикатов,
+                    медицинских изделий и других товаров, требующих защиты от внешней среды.
+                </p>
+
+                <ul>
+                    <li>Пищевая промышленность и предприятия общественного питания.</li>
+                    <li>Производственные и перерабатывающие предприятия.</li>
+                    <li>Фармацевтические и медицинские организации.</li>
+                </ul>
+            </div>
+
+            <button class="catalog-categories__toggle" type="button">
+                Показать полностью
+            </button>
+</div>
+          <div class="catalog-divider"></div>
+            <div class="catalog-faq">
+                <h2 class="product__card-title catalog-faq__title">FAQ</h2>
+                <div class="catalog-faq__wrapper">
+                    <div class="catalog-faq__item">
+                        <div class="catalog-faq__item_header">
+                            <h4 class="catalog-faq__item_title">
+                                Вакуумные упаковщики DZ и DZQ: практичные решения для вашего бизнеса
+                            </h4>
+                            <div class="catalog-faq__item_arrow">
+                                <svg width="18" height="11" viewBox="0 0 18 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.707031 0.707031L8.70703 8.70703L16.707 0.707031"
+                                          stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="catalog-faq__item_text">
+                            Вы можете купить аппарат для вакуумной упаковки продуктов, выполненный в любом из описанных вариантов. Для быстрого просмотра характеристик заходите на страницы товаров в каталоге. Агрегаты различных серий могут применяться на производстве в составе технологических линий, дополняться транспортерами и другим оснащением. Установки оснащаются цифровой панелью для удобства использования.
+                        </div>
+                    </div>
+                    <div class="catalog-faq__item">
+                        <div class="catalog-faq__item_header">
+                            <h4 class="catalog-faq__item_title">
+                                Вакуумные упаковщики DZ и DZQ: практичные решения для вашего бизнеса
+                            </h4>
+                            <div class="catalog-faq__item_arrow">
+                                <svg width="18" height="11" viewBox="0 0 18 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.707031 0.707031L8.70703 8.70703L16.707 0.707031"
+                                          stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="catalog-faq__item_text">
+                            Вы можете купить аппарат для вакуумной упаковки продуктов, выполненный в любом из описанных вариантов. Для быстрого просмотра характеристик заходите на страницы товаров в каталоге. Агрегаты различных серий могут применяться на производстве в составе технологических линий, дополняться транспортерами и другим оснащением. Установки оснащаются цифровой панелью для удобства использования.
+                        </div>
+                    </div>
+                    <div class="catalog-faq__item">
+                        <div class="catalog-faq__item_header">
+                            <h4 class="catalog-faq__item_title">
+                                Вакуумные упаковщики DZ и DZQ: практичные решения для вашего бизнеса
+                            </h4>
+                            <div class="catalog-faq__item_arrow">
+                                <svg width="18" height="11" viewBox="0 0 18 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.707031 0.707031L8.70703 8.70703L16.707 0.707031"
+                                          stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="catalog-faq__item_text">
+                            Вы можете купить аппарат для вакуумной упаковки продуктов, выполненный в любом
+                            из описанных вариантов. Для быстрого просмотра характеристик заходите на страницы
+                            товаров в каталоге...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+      </div>
+    </main>
+
+    {{> _footer}}
+
+    <div class="callback-popup">
+      <div id="feedback-popup" class="feedback-popup">
+        <span class="close-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+              fill="#70828A"
+            />
+          </svg>
+        </span>
+        <form action="">
+          <div class="feedback-popup_title">Обратный звонок</div>
+          <input type="text" placeholder="Ваше имя" required />
+          <input
+            type="tel"
+            data-maska="+7 (###)-###-##-##"
+            placeholder="Номер телефона"
+            required
+          />
+          <div class="feedback-popup_input-time">
+            <input type="text" placeholder="Удобное для звонка время" />
+          </div>
+          <button class="btn">Заказать звонок</button>
+          <div class="feedback-popup_privacy">
+            <input type="checkbox" id="feedback-popup_checkbox" required />
+            <label for="feedback-popup_checkbox">
+              <svg
+                width="16"
+                height="13"
+                viewBox="0 0 16 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 6.5L5.34483 11L15 1"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </label>
+            <span>
+              Отправляя форму, я соглашаюсь с политикой обработки персональных
+              данных и даю согласие на
+              <a href="#">обработку персональных данных.</a>
+            </span>
+          </div>
+        </form>
+        <div class="feedback-success" style="display: none">
+          <div class="feedback-popup_title">Спасибо!</div>
+          <p>
+            Ваша заявка принята. Наш менеджер свяжется с вами в указанное время.
+          </p>
+          <button class="btn success-btn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+    <div class="service-popup">
+      <div id="service-popup" class="feedback-popup">
+        <span class="close-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+              fill="#70828A"
+            />
+          </svg>
+        </span>
+        <form action="">
+          <div class="feedback-popup_title">Укажите данные</div>
+          <input type="text" placeholder="Ваше имя" required />
+          <input
+            type="tel"
+            data-maska="+7 (###)-###-##-##"
+            placeholder="Номер телефона"
+            required
+          />
+          <button class="btn">Обратиться в сервис</button>
+          <div class="feedback-popup_privacy">
+            <input type="checkbox" id="service-popup_checkbox" required />
+            <label for="service-popup_checkbox">
+              <svg
+                width="16"
+                height="13"
+                viewBox="0 0 16 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 6.5L5.34483 11L15 1"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </label>
+            <span>
+              Отправляя форму, я соглашаюсь с политикой обработки персональных
+              данных и даю согласие на
+              <a href="#">обработку персональных данных.</a>
+            </span>
+          </div>
+        </form>
+        <div class="feedback-success" style="display: none">
+          <div class="feedback-popup_title">Спасибо!</div>
+          <p>
+            Ваша заявка принята. Наш специалист свяжется с вами в ближайшее
+            время.
+          </p>
+          <button class="btn success-btn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe-popup">
+      <div id="subscribe-popup" class="feedback-popup">
+        <span class="close-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+              fill="#70828A"
+            />
+          </svg>
+        </span>
+        <div class="feedback-success">
+          <div class="feedback-popup_title">Спасибо за подписку!</div>
+          <p>Вы успешно подписались на нашу рассылку.</p>
+          <button class="btn success-btn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="advantages-popup">
+      <div id="advantages-popup" class="feedback-popup">
+        <span class="close-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+              fill="#70828A"
+            />
+          </svg>
+        </span>
+        <div class="feedback-success">
+          <div class="feedback-popup_title">Ваше обращение принято!</div>
+          <p>Наш специалист свяжется с вами в ближайшее время.</p>
+          <button class="btn success-btn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="feedback-main-popup">
+      <div id="feedback-main-popup" class="feedback-popup">
+        <span class="close-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+              fill="#70828A"
+            />
+          </svg>
+        </span>
+        <div class="feedback-success">
+          <div class="feedback-popup_title">Спасибо!</div>
+          <p>
+            Ваша заявка принята. Наш менеджер свяжется с вами в ближайшее время.
+          </p>
+          <button class="btn success-btn">Хорошо</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./catalog-scripts.js"></script>
+  </body>
+</html>

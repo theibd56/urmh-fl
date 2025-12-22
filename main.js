@@ -527,10 +527,11 @@ document.addEventListener('DOMContentLoaded', function(){
 document.addEventListener('DOMContentLoaded', function(){
     const advantagesPopup = document.querySelector('.advantages-popup')
     const advantagesForm = document.querySelector('#advantages_feedback-form')
-    const advantagesSuccess = document.querySelector('.advantages-popup .feedback-success')
     const advantagesSuccessBtn = document.querySelector('.advantages-popup .success-btn')
     const advantagesCloseFormBtn = document.querySelector('.advantages-popup .close-popup')
-    
+
+    if(!advantagesForm) return
+
     // Обработчик отправки формы обратной связи
     advantagesForm.addEventListener('submit', (event) => {
         event.preventDefault() // Предотвращаем стандартную отправку формы
@@ -571,36 +572,37 @@ document.addEventListener('DOMContentLoaded', function(){
 document.addEventListener('DOMContentLoaded', function(){
     const feedbackMainPopup = document.querySelector('.feedback-main-popup')
     const feedbackMainForm = document.querySelector('#feedback_main_form')
-    const feedbackMainSuccess = document.querySelector('.feedback-main-popup .feedback-success')
     const feedbackMainSuccessBtn = document.querySelector('.feedback-main-popup .success-btn')
     const feedbackMainCloseFormBtn = document.querySelector('.feedback-main-popup .close-popup')
-    
+
+    if(!feedbackMain) return
+
     // Обработчик отправки основной формы обратной связи
     feedbackMainForm.addEventListener('submit', (event) => {
         event.preventDefault() // Предотвращаем стандартную отправку формы
-        
+
         // Показываем popup с благодарностью
         feedbackMainPopup.classList.add('active')
         document.body.classList.add('no-scroll')
-        
+
         // Сбрасываем форму
         feedbackMainForm.reset()
     })
-    
+
     // Обработчик кнопки "Хорошо" в блоке успеха
     feedbackMainSuccessBtn.addEventListener('click', () => {
         // Скрываем popup
         feedbackMainPopup.classList.remove('active')
         document.body.classList.remove('no-scroll')
     })
-    
+
     // Обработчик закрытия по крестику
     feedbackMainCloseFormBtn.addEventListener('click', () => {
         // Скрываем popup
         feedbackMainPopup.classList.remove('active')
         document.body.classList.remove('no-scroll')
     })
-    
+
     // Закрытие по клику вне формы
     document.addEventListener('click', (event) => {
         if (event.target === feedbackMainPopup) {
@@ -1157,35 +1159,35 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Вакуумный упаковщик DZ-400/2T', 
             category: 'Упаковочное оборудование',
             price: '45 000',
-            image: '/public/catalog2-2.png'
+            image: '/catalog2-2.png'
         },
         { 
             id: 2, 
             title: 'Вакуумный упаковщик DZ-500/2E', 
             category: 'Упаковочное оборудование',
             price: '52 500',
-            image: '/public/catalog2-2.png'
+            image: '/catalog2-2.png'
         },
         { 
             id: 3, 
             title: 'Горизонтальная упаковочная машина HL-450', 
             category: 'Упаковочное оборудование',
             price: '78 900',
-            image: '/public/catalog3-2.png'
+            image: '/catalog3-2.png'
         },
         { 
             id: 4, 
             title: 'Запайщик пакетов FRD-1000', 
             category: 'Упаковочное оборудование',
             price: '23 700',
-            image: '/public/catalog1-2.png'
+            image: '/catalog1-2.png'
         },
         { 
             id: 5, 
             title: 'Мясорубка промышленная MG-32', 
             category: 'Мясопереработка',
             price: '34 800',
-            image: '/public/catalog2-2.png'
+            image: '/catalog2-2.png'
         },
     ];
 
