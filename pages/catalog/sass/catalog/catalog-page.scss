@@ -10,8 +10,8 @@
 .catalog_card{
     width: calc(100% / 6 - 16px);
     flex-grow: 1;
-    
- 
+  max-width: 760px;
+
     &-img{
         height: 293px;
         border-radius: 16px;
