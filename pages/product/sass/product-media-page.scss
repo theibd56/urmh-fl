@@ -291,9 +291,14 @@
     }
     .product__price{
         font-size: 24px;
+        gap: 8px;
+        .old-price {
+          font-size: 14px;
+        }
     }
     .product__quantity-actions{
         gap: 8px;
+        width: 100%;
     }
     .product__quantity{
         height: 40px;
@@ -303,6 +308,9 @@
     .product__quantity-actions button{
         width: 40px;
         height: 40px;
+      &.product__add-to-cart {
+        margin-right: auto;
+      }
     }
     .product__action-link span{
         font-size: 13px;    
@@ -418,8 +426,8 @@
         border-radius: 16px;
     }
     .product__videos-block .product__video-play-btn{
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
     .product__videos-block .product__videos-next{
         display: none;

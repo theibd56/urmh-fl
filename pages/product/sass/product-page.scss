@@ -1,5 +1,5 @@
 .product {
-    margin: 0 0 80px;
+    margin: 24px 0 80px;
 
     &__wrapper {
         // display: grid;
@@ -12,7 +12,7 @@
     }
 
     &__image {
-        width: calc(50% - 20px);
+        width: calc(50% - 19px);
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -198,7 +198,7 @@
     }
 
     &__info {
-        width: calc(50% - 20px);
+        width: calc(50% - 21px);
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -291,7 +291,7 @@
             font-size: 16px;
             font-weight: 400;
             color: #70828A;
-            line-height: 130%;
+            line-height: 1.5;
             text-decoration: underline;
             text-decoration-style: solid;
             text-decoration-thickness: auto;
@@ -388,6 +388,7 @@
             }
         }
 
+
         .product__city {
             font-size: 18px;
             font-weight: 500;
@@ -401,7 +402,7 @@
     &__city {
         font-size: 18px;
         font-weight: 400;
-        color: #2C3336;
+        color: #232426;
         line-height: 1.4;
     }
 
@@ -657,7 +658,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 16px;
+        gap: 15px;
     }
 
     &__action-link {
@@ -680,9 +681,7 @@
             font-size: 16px;
             font-weight: 400;
             color: #70828A;
-            line-height: 130%;
-            font-size: 16px;
-            line-height: 20px;
+            line-height: 1.5;
             letter-spacing: 0%;
             text-decoration: underline;
             text-decoration-style: dotted;
@@ -889,7 +888,7 @@
 
     &__related-price {
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 600;
         color: #2C3336;
         line-height: 1.275em;
         margin-top: 0;
@@ -1177,9 +1176,8 @@
         text-underline-offset: 3px;
         font-weight: 400;
         font-size: 18px;
-        line-height: 100%;
+        line-height: 1.5;
         letter-spacing: 0%;
-        text-decoration: underline;
         text-decoration-style: dotted;
         text-decoration-thickness: 12%;
         text-decoration-skip-ink: auto;
@@ -1256,8 +1254,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 210px;
-            height: 210px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             z-index: 2;
             cursor: pointer;
@@ -1328,6 +1326,24 @@
             color: #CDD1D2;
             font-weight: 400;
         }
+    }
+
+    &__spares-content {
+      max-height: 720px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(227, 227, 232, 0.47);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #D2D2D7;
+        border-radius: 2px;
+      }
     }
 
     &__spares-table {
