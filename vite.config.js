@@ -7,10 +7,12 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html'),
-                catalogIndex: resolve(__dirname, './pages/catalog/catalog-page.html'),
-                productIndex: resolve(__dirname, './pages/product/product-page.html'),
-                subcategories: resolve(__dirname, './pages/catalog/subcategories-page.html'),
+                mainPage: resolve(__dirname, 'index.html'),
+                catalogPage: resolve(__dirname, './pages/catalog/catalog-page.html'),
+                productPage: resolve(__dirname, './pages/product/product-page.html'),
+                productSale: resolve(__dirname, './pages/product/product-sale-page.html'),
+                productDoublePrice: resolve(__dirname, './pages/product/product-doublePrice-page.html'),
+                subcategoriesPage: resolve(__dirname, './pages/catalog/subcategories-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',
