@@ -422,18 +422,32 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     })
+
     document.addEventListener('DOMContentLoaded', () => {
         const compareBtns = document.querySelectorAll('.product__card-compare');
         const favoriteBtns = document.querySelectorAll('.product__card-favorite');
+        const addToCartBtns = document.querySelectorAll('.product__card-cart');
 
         compareBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 btn.classList.toggle('active');
             })
         })
 
         favoriteBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.classList.toggle('active');
+            })
+        })
+
+        addToCartBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 btn.classList.toggle('active');
             })
         })
@@ -668,20 +682,13 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtns = document.querySelectorAll('.product__card-cart');
-    
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-        })
-    })
-})
-
-document.addEventListener('DOMContentLoaded', function() {
     const addToCartBtns = document.querySelectorAll('.product__spares-cart');
     
     addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) =>
+        {
+            e.preventDefault();
+            e.stopPropagation();
             btn.classList.toggle('active');
         })
     })

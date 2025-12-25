@@ -31,15 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const compareBtns = document.querySelectorAll('.product__card-compare');
     const favoriteBtns = document.querySelectorAll('.product__card-favorite');
+    const addToCartBtns = document.querySelectorAll('.product__card-cart');
 
     compareBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             btn.classList.toggle('active');
         })
     })
 
     favoriteBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            btn.classList.toggle('active');
+        })
+    })
+
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             btn.classList.toggle('active');
         })
     })
@@ -54,13 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!openBtn || !closeBtn || !aside) return;
 
-    console.log('adad')
-
     const open = () => {
         aside.classList.add('active');
         html.classList.add('lock');
-
-        console.log('adad')
     };
 
     const close = () => {
@@ -112,15 +121,6 @@ document.querySelectorAll('.js-collapsible').forEach(block => {
             : 'Показать полностью';
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtns = document.querySelectorAll('.product__card-cart');
-
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-        })
-    })
-})
 
 document.querySelectorAll('.catalog-filter__item_header').forEach(header => {
     header.addEventListener('click', () => {

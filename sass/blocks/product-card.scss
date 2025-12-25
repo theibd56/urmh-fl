@@ -7,6 +7,11 @@
       width: 100%;
       padding-top: 40px;
     }
+    &:hover {
+      .product__card-name {
+        color: #0071E3;
+      }
+    }
   }
 
   &__card-header {
@@ -102,6 +107,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 44px;
+    transition: color .3s ease;
   }
 
   &__card-spec {

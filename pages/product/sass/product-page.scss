@@ -1369,6 +1369,7 @@
         align-items: stretch;
         background: white;
         overflow: hidden;
+        cursor: pointer;
 
         &--head {
             display: grid;
@@ -1382,6 +1383,12 @@
             background: #F7F7F8;
             border-color: transparent;
         }
+
+      &:hover {
+        .product__spares-col--name {
+          color: #0071E3;
+        }
+      }
     }
 
     &__spares-row:not(&__spares-row--head) {
@@ -1413,6 +1420,7 @@
         &--name{
             padding: 8px 16px;
             word-break: break-all;
+            transition: color .3s ease;
         }
 
         &--image {
