@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             new Swiper(slider, {
                 slidesPerView: 'auto',
-                spaceBetween: 13,
+                spaceBetween: 16,
                 loop: true,
                 navigation: {
                     nextEl: container.querySelector('.product__card-next'),
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 breakpoints: {
                     0: { spaceBetween: 8 },
-                    768: { spaceBetween: 13 }
+                    768: { spaceBetween: 16 }
                 }
             });
         });
@@ -573,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const copyBtn = document.querySelector(".copy-btn");
+    const copyBtn = document.querySelector(".product__code");
     const textToCopy = document.getElementById("text-to-copy");
     const notification = document.getElementById("copy-notification");
 

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         new Swiper(slider, {
             slidesPerView: 'auto',
-            spaceBetween: 13,
+            spaceBetween: 16,
             loop: true,
             navigation: {
                 nextEl: container.querySelector('.product__card-next'),
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             breakpoints: {
                 0: { spaceBetween: 8 },
-                768: { spaceBetween: 13 }
+                768: { spaceBetween: 16 }
             }
         });
     });
