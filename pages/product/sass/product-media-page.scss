@@ -103,6 +103,10 @@
         line-height: 18px;
         color: #70828A;
         font-weight: 400;
+
+      .spares-name {
+        white-space: normal;
+      }
         
         &::before {
             content: attr(data-label);

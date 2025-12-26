@@ -121,40 +121,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Выпадающий список доступности товара
+// Выпадающий список доступности товара
     const availabilityToggle = document.querySelector('.product__availability-toggle');
     const availabilityDropdown = document.querySelector('.product__availability-dropdown');
     const availabilityItems = document.querySelectorAll('.product__availability-item');
     const availabilityContainer = document.querySelector('.product__availability');
 
     if (availabilityToggle && availabilityDropdown && availabilityContainer) {
-        // Открытие/закрытие списка
+        // Открытие / закрытие списка
         availabilityToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             const isExpanded = availabilityContainer.getAttribute('aria-expanded') === 'true';
-            availabilityContainer.setAttribute('aria-expanded', !isExpanded);
-            availabilityToggle.setAttribute('aria-expanded', !isExpanded);
+
+            availabilityContainer.setAttribute('aria-expanded', String(!isExpanded));
+            availabilityToggle.setAttribute('aria-expanded', String(!isExpanded));
         });
 
-        // Выбор элемента из списка
+        // Выбор элемента
         availabilityItems.forEach(item => {
             item.addEventListener('click', () => {
                 const city = item.getAttribute('data-city');
                 const status = item.getAttribute('data-status');
-                const statusText = item.querySelector('.product__status-badge').textContent;
+                const itemStatusBadge = item.querySelector('.product__status-badge');
 
-                // Обновляем выбранный элемент
+                // Элементы выбранного значения
                 const selectedCity = availabilityToggle.querySelector('.product__city');
-                const selectedStatus = availabilityToggle.querySelector('.product__status-badge');
+                const selectedStatusWrapper = availabilityToggle.querySelector('.product__status');
 
+                // Обновляем город
                 selectedCity.textContent = city;
-                selectedStatus.textContent = statusText;
 
-                // Обновляем классы статуса
-                selectedStatus.className = 'product__status-badge';
-                selectedStatus.classList.add(`product__status-badge--${status}`);
+                // Полностью заменяем статус (HTML + классы)
+                selectedStatusWrapper.innerHTML = '';
+                const newStatusBadge = itemStatusBadge.cloneNode(true);
 
-                // Обновляем aria-selected
+                // На всякий случай чистим и ставим правильный модификатор
+                newStatusBadge.className = 'product__status-badge';
+                newStatusBadge.classList.add(`product__status-badge--${status}`);
+
+                selectedStatusWrapper.appendChild(newStatusBadge);
+
+                // aria-selected
                 availabilityItems.forEach(i => i.setAttribute('aria-selected', 'false'));
                 item.setAttribute('aria-selected', 'true');
 
@@ -164,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Закрытие при клике вне списка
+        // Закрытие при клике вне компонента
         document.addEventListener('click', (e) => {
             if (!availabilityContainer.contains(e.target)) {
                 availabilityContainer.setAttribute('aria-expanded', 'false');
@@ -172,11 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Устанавливаем первый элемент как выбранный по умолчанию
+        // Первый элемент выбран по умолчанию
         if (availabilityItems.length > 0) {
             availabilityItems[0].setAttribute('aria-selected', 'true');
         }
     }
+
 
     // Модальное окно "Бесплатное тестирование"
     const testingBtn = document.querySelector('.product__banner-btn');
