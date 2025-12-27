@@ -19,6 +19,7 @@
   }
   .product__card-name{
     font-size: 14px;
+    margin: 0;
   }
   .product__card-spec{
     display: none;
@@ -28,6 +29,9 @@
     align-items: flex-start;
     gap: 8px;
     margin-top: 12px;
+  }
+  .product__card-content {
+    gap: 0;
   }
   .product__card-price{
     font-size: 18px;
@@ -43,6 +47,6 @@
 
 @media (max-width: 480px) {
   .product__card-image{
-    height: 144px;
+    height: 188px;
   }
 }

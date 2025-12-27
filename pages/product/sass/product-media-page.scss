@@ -476,3 +476,14 @@
         padding: 2px 8px;
     }
 }
+
+@media screen and (max-width: 376px) {
+  .product {
+    &__slider-thumbs {
+      .swiper-slide {
+        width: 40px !important;
+        height: 40px;
+      }
+    }
+  }
+}
