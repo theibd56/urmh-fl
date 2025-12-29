@@ -410,6 +410,22 @@
     &__status {
         display: flex;
         align-items: center;
+        flex-direction: column;
+        &:has(.product__status-badge:nth-child(2)) {
+          align-items: flex-start;
+          padding: 4px 8px;
+          gap: 3px;
+          .product__status-badge {
+            height: auto;
+            padding: 0;
+            &:nth-child(2) {
+              font-size: 12px;
+              font-weight: 400;
+              color: #70828A;
+
+            }
+          }
+        }
     }
 
     &__status-badge {
@@ -419,10 +435,9 @@
         border-radius: 8px;
         font-size: 16px;
         font-weight: 500;
-        line-height: 1.275em;
         height: 28px;
         white-space: nowrap;
-
+        line-height: 1;
         &--in-stock {
             //background: rgba(69, 213, 55, 0.15);
             color: #45D537;
@@ -436,14 +451,6 @@
         &--expected {
             //background: rgba(255, 50, 73, 0.15);
             color: #FF3249;
-        }
-        span {
-          line-height: 1;
-          &:nth-child(2){
-            font-size: 12px;
-            font-weight: 400;
-            color: #70828A;
-          }
         }
 
       &:has(span:nth-child(2)){

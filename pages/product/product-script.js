@@ -141,25 +141,25 @@ document.addEventListener('DOMContentLoaded', () => {
         availabilityItems.forEach(item => {
             item.addEventListener('click', () => {
                 const city = item.getAttribute('data-city');
-                const status = item.getAttribute('data-status');
                 const itemStatusBadge = item.querySelector('.product__status-badge');
+                const amount = parseInt(item.dataset.amount, 10);
+                const status = item.dataset.status;
 
                 // Элементы выбранного значения
                 const selectedCity = availabilityToggle.querySelector('.product__city');
                 const selectedStatusWrapper = availabilityToggle.querySelector('.product__status');
 
+                updateAvailabilityBadge(
+                    {
+                        amount,
+                        status,
+                        quantity: parseInt(quantityInput.value, 10)
+                    },
+                    selectedStatusWrapper
+                );
+
                 // Обновляем город
                 selectedCity.textContent = city;
-
-                // Полностью заменяем статус (HTML + классы)
-                selectedStatusWrapper.innerHTML = '';
-                const newStatusBadge = itemStatusBadge.cloneNode(true);
-
-                // На всякий случай чистим и ставим правильный модификатор
-                newStatusBadge.className = 'product__status-badge';
-                newStatusBadge.classList.add(`product__status-badge--${status}`);
-
-                selectedStatusWrapper.appendChild(newStatusBadge);
 
                 // aria-selected
                 availabilityItems.forEach(i => i.setAttribute('aria-selected', 'false'));
@@ -267,23 +267,51 @@ document.addEventListener('DOMContentLoaded', () => {
             updateButtonsState();
         };
 
-        // Обработчик клика на кнопку минус
+        quantityInput.addEventListener('change', () => {
+            updateQuantity(quantityInput.value);
+            refreshAvailabilityFromQuantity();
+        });
+
+        const activeItem = document.querySelector('.product__availability-item[aria-selected="true"]');
+
+        if (activeItem) {
+            updateAvailabilityBadge(
+                {
+                    amount: parseInt(activeItem.dataset.amount, 10),
+                    status: activeItem.dataset.status,
+                    quantity: parseInt(quantityInput.value, 10)
+                },
+                document.querySelector('.product__availability-toggle .product__status')
+            );
+        }
+
+        quantityPlusBtn.addEventListener('click', () => {
+            const currentValue = parseInt(quantityInput.value, 10) || 1;
+            const newValue = currentValue + 1;
+
+            updateQuantity(newValue);
+            refreshAvailabilityFromQuantity(newValue);
+            refreshAllAvailabilityItems(newValue);
+        });
+
+
         quantityMinusBtn.addEventListener('click', () => {
             const currentValue = parseInt(quantityInput.value, 10) || 1;
             if (currentValue > 1) {
-                updateQuantity(currentValue - 1);
+                const newValue = currentValue - 1;
+
+                updateQuantity(newValue);
+                refreshAvailabilityFromQuantity(newValue);
+                refreshAllAvailabilityItems(newValue);
             }
         });
 
-        // Обработчик клика на кнопку плюс
-        quantityPlusBtn.addEventListener('click', () => {
-            const currentValue = parseInt(quantityInput.value, 10) || 1;
-            updateQuantity(currentValue + 1);
-        });
-
-        // Обработчик изменения значения в input
         quantityInput.addEventListener('change', () => {
-            updateQuantity(quantityInput.value);
+            const value = parseInt(quantityInput.value, 10) || 1;
+
+            updateQuantity(value);
+            refreshAvailabilityFromQuantity(value);
+            refreshAllAvailabilityItems(value);
         });
 
         // Обработчик ввода в input (валидация в реальном времени)
@@ -701,3 +729,96 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 })
+
+function updateAvailabilityBadge({ amount, status, quantity }, container) {
+    container.innerHTML = '';
+
+    // expected — ничего не добавляем
+    if (status === 'expected') {
+        const badge = document.createElement('div');
+        badge.className = 'product__status-badge product__status-badge--expected';
+        badge.innerHTML = '<span>Ожидается к поступлению</span>';
+        container.appendChild(badge);
+        return;
+    }
+
+    // количество 1 — оставляем "как есть"
+    if (quantity <= 1 && amount > 0) {
+        const badge = document.createElement('div');
+        badge.className = 'product__status-badge product__status-badge--in-stock';
+        badge.innerHTML = '<span>В наличии</span>';
+        container.appendChild(badge);
+        return;
+    }
+
+    // data-amount = 0 → всё под заказ
+    if (amount === 0) {
+        const badge = document.createElement('div');
+        badge.className = 'product__status-badge product__status-badge--order';
+        badge.innerHTML = `<span>Под заказ ${quantity} шт</span>`;
+        container.appendChild(badge);
+        return;
+    }
+
+    // хватает на складе
+    if (quantity <= amount) {
+        const badge = document.createElement('div');
+        badge.className = 'product__status-badge product__status-badge--in-stock';
+        badge.innerHTML = `<span>В наличии ${quantity} шт</span>`;
+        container.appendChild(badge);
+        return;
+    }
+
+    // не хватает — делим
+    const inStockQty = amount;
+    const orderQty = quantity - amount;
+
+    const inStockBadge = document.createElement('div');
+    inStockBadge.className = 'product__status-badge product__status-badge--in-stock';
+    inStockBadge.innerHTML = `<span>В наличии ${inStockQty} шт</span>`;
+
+    const orderBadge = document.createElement('div');
+    orderBadge.className = 'product__status-badge product__status-badge--order';
+    orderBadge.innerHTML = `<span>Под заказ ${orderQty} шт</span>`;
+
+    container.append(inStockBadge, orderBadge);
+}
+
+function refreshAvailabilityFromQuantity(quantity) {
+    const activeItem = document.querySelector('.product__availability-item[aria-selected="true"]');
+    const statusContainer = document.querySelector('.product__availability-toggle .product__status');
+
+    if (!activeItem || !statusContainer) return;
+
+    updateAvailabilityBadge(
+        {
+            amount: parseInt(activeItem.dataset.amount, 10),
+            status: activeItem.dataset.status,
+            quantity
+        },
+        statusContainer
+    );
+}
+
+function updateAvailabilityItemBadge(item, quantity) {
+    const status = item.dataset.status;
+    const amount = parseInt(item.dataset.amount, 10);
+    const statusContainer = item.querySelector('.product__status');
+
+    if (!statusContainer) return;
+
+    updateAvailabilityBadge(
+        {
+            amount,
+            status,
+            quantity
+        },
+        statusContainer
+    );
+}
+
+function refreshAllAvailabilityItems(quantity) {
+    document.querySelectorAll('.product__availability-item').forEach(item => {
+        updateAvailabilityItemBadge(item, quantity);
+    });
+}

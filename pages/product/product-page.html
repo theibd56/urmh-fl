@@ -31,7 +31,7 @@
         </li>
       </ol>
       <section class="product">
-        <h3 class="product__title product__title--tablet">Горизонтальная упаковочная машина DXDZ-250XD (H-40мм, bag L 65-190mm, S 200mm, регулируемый формирователь, вставки в транспортере)</h3>
+        <h1 class="product__title product__title--tablet">Горизонтальная упаковочная машина DXDZ-250XD (H-40мм, bag L 65-190mm, S 200mm, регулируемый формирователь, вставки в транспортере)</h1>
         <div class="product__wrapper">
           <div class="product__image">
             <div class="product__slider-main swiper">
@@ -212,7 +212,7 @@
               </div>
             </div>
 
-            <h3 class="product__title">Горизонтальная упаковочная машина DXDZ-250XD</h3>
+            <h1 class="product__title">Горизонтальная упаковочная машина DXDZ-250XD</h1>
 
             <div class="product__availability" aria-expanded="false">
               <button class="product__availability-toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
@@ -220,8 +220,7 @@
                   <div class="product__city">Новосибирск</div>
                   <div class="product__status">
                     <div class="product__status-badge product__status-badge--in-stock">
-                      <span>В наличии 38 шт</span>
-                      <span>Под заказ 65 шт</span>
+                      <span>В наличии</span>
                     </div>
                   </div>
                 </div>
@@ -233,50 +232,92 @@
                 </svg>
               </button>
               <div class="product__availability-dropdown" role="listbox">
-                <button class="product__availability-item" type="button" role="option" data-city="Новосибирск"
-                        data-status="in-stock">
+                <!-- В наличии (есть на складе) -->
+                <button
+                    class="product__availability-item"
+                    type="button"
+                    role="option"
+                    data-city="Новосибирск"
+                    data-status="in-stock"
+                    data-amount="10"
+                >
                   <div class="product__city">Новосибирск</div>
-                  <div  class="product__status-badge product__status-badge--in-stock">
-                    <span>В наличии 38 шт</span>
-                    <span>Под заказ 65 шт</span>
+
+                  <div class="product__status">
+                    <div class="product__status-badge product__status-badge--in-stock">
+                      <span>В наличии</span>
+                    </div>
                   </div>
                 </button>
-                <button class="product__availability-item" type="button" role="option" data-city="Москва"
-                        data-status="in-stock">
+
+                <button
+                    class="product__availability-item"
+                    type="button"
+                    role="option"
+                    data-city="Москва"
+                    data-status="in-stock"
+                    data-amount="5"
+                >
                   <div class="product__city">Москва</div>
-                  <div  class="product__status-badge product__status-badge--in-stock">
-                    <span>В наличии</span>
-                    <span>Под заказ 65 шт</span>
+                  <div class="product__status">
+                    <div class="product__status-badge product__status-badge--in-stock">
+                      <span>В наличии</span>
+                    </div>
                   </div>
                 </button>
-                <button class="product__availability-item" type="button" role="option" data-city="Алма Аты"
-                        data-status="order">
-                  <div class="product__city">Алма Аты</div>
-                  <div  class="product__status-badge product__status-badge--order">
-                    <span>Под заказ</span>
+
+                <!-- Под заказ (на складе 0) -->
+                <button
+                    class="product__availability-item"
+                    type="button"
+                    role="option"
+                    data-city="Алма-Аты"
+                    data-status="order"
+                    data-amount="0"
+                >
+                  <div class="product__city">Алма-Аты</div>
+                  <div class="product__status">
+                    <div class="product__status-badge product__status-badge--order">
+                      <span>Под заказ</span>
+                    </div>
                   </div>
+
                 </button>
-                <button class="product__availability-item" type="button" role="option" data-city="Новосибирск"
-                        data-status="expected">
+
+                <!-- Ожидается поступление (количество не учитываем) -->
+                <button
+                    class="product__availability-item"
+                    type="button"
+                    role="option"
+                    data-city="Новосибирск"
+                    data-status="expected"
+                    data-amount="0"
+                >
                   <div class="product__city">Новосибирск</div>
-                  <div  class="product__status-badge product__status-badge--expected">
-                    <span>Ожидается к поступлению</span>
+                  <div class="product__status">
+                    <div class="product__status-badge product__status-badge--expected">
+                      <span>Ожидается к поступлению</span>
+                    </div>
                   </div>
+
                 </button>
-                <button class="product__availability-item" type="button" role="option" data-city="Москва"
-                        data-status="expected">
+
+                <button
+                    class="product__availability-item"
+                    type="button"
+                    role="option"
+                    data-city="Москва"
+                    data-status="expected"
+                    data-amount="0"
+                >
                   <div class="product__city">Москва</div>
-                  <div  class="product__status-badge product__status-badge--expected">
-                    <span>Ожидается к поступлению</span>
+                  <div class="product__status">
+                    <div class="product__status-badge product__status-badge--expected">
+                      <span>Ожидается к поступлению</span>
+                    </div>
                   </div>
                 </button>
-                <button class="product__availability-item" type="button" role="option" data-city="Алма Аты"
-                        data-status="in-stock">
-                  <div class="product__city">Алма Аты</div>
-                  <div  class="product__status-badge product__status-badge--in-stock">
-                    <span>В наличии</span>
-                  </div>
-                </button>
+
               </div>
             </div>
 
