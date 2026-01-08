@@ -16,6 +16,10 @@
   }
   .product__card-image{
     height: 188px;
+    .product__card-sticker {
+      width: 47px;
+      height: 20px;
+    }
   }
   .product__card-name{
     font-size: 14px;

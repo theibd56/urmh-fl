@@ -137,15 +137,19 @@
       a {
         font-size: 16px;
         display: inline-block;
-        padding: 10px 16px;
+        padding: 8.5px 16.5px;
         border-radius: 16px;
         border: 1px solid #E1E1E1;
         transition: background-color .3s ease;
         white-space: nowrap;
+        height: 40px;
         &.active {
           border-color: #0071E3;
           background: #0071E3;
           color: white;
+          &:hover {
+            background: #1087FE;
+          }
         }
         &:hover {
           background: #ededed;
@@ -161,10 +165,10 @@
       &.grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 15px;
         .product__card {
           width: 100%;
-          max-width: 290px;
+          max-width: 293px;
         }
       }
       &.row {
@@ -292,12 +296,12 @@
       margin-top: 24px;
       background: none;
       border: none;
+      border-bottom: 2px dotted #0071E3;
       padding: 0;
 
       font-size: 18px;
       color: #0071E3;
       cursor: pointer;
-      text-decoration: underline;
       transition: opacity .3s ease;
       &:hover {
         opacity: 0.7;
@@ -307,7 +311,7 @@
     &__info {
       h3 {
         font-size: 32px;
-        font-weight: 500;
+        font-weight: 600;
         color: #2C3336;
         margin-bottom: 24px;
 
