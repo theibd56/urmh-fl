@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const feedbackMainSuccessBtn = document.querySelector('.feedback-main-popup .success-btn')
     const feedbackMainCloseFormBtn = document.querySelector('.feedback-main-popup .close-popup')
 
-    if(!feedbackMain) return
+    if(!feedbackMainForm) return
 
     // Обработчик отправки основной формы обратной связи
     feedbackMainForm.addEventListener('submit', (event) => {

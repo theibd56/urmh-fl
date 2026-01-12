@@ -169,16 +169,21 @@ p{
     &:hover {
       background-color: #E1E1E5;
     }
-  
-    }
-    span{
-      width: 100%;
-      display: -webkit-box;
-        -webkit-line-clamp: 1; // количество строк
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+  }
+  span{
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  li:last-child {
+    flex: 1;
+    min-width: 0;
+  }
 }
+
 
 .page__title {
   color: #2C3336;
@@ -315,7 +320,7 @@ p{
     font-size: 32px;
   }
   .kroshki {
-    a {
+    a, span {
       font-size: 12px;
     }
   }

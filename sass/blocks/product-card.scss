@@ -64,6 +64,7 @@
   }
 
   &__card-swiper {
+    overflow: visible !important;
     width: 100%;
     .swiper-slide{
       width: 293px;

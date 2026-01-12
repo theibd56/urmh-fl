@@ -78,9 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
     })
 
- 
-
-
     // Переключение видимости блока характеристик
     const detailsContent = document.querySelector('.product__details-content');
     const descriptionMoreBtn = document.querySelector('.product__description-more');
@@ -95,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
             detailsContent.style.maxHeight = originalMaxHeight;
 
             if (fullHeight <= 400) {
+                detailsContent.classList.remove('product__details-additional');
                 descriptionMoreBtn.style.display = 'none';
             } else {
+                detailsContent.classList.add('product__details-additional');
                 descriptionMoreBtn.style.display = 'block';
             }
         };

@@ -248,12 +248,15 @@
         gap: 16px;
     }
     .product__code span{
-        width: 111px;
+        width: 118.5px;
         font-size: 13px;
-
         input{
             font-size: 13px;
         }
+    }
+    .product__code #copy-notification {
+      padding: 8px;
+      text-align: center;
     }
     .product__cheaper-link span{
         font-size: 13px;
@@ -262,7 +265,7 @@
         width: 100%;
     }
     .product__availability-toggle{
-        padding: 6px 8px 6px 16px;
+        padding: 6px 32px 6px 16px;
         height: 40px;
     }
     .product__city{
@@ -307,7 +310,7 @@
     .product__quantity{
         height: 40px;
         padding: 8px 12px;
-        width: 144px;
+        width: 178px;
     }
     .product__quantity-actions button{
         width: 40px;
@@ -485,5 +488,8 @@
         height: 40px;
       }
     }
+  }
+  .product__quantity{
+    width: 144px;
   }
 }
