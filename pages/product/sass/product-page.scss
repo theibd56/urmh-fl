@@ -349,6 +349,9 @@
         height: 28px;
         transition: transform 0.2s ease;
         color: #2C3336;
+
+      position: absolute;
+      right: 12px;
     }
 
     &__availability[aria-expanded="true"] &__availability-arrow {

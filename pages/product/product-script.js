@@ -56,27 +56,71 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 // Видео-слайдер
 document.addEventListener('DOMContentLoaded', () => {
-   const productVideosSlider = new Swiper('.product__videos-slider', {
-        slidesPerView: 3,
+    const videosSliderEl = document.querySelector('.product__videos-slider');
+    const slidesCount = videosSliderEl.querySelectorAll('.swiper-slide').length;
+
+    let slidesPerView = 3;
+    let loop = true;
+
+    let mobileSlides = 1.8;
+    let desktopSlides = 3;
+
+    if (slidesCount === 1) {
+        mobileSlides = 1;
+        desktopSlides = 1;
+    }
+
+    if (slidesCount === 2) {
+        mobileSlides = 1.8;
+        desktopSlides = 2;
+    }
+
+    if (slidesCount >= 3) {
+        mobileSlides = 1.8;
+        desktopSlides = 3;
+    }
+
+    if (slidesCount === 1) {
+        slidesPerView = 1;
+        loop = false;
+        videosSliderEl.classList.add('is-one-slide');
+    }
+
+    if (slidesCount === 2) {
+        slidesPerView = 2;
+        loop = false;
+        videosSliderEl.classList.add('is-two-slides');
+    }
+
+    if (slidesCount === 3) {
+        slidesPerView = 3;
+        loop = false;
+        videosSliderEl.classList.add('is-three-slides');
+    }
+
+    const productVideosSlider = new Swiper('.product__videos-slider', {
+        slidesPerView,
         spaceBetween: 16,
-        loop: true,
+        loop,
         navigation: {
             nextEl: '.product__videos-next',
             prevEl: '.product__videos-prev',
         },
         breakpoints: {
             0: {
-                slidesPerView: 'auto',
+                slidesPerView: mobileSlides,
                 spaceBetween: 8,
-
+            },
+            600: {
+                slidesPerView: desktopSlides,
+                spaceBetween: 16,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView,
                 spaceBetween: 16,
             },
         }
-        
-    })
+    });
 
     // Переключение видимости блока характеристик
     const detailsContent = document.querySelector('.product__details-content');
