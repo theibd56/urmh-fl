@@ -182,7 +182,7 @@ p{
     text-overflow: ellipsis;
     min-width: 0;
   }
-  li:last-child {
+  li:not(:has(a)):last-child {
     flex: 1;
     min-width: 0;
   }
