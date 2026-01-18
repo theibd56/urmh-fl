@@ -2,12 +2,9 @@
   .catalog {
     &-aside {
       position: fixed;
-      max-width: 328px;
       z-index: 99999;
-
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -45%);
+      max-width: 100%;
+      inset: 0;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -16,11 +13,21 @@
               opacity .25s ease,
               transform .25s ease,
               visibility .25s;
+      &__wrapper {
+        width: 100%;
+        max-width: 328px;
+        overflow: auto;
 
-      &::after {
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &__jalousie {
         content: '';
         position: absolute;
-        inset: -200vw;
+        inset: 0;
         z-index: -1;
 
         background: rgba(255, 255, 255, 0.7);
@@ -43,9 +50,9 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transform: translate(-50%, -50%);
+        //transform: translate(-50%, -50%);
 
-        &::after {
+        .catalog-aside__jalousie {
           opacity: 1;
         }
       }
