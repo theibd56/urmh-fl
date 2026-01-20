@@ -186,12 +186,6 @@
           }
         }
       }
-
-      &__pagger {
-        padding: 32px 0 0 0;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
     }
     &-faq {
       &__wrapper {
@@ -220,7 +214,7 @@
     &-wrapper {
       &__products.grid {
         .product__card {
-          width: calc(50% - 6px);
+          width: calc(50% - 4px);
         }
       }
     }

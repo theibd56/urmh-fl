@@ -68,6 +68,11 @@
   .product__card-image{
     height: 167.5px;
   }
+  .product__card-swiper {
+    .product__card-image{
+      height: 188px;
+    }
+  }
 }
 
 @media (max-width: 360px) {

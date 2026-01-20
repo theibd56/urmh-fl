@@ -2,6 +2,7 @@
   &-sort {
     position: relative;
     width: 200px;
+    z-index: 50;
     font-size: 16px;
     color: #2C3336;
 
@@ -405,10 +406,8 @@
         }
       }
       img {
-        width: 100%;
-        max-width: 110.5px;
-        height: 100%;
-        max-height: 110.5px;
+        width: 110.5px;
+        height: 110.5px;
         object-fit: contain;
       }
       &:hover {
