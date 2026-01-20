@@ -160,6 +160,10 @@ p{
   font-style: normal;
   font-weight: 300;
   line-height: 17px;
+  li {
+    display: flex;
+    gap: 4px;
+  }
   a {
     text-decoration: none;
     display: flex;
