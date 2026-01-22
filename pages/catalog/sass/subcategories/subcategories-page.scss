@@ -384,6 +384,11 @@
 
   &-top {
     margin-bottom: 40px;
+    &__slider {
+      .swiper-wrapper {
+        justify-content: space-between;
+      }
+    }
     &__title {
       margin-bottom: 24px;
     }
