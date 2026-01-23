@@ -14,7 +14,7 @@ export default defineConfig({
                 productDoublePrice: resolve(__dirname, './pages/product/product-doublePrice-page.html'),
                 subcategoriesPage: resolve(__dirname, './pages/catalog/subcategories-page.html'),
                 blogPage: resolve(__dirname, './pages/blog/blog-page.html'),
-                blogInnerPage: resolve(__dirname, './pages/blog/assets-page.html'),
+                assetsPage: resolve(__dirname, './pages/assets/assets-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',
