@@ -74,6 +74,11 @@
         max-width: 100%;
       }
     }
+    &-top {
+      &__slider {
+        overflow: visible !important;
+      }
+    }
   }
 }
 
