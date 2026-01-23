@@ -346,7 +346,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const successBtn = document.querySelector('.success-btn')
 
     popupShowBtns.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault()
             popup.classList.add('active')
             document.body.classList.add('no-scroll')
         })
