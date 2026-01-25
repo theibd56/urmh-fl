@@ -4,7 +4,7 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
-    function createSlider(sliderSelector, navPrevSelector, navNextSelector) {
+    function createSlider(sliderSelector, navPrevSelector, navNextSelector, paggerSelector) {
         const sliderEl = document.querySelector(sliderSelector);
 
         if (!sliderEl) return null;
@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: navNextSelector,
                 prevEl: navPrevSelector,
             },
+            pagination: {
+                el: paggerSelector,
+                clickable: true
+            },
             breakpoints: {
                 0: {
                     slidesPerView: mobileSlides,
@@ -67,13 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const assetsVideosSlider = createSlider(
         '.assets__videos_slider',
         '.assets__videos_prev',
-        '.assets__videos_next'
+        '.assets__videos_next',
+        '.assets__videos_slider-pagger'
     );
 
     const assetsGallerySlider = createSlider(
         '.assets__gallery_slider',
         '.assets__gallery_prev',
-        '.assets__gallery_next'
+        '.assets__gallery_next',
+        '.assets__gallery_slider-pagger'
     );
 
     //галерея
@@ -100,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         breakpoints: {
             0: {
-                slidesPerView: 1.8,
+                slidesPerView: 1.5,
                 spaceBetween: 8,
             },
             600: {
@@ -108,9 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 16,
             },
             768: {
-                slidesPerView: 4,
+                slidesPerView: 2.5,
                 spaceBetween: 16,
             },
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },  
+            1550: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }, 
+            1860: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            }, 
         }
     });
 })
+

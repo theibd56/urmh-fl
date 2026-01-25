@@ -321,7 +321,7 @@ p{
   h2, .page__title_56{
     font-size: 22px;
   }
-  h4{
+  h4:not(.assets__products_title, .assets__table_title){
     font-size: 14px;
   }
   .page__title {

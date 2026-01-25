@@ -90,6 +90,9 @@
     &_slider {
       width: 100%;
       border-radius: 32px;
+      &-pagger {
+        display: none;
+      }
     }
 
     &_item {
@@ -163,6 +166,9 @@
     &_slider {
       width: 100%;
       border-radius: 32px;
+      &-pagger {
+        display: none;
+      }
     }
 
     &_item {
@@ -297,6 +303,7 @@
       margin-bottom: 24px;
     }
     table {
+      overflow-wrap: break-word;
       border-radius: 16px;
       border-collapse: collapse; /* Объединяет границы ячеек */
       border-spacing: 0; /* Убирает расстояние между ячейками */
@@ -331,6 +338,7 @@
     }
     &_title {
       margin-bottom: 24px;
+      font-weight: 600;
     }
     &_next, &_prev {
       position: absolute;
@@ -460,6 +468,9 @@
       &:hover {
         color: #fff;
         background: #0071E3;
+      }
+      &-mobile {
+        display: none;
       }
     }
   }
