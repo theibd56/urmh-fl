@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./scss/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content">
+    <div class="container">
+    <ol class="kroshki">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="error">
+        <div class="error__content">
+            <div class="error__image">
+                <img src="/public/images/Error_404.png" alt="">
+            </div>
+            <div class="error__text">
+                <h1 class="page__title ">
+                    Запрашиваемая страница не найдена
+                </h1>
+                <p>Возможно, ссылка устарела, страница была перемещена, или вы ошиблись при вводе адреса.</p>
+            </div>
+            <div class="error__actions">
+                <a href="#" class="error__actions-secondary">Вернуться на главную</a>
+                <a href="#" class="error__actions-primary">Посмотреть каталог</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    {{> _footer}}
+
+    <div class="callback-popup">
+    <div id="feedback-popup" class="feedback-popup">
+        <span class="close-popup">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+                fill="#70828A"
+            />
+            </svg>
+        </span>
+    <form action="">
+        <div class="feedback-popup_title">Обратный звонок</div>
+        <input type="text" placeholder="Ваше имя" required />
+        <input
+            type="tel"
+            data-maska="+7 (###)-###-##-##"
+            placeholder="Номер телефона"
+            required
+        />
+        <div class="feedback-popup_input-time">
+        <input type="text" placeholder="Удобное для звонка время" />
+        </div>
+        <button class="btn">Заказать звонок</button>
+        <div class="feedback-popup_privacy">
+        <input type="checkbox" id="feedback-popup_checkbox" required />
+        <label for="feedback-popup_checkbox">
+            <svg
+                width="16"
+                height="13"
+                viewBox="0 0 16 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M1 6.5L5.34483 11L15 1"
+                stroke="white"
+                stroke-width="2"
+            />
+            </svg>
+        </label>
+        <span>
+                Отправляя форму, я соглашаюсь с политикой обработки персональных
+                данных и даю согласие на
+                <a href="#">обработку персональных данных.</a>
+            </span>
+        </div>
+    </form>
+    <div class="feedback-success" style="display: none">
+        <div class="feedback-popup_title">Спасибо!</div>
+        <p>
+        Ваша заявка принята. Наш менеджер свяжется с вами в указанное время.
+        </p>
+        <button class="btn success-btn">Хорошо</button>
+    </div>
+    </div>
+    </div>
+    <div class="service-popup">
+    <div id="service-popup" class="feedback-popup">
+        <span class="close-popup">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+                fill="#70828A"
+            />
+            </svg>
+        </span>
+    <form action="">
+        <div class="feedback-popup_title">Укажите данные</div>
+        <input type="text" placeholder="Ваше имя" required />
+        <input
+            type="tel"
+            data-maska="+7 (###)-###-##-##"
+            placeholder="Номер телефона"
+            required
+        />
+        <button class="btn">Обратиться в сервис</button>
+        <div class="feedback-popup_privacy">
+        <input type="checkbox" id="service-popup_checkbox" required />
+        <label for="service-popup_checkbox">
+            <svg
+                width="16"
+                height="13"
+                viewBox="0 0 16 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M1 6.5L5.34483 11L15 1"
+                stroke="white"
+                stroke-width="2"
+            />
+            </svg>
+        </label>
+        <span>
+                Отправляя форму, я соглашаюсь с политикой обработки персональных
+                данных и даю согласие на
+                <a href="#">обработку персональных данных.</a>
+            </span>
+        </div>
+    </form>
+    <div class="feedback-success" style="display: none">
+        <div class="feedback-popup_title">Спасибо!</div>
+        <p>
+        Ваша заявка принята. Наш специалист свяжется с вами в ближайшее
+        время.
+        </p>
+        <button class="btn success-btn">Хорошо</button>
+    </div>
+    </div>
+    </div>
+    <div class="subscribe-popup">
+    <div id="subscribe-popup" class="feedback-popup">
+        <span class="close-popup">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+                fill="#70828A"
+            />
+            </svg>
+        </span>
+    <div class="feedback-success">
+        <div class="feedback-popup_title">Спасибо за подписку!</div>
+        <p>Вы успешно подписались на нашу рассылку.</p>
+        <button class="btn success-btn">Хорошо</button>
+    </div>
+    </div>
+    </div>
+
+    <div class="advantages-popup">
+    <div id="advantages-popup" class="feedback-popup">
+        <span class="close-popup">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+                fill="#70828A"
+            />
+            </svg>
+        </span>
+    <div class="feedback-success">
+        <div class="feedback-popup_title">Ваше обращение принято!</div>
+        <p>Наш специалист свяжется с вами в ближайшее время.</p>
+        <button class="btn success-btn">Хорошо</button>
+    </div>
+    </div>
+    </div>
+
+    <div class="feedback-main-popup">
+    <div id="feedback-main-popup" class="feedback-popup">
+        <span class="close-popup">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38462 18L0 16.6154L7.61538 9L0 1.38462L1.38462 0L9 7.61538L16.6154 0L18 1.38462L10.3846 9Z"
+                fill="#70828A"
+            />
+            </svg>
+        </span>
+    <div class="feedback-success">
+        <div class="feedback-popup_title">Спасибо!</div>
+        <p>
+        Ваша заявка принята. Наш менеджер свяжется с вами в ближайшее время.
+        </p>
+        <button class="btn success-btn">Хорошо</button>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./blog-scripts.js"></script>
+    </body>
+    </html>

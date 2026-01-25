@@ -1,0 +1,47 @@
+@media  (max-width: 768px) {
+    .error {
+        // min-height: auto;
+        padding: 100px 0; 
+        &__content {
+            max-width: 448px;
+            padding: 0;
+            gap: 16px;
+        }
+        &__image {
+            position: static;
+            transform: none;
+            height: 120px;
+            width: 219px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__text {
+            gap: 24px;
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                margin-top: 8px;
+            }
+        }
+        &__actions {
+            margin-top: 8px;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+            &-primary {
+                padding: 10px 26px;
+
+                font-size: 14px;
+            }
+            &-secondary {
+                padding: 11px 41px;
+
+                font-size: 14px;
+            }
+        }
+    }
+}
+
