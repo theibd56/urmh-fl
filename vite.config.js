@@ -15,6 +15,7 @@ export default defineConfig({
                 subcategoriesPage: resolve(__dirname, './pages/catalog/subcategories-page.html'),
                 blogPage: resolve(__dirname, './pages/blog/blog-page.html'),
                 assetsPage: resolve(__dirname, './pages/assets/assets-page.html'),
+                errorPage: resolve(__dirname, './pages/error/error-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',
