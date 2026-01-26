@@ -46,6 +46,11 @@
             font-weight: 500;
             font-size: 18px;
             color: #2c3336;
+          transition: background-color .3s ease, color .3s ease;
+          &:hover {
+            background: #0071E3;
+            color: #fff;
+          }
         }
         &-primary {
             border-radius: 16px;
@@ -55,6 +60,10 @@
             font-weight: 500;
             font-size: 18px;
             color: #fff;
+          transition: background-color .3s ease;
+          &:hover {
+            background: #1087FE;
+          }
         }
     }
 }
