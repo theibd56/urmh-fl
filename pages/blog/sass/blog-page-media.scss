@@ -33,25 +33,26 @@
         }
         &__categories {
             margin-bottom: 16px;
-            flex-wrap: nowrap;
-            flex-wrap: nowrap;
-            overflow: auto;
-            /* Firefox */
-            scrollbar-width: thin;
-            scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
+            ul {
+              flex-wrap: nowrap;
+              overflow: auto;
+              /* Firefox */
+              scrollbar-width: thin;
+              scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
 
-            /* Chrome, Safari, Edge */
-            &::-webkit-scrollbar {
-            height: 1px; // горизонтальный скролл — делаем его тонким
-            }
+              /* Chrome, Safari, Edge */
+              &::-webkit-scrollbar {
+                height: 1px; // горизонтальный скролл — делаем его тонким
+              }
 
-            &::-webkit-scrollbar-track {
-            background: transparent;
-            }
+              &::-webkit-scrollbar-track {
+                background: transparent;
+              }
 
-            &::-webkit-scrollbar-thumb {
-            background-color: rgba(137, 137, 137, 0.3);
-            border-radius: 4px;
+              &::-webkit-scrollbar-thumb {
+                background-color: rgba(137, 137, 137, 0.3);
+                border-radius: 4px;
+              }
             }
         }
         &__wrapper {

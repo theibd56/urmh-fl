@@ -36,12 +36,13 @@
     }
   }
   &__categories {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-
     margin-bottom: 32px;
+    ul {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     a {
       display: flex;
       align-items: center;

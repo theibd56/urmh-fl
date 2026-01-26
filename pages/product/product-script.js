@@ -7,7 +7,7 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 // Thumb slider
 
 document.addEventListener('DOMContentLoaded', () => {
-        // основной
+    // основной
     const productThumbsSwiper = new Swiper('.product__slider-thumbs', {
         spaceBetween: 16,
         slidesPerView: 7,
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const relatedProductSwiper = new Swiper('.product__related-slider', {
         slidesPerView: 3,
-        spaceBetween: 16,  
-        
+        spaceBetween: 16,
+
         navigation: {
             nextEl: '.product__related-nav-btn--next',
             prevEl: '.product__related-nav-btn--prev',
@@ -53,9 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
-})
 // Видео-слайдер
-document.addEventListener('DOMContentLoaded', () => {
     const videosSliderEl = document.querySelector('.product__videos-slider');
     const slidesCount = videosSliderEl.querySelectorAll('.swiper-slide').length;
 
@@ -466,236 +464,221 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.product__card-swiper').forEach((slider) => {
-            const container = slider.closest('.product__card-slider');
+document.querySelectorAll('.product__card-swiper').forEach((slider) => {
+    const container = slider.closest('.product__card-slider');
 
-            new Swiper(slider, {
-                slidesPerView: 'auto',
-                spaceBetween: 16,
-                loop: true,
-                navigation: {
-                    nextEl: container.querySelector('.product__card-next'),
-                    prevEl: container.querySelector('.product__card-prev'),
-                },
-                breakpoints: {
-                    0: { spaceBetween: 8 },
-                    768: { spaceBetween: 16 }
-                }
-            });
-        });
+    new Swiper(slider, {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+            nextEl: container.querySelector('.product__card-next'),
+            prevEl: container.querySelector('.product__card-prev'),
+        },
+        breakpoints: {
+            0: { spaceBetween: 8 },
+            768: { spaceBetween: 16 }
+        }
     });
+});
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const productAddToCompare = document.querySelectorAll('.product__add-to-compare');
-        productAddToCompare.forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            })
-        })
-
-        const productAddToFavorite = document.querySelectorAll('.product__add-to-favorites');
-        productAddToFavorite.forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            })
-        })
+const productAddToCompare = document.querySelectorAll('.product__add-to-compare');
+productAddToCompare.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
     })
+})
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const compareBtns = document.querySelectorAll('.product__card-compare');
-        const favoriteBtns = document.querySelectorAll('.product__card-favorite');
-        const addToCartBtns = document.querySelectorAll('.product__card-cart');
-
-        compareBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                btn.classList.toggle('active');
-            })
-        })
-
-        favoriteBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                btn.classList.toggle('active');
-            })
-        })
-
-        addToCartBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                btn.classList.toggle('active');
-            })
-        })
+const productAddToFavorite = document.querySelectorAll('.product__add-to-favorites');
+productAddToFavorite.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
     })
+})
 
+const compareBtns = document.querySelectorAll('.product__card-compare');
+const favoriteBtns = document.querySelectorAll('.product__card-favorite');
+const addToCartBtns = document.querySelectorAll('.product__card-cart');
 
-document.addEventListener('DOMContentLoaded', function(){
-    const productCheaperPopup = document.querySelector('.product-cheaper-popup')
-    const productCheaperShowBtns = document.querySelectorAll('.show-product-cheaper-popup')
-    const productCheaperCloseFormBtn = document.querySelector('.product-cheaper-popup .close-popup')
-    const productCheaperForm = document.querySelector('#product-cheaper-popup form')
-    const productCheaperSuccess = document.querySelector('.product-cheaper-popup .feedback-success')
-    const productCheaperSuccessBtn = document.querySelector('.product-cheaper-popup .success-btn')
-
-    productCheaperShowBtns.forEach(item => {
-        item.addEventListener('click', () => {
-            productCheaperPopup.classList.add('active')
-            
-            document.body.classList.add('no-scroll')
-        })
+compareBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('active');
     })
+})
 
-    productCheaperCloseFormBtn.addEventListener('click', () => {
-        productCheaperForm.reset()
+favoriteBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('active');
+    })
+})
+
+addToCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('active');
+    })
+})
+
+
+const productCheaperPopup = document.querySelector('.product-cheaper-popup')
+const productCheaperShowBtns = document.querySelectorAll('.show-product-cheaper-popup')
+const productCheaperCloseFormBtn = document.querySelector('.product-cheaper-popup .close-popup')
+const productCheaperForm = document.querySelector('#product-cheaper-popup form')
+const productCheaperSuccess = document.querySelector('.product-cheaper-popup .feedback-success')
+const productCheaperSuccessBtn = document.querySelector('.product-cheaper-popup .success-btn')
+
+productCheaperShowBtns.forEach(item => {
+    item.addEventListener('click', () => {
+        productCheaperPopup.classList.add('active')
+
+        document.body.classList.add('no-scroll')
+    })
+})
+
+productCheaperCloseFormBtn.addEventListener('click', () => {
+    productCheaperForm.reset()
+    productCheaperPopup.classList.remove('active')
+    document.body.classList.remove('no-scroll')
+    setTimeout(() => {
+        productCheaperForm.style.display = 'block'
+        productCheaperSuccess.style.display = 'none'
+    })
+})
+productCheaperForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    productCheaperForm.style.display = 'none'
+    productCheaperSuccess.style.display = 'block'
+})
+
+productCheaperSuccessBtn.addEventListener('click', () => {
+    productCheaperForm.reset()
+    setTimeout(() => {
         productCheaperPopup.classList.remove('active')
         document.body.classList.remove('no-scroll')
         setTimeout(() => {
             productCheaperForm.style.display = 'block'
             productCheaperSuccess.style.display = 'none'
-        })
-    })
-    productCheaperForm.addEventListener('submit', (event) => {
-        event.preventDefault() 
-        
-        productCheaperForm.style.display = 'none'
-        productCheaperSuccess.style.display = 'block'
-    })
-
-    productCheaperSuccessBtn.addEventListener('click', () => {
-        productCheaperForm.reset() 
-        setTimeout(() => {
-            productCheaperPopup.classList.remove('active')
-            document.body.classList.remove('no-scroll')
-            setTimeout(() => {
-                productCheaperForm.style.display = 'block'
-                productCheaperSuccess.style.display = 'none'
-            }, 300) 
-        }, 0)
-    })
-
-    document.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            productCheaperForm.reset()
-            productCheaperPopup.classList.remove('active')
-            document.body.classList.remove('no-scroll')
-            setTimeout(() => {
-                productCheaperForm.style.display = 'flex'
-                productCheaperSuccess.style.display = 'none'
-            }, 300) 
-        }
-    }); 
-
+        }, 300)
+    }, 0)
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    const copyBtn = document.querySelector(".product__code");
-    const textToCopy = document.getElementById("text-to-copy");
-    const notification = document.getElementById("copy-notification");
-
-    function copyText() {
-        // Выделяем текст
-        // textToCopy.select();
-        textToCopy.setSelectionRange(0, 99999);
-        
-        // Пытаемся скопировать
-        try {
-            const successful = document.execCommand('copy');
-            if (successful) {
-                // Показываем уведомление
-                notification.style.display = "block";
-                setTimeout(() => {
-                    notification.style.display = "none";
-                }, 2000);
-            }
-        } catch (err) {
-            console.log('Ошибка при копировании:', err);
-        }
-    }
-
-    // Настройка
-    if (textToCopy) {
-        textToCopy.style.width = textToCopy.value.length  + 'ch';
-    }
-
-    if (copyBtn) {
-        copyBtn.addEventListener('click', copyText);
-        copyBtn.style.cursor = 'pointer';
-    }
-    
-    // Скрываем уведомление изначально
-    if (notification) {
-        notification.style.display = 'none';
+document.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        productCheaperForm.reset()
+        productCheaperPopup.classList.remove('active')
+        document.body.classList.remove('no-scroll')
+        setTimeout(() => {
+            productCheaperForm.style.display = 'flex'
+            productCheaperSuccess.style.display = 'none'
+        }, 300)
     }
 });
+
+const copyBtn = document.querySelector(".product__code");
+const textToCopy = document.getElementById("text-to-copy");
+const notification = document.getElementById("copy-notification");
+
+function copyText() {
+    // Выделяем текст
+    // textToCopy.select();
+    textToCopy.setSelectionRange(0, 99999);
+
+    // Пытаемся скопировать
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            // Показываем уведомление
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000);
+        }
+    } catch (err) {
+        console.log('Ошибка при копировании:', err);
+    }
+}
+
+// Настройка
+if (textToCopy) {
+    textToCopy.style.width = textToCopy.value.length  + 'ch';
+}
+
+if (copyBtn) {
+    copyBtn.addEventListener('click', copyText);
+    copyBtn.style.cursor = 'pointer';
+}
+
+// Скрываем уведомление изначально
+if (notification) {
+    notification.style.display = 'none';
+}
 
 
 // product__add-to-cart
 
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtn = document.querySelector('.product__add-to-cart');
-    
-    addToCartBtn?.addEventListener('click', () => {
-        addToCartBtn.classList.toggle('active');
-     
-    })
+const addToCartBtn = document.querySelector('.product__add-to-cart');
 
-    // Обработка кнопок "Добавить" в связанных товарах
-    const relatedBtns = document.querySelectorAll('.product__related-btn');
-    
-    relatedBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const relatedItem = this.closest('.product__related-item');
-            const actionsContainer = relatedItem.querySelector('.product__related-actions');
-            
-            if (!actionsContainer) return;
-            
-            // Скрываем кнопку и показываем контейнер с счетчиком и корзиной
-            this.style.display = 'none';
-            actionsContainer.style.display = 'flex';
-        });
-    });
+addToCartBtn?.addEventListener('click', () => {
+    addToCartBtn.classList.toggle('active');
 
-    // Делегирование событий для счетчика
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.product__related-counter-btn--minus')) {
-            const counter = e.target.closest('.product__related-counter');
-            const counterValue = counter.querySelector('.product__related-counter-value');
-            let value = parseInt(counterValue.textContent, 10);
-            if (value > 1) {
-                value--;
-                counterValue.textContent = value;
-            }
-        }
-        
-        if (e.target.closest('.product__related-counter-btn--plus')) {
-            const counter = e.target.closest('.product__related-counter');
-            const counterValue = counter.querySelector('.product__related-counter-value');
-            let value = parseInt(counterValue.textContent, 10);
-            value++;
-            counterValue.textContent = value;
-        }
-
-        if (e.target.closest('.product__related-cart-icon')) {
-            const cartIcon = e.target.closest('.product__related-cart-icon');
-            cartIcon.classList.toggle('active');
-        }
-    });
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtns = document.querySelectorAll('.product__spares-cart');
-    
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', (e) =>
-        {
-            e.preventDefault();
-            e.stopPropagation();
-            btn.classList.toggle('active');
-        })
+// Обработка кнопок "Добавить" в связанных товарах
+const relatedBtns = document.querySelectorAll('.product__related-btn');
+
+relatedBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const relatedItem = this.closest('.product__related-item');
+        const actionsContainer = relatedItem.querySelector('.product__related-actions');
+
+        if (!actionsContainer) return;
+
+        // Скрываем кнопку и показываем контейнер с счетчиком и корзиной
+        this.style.display = 'none';
+        actionsContainer.style.display = 'flex';
+    });
+});
+
+// Делегирование событий для счетчика
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.product__related-counter-btn--minus')) {
+        const counter = e.target.closest('.product__related-counter');
+        const counterValue = counter.querySelector('.product__related-counter-value');
+        let value = parseInt(counterValue.textContent, 10);
+        if (value > 1) {
+            value--;
+            counterValue.textContent = value;
+        }
+    }
+
+    if (e.target.closest('.product__related-counter-btn--plus')) {
+        const counter = e.target.closest('.product__related-counter');
+        const counterValue = counter.querySelector('.product__related-counter-value');
+        let value = parseInt(counterValue.textContent, 10);
+        value++;
+        counterValue.textContent = value;
+    }
+
+    if (e.target.closest('.product__related-cart-icon')) {
+        const cartIcon = e.target.closest('.product__related-cart-icon');
+        cartIcon.classList.toggle('active');
+    }
+});
+
+const addToCartSparesBtns = document.querySelectorAll('.product__spares-cart');
+
+addToCartSparesBtns.forEach(btn => {
+    btn.addEventListener('click', (e) =>
+    {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('active');
     })
 })
 

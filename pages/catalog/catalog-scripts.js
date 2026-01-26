@@ -26,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 'auto',
         spaceBetween: 12,
     })
-});
 
-document.addEventListener('DOMContentLoaded', () => {
     const compareBtns = document.querySelectorAll('.product__card-compare');
     const favoriteBtns = document.querySelectorAll('.product__card-favorite');
     const addToCartBtns = document.querySelectorAll('.product__card-cart');
@@ -56,9 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active');
         })
     })
-})
 
-document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.querySelector('.catalog-filter__mobile-toggle');
     const closeBtn = document.querySelector('.js-filter-modal-close');
     const aside = document.querySelector('.catalog-aside');
@@ -91,9 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             close();
         }
     });
-})
 
-document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.catalog-faq__item');
 
     items.forEach(item => {
@@ -107,53 +101,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 
-document.querySelectorAll('.js-collapsible').forEach(block => {
-    const content = block.querySelector('.catalog-categories__content');
-    const button = block.querySelector('.catalog-categories__toggle');
+    document.querySelectorAll('.js-collapsible').forEach(block => {
+        const content = block.querySelector('.catalog-categories__content');
+        const button = block.querySelector('.catalog-categories__toggle');
 
-    button.addEventListener('click', () => {
-        const isOpen = content.classList.toggle('is-open');
+        button.addEventListener('click', () => {
+            const isOpen = content.classList.toggle('is-open');
 
-        button.textContent = isOpen
-            ? 'Скрыть'
-            : 'Показать полностью';
-    });
-});
-
-document.querySelectorAll('.catalog-filter__item_header').forEach(header => {
-    header.addEventListener('click', () => {
-        header.closest('.catalog-filter__item')?.classList.toggle('active');
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const products = document.querySelector('.catalog-wrapper__products');
-    const btnGrid = document.querySelector('.js-catalog-view-grid');
-    const btnRow = document.querySelector('.js-catalog-view-row');
-
-    if (products && btnGrid && btnRow) {
-        btnGrid.addEventListener('click', () => {
-            products.classList.add('grid');
-            products.classList.remove('row');
-
-            btnGrid.classList.add('active');
-            btnRow.classList.remove('active');
+            button.textContent = isOpen
+                ? 'Скрыть'
+                : 'Показать полностью';
         });
 
-        btnRow.addEventListener('click', () => {
-            products.classList.add('row');
-            products.classList.remove('grid');
-
-            btnRow.classList.add('active');
-            btnGrid.classList.remove('active');
+        document.querySelectorAll('.catalog-filter__item_header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.closest('.catalog-filter__item')?.classList.toggle('active');
+            });
         });
-    }
-})
 
-document.addEventListener('DOMContentLoaded', () => {
+        const products = document.querySelector('.catalog-wrapper__products');
+        const btnGrid = document.querySelector('.js-catalog-view-grid');
+        const btnRow = document.querySelector('.js-catalog-view-row');
+
+        if (products && btnGrid && btnRow) {
+            btnGrid.addEventListener('click', () => {
+                products.classList.add('grid');
+                products.classList.remove('row');
+
+                btnGrid.classList.add('active');
+                btnRow.classList.remove('active');
+            });
+
+            btnRow.addEventListener('click', () => {
+                products.classList.add('row');
+                products.classList.remove('grid');
+
+                btnRow.classList.add('active');
+                btnGrid.classList.remove('active');
+            });
+        }
+    })
+
     document.querySelectorAll('.js-catalog-sort').forEach(sort => {
         const current = sort.querySelector('.catalog-sort__current');
         const value = sort.querySelector('.catalog-sort__value');
@@ -192,5 +181,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
 })
