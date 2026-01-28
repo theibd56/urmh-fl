@@ -13,7 +13,7 @@
   &__toggle {
     background: #fff;
     border-radius: 48px;
-    padding: 8px;
+    padding: 8px 7px;
     button {
       height: 47px;
       padding: 0 16px;
@@ -26,12 +26,14 @@
 
       font-size: 16px;
       color: #2C3336;
+      font-weight: 400;
 
       transition: all .3s ease;
       &.active {
         color: #fff;
         background: #0071E3;
         pointer-events: none;
+        font-weight: 500;
       }
     }
   }
@@ -56,13 +58,16 @@
       color: #2C3336;
       transition: all .3s ease;
       white-space: nowrap;
+      letter-spacing: 0;
       span {
         background: #E1E1E1;
-        padding: 2px 7.5px;
+        padding: 2px 4px;
         color: #70828A;
         font-size: 14px;
         border-radius: 8px;
         transition: all .3s ease;
+        text-align: center;
+        min-width: 26px;
       }
       &.active {
         border-color: #0071E3;
@@ -92,7 +97,7 @@
   }
   &__card {
     background: #fff;
-    padding: 24px;
+    padding: 26px 24px;
     border-radius: 32px;
 
     display: flex;
@@ -157,16 +162,11 @@
       font-size: 16px;
       color: #70828A;
       display: inline-block;
-
-      /* button 2 */
-
       box-sizing: border-box;
-
-      padding: 10px 16px;
-
+      padding: 9px 15px;
       border: 1px solid #E1E1E5;
       border-radius: 16px;
-      transition: background-color .3s ease, color .3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
       &:hover {
         color: #fff;
         background: #0071E3;
