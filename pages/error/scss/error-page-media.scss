@@ -1,7 +1,17 @@
+@media  (min-width: 768px) {
+    .error {
+        br {
+            display: none;
+        }
+    }
+}
+
 @media  (max-width: 768px) {
     .error {
-        // min-height: auto;
-        padding: 100px 0; 
+        padding: 100px 16px ; 
+        &__container {
+            padding: 0 !important;
+        }
         &__content {
             max-width: 448px;
             padding: 0;

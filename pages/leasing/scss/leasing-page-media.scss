@@ -1,0 +1,192 @@
+@media  (max-width: 768px) {
+    .leasing {
+        padding-bottom: 16px;
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            h1 {
+                font-size: 22px;
+            }
+        }
+        &__wrapper {
+            padding-top: 8px; //??
+            flex-direction: column;
+            gap: 0px;
+            width: 100%;
+        }
+        &__content {
+            border-radius: 16px;
+            padding: 16px;
+            width: auto;
+        }
+        &__advantages {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+
+            &-feature {
+                border-radius: 16px;
+                padding: 16px;
+                width: 296px;
+                background: #f7f7f8;
+                width: 100%;
+            }
+        }
+        &__desc {
+            p {
+                border-radius: 16px;
+                padding: 16px;
+            }
+        }
+        &__row {
+            flex-direction: column;
+            gap: 32px;
+
+            &-target {
+                margin: 0;
+                min-width: auto;
+                ul {
+                    gap: 8px;
+
+                }
+            }
+            &-advantages {
+                margin: 0;
+                min-width: auto;
+                ul {
+                    gap: 8px;
+                }
+            }
+        }
+        &__partners {
+            &-card {
+                &-title {
+                    font-size: 14px;
+                }
+            }
+            .swiper-slide {
+                border-radius: 16px;
+                max-width: 188px;
+            }
+            &-image {
+                width: 140px;
+                height: 140px;
+            }
+            &-text {
+                gap: 8px;
+            }
+        }
+        &__steps {
+            &-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 8px;
+            }
+            &-card {
+                gap: 8px;
+                border-radius: 16px;
+                padding: 16px;
+                width: auto;
+                span {
+                    font-size: 30px;
+                }
+                &:last-child {
+                    grid-column: span 2;
+                }
+            }
+        }
+        &__products {
+            &_prev, &_next {
+                display: none;
+            }
+            &-card {
+                border-radius: 16px;
+                padding: 24;
+                &_image {
+                    height: 188px;
+                }
+            }
+            &_link {
+                font-size: 14px;
+            }
+        }
+        &-faq {
+            &__title {
+                margin-bottom: 16px;
+                font-size: 32px;
+                font-weight: 500;
+            }
+            &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            }
+            &__item {
+            padding: 24px;
+            background: #f7f7f8;
+            border-radius: 16px;
+            cursor: pointer;
+            &_header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+            }
+
+            &_subtitle {
+                font-weight: 500;
+                font-size: 24px;
+                color: #2C3336;
+            }
+
+            &_arrow {
+                color: #2C3336;
+                transition: transform 0.35s ease, color 0.35s ease;
+            }
+
+            &_text {
+                background: #fff;
+                padding: 0 24px;
+                margin-top: 0;
+                font-size: 18px;
+                color: #70828A;
+                border-radius: 16px;
+
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+
+                transition:
+                        max-height 0.45s ease,
+                        opacity 0.25s ease,
+                        padding 0.35s ease,
+                        margin 0.35s ease;
+            }
+
+            &.is-active {
+                background: #f7f7f8;
+                .leasing-faq__item_text {
+                max-height: 500px; // с запасом
+                opacity: 1;
+                padding: 24px;
+                margin-top: 16px;
+                }
+
+                .leasing-faq__item_arrow {
+                transform: rotate(180deg);
+                color: #0071E3;
+                }
+            }
+            }
+        }
+
+        h4:not(.leasing__partners-card-title) {
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}

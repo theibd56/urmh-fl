@@ -106,6 +106,10 @@ body {
 .main {
   min-height: 100vh;
   overflow: hidden;
+  
+    &.error__page {
+        min-height: auto;
+    }
 }
 .page-content{
     background-color: #f7f7f8;
