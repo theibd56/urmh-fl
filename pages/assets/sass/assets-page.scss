@@ -2,7 +2,7 @@
   padding: 24px 0 80px;
 
   display: flex;
-  gap: 16px;
+  gap: 17px;
   &__content {
     flex: 1;
     min-width: 0;
@@ -75,11 +75,7 @@
         color: #70828A;
         &:before {
           content: '—';
-          color: #0071E3;
           padding-right: 8px;
-        }
-        &:not(:last-child) {
-          margin-bottom: 16px;
         }
       }
     }
@@ -98,7 +94,7 @@
     &_item {
       display: block;
       border-radius: 32px;
-      height: 400px !important;
+      height: 360px !important;
       overflow: hidden;
       font-weight: 500;
       font-size: 18px;
@@ -174,7 +170,7 @@
     &_item {
       border-radius: 32px;
       padding: 32px;
-      height: 400px !important;
+      height: 360px !important;
       overflow: hidden;
       font-weight: 500;
       font-size: 18px;
@@ -251,7 +247,7 @@
   &__video {
     border-radius: 32px;
     padding: 32px;
-    height: 400px;
+    height: 360px;
     overflow: hidden;
     font-weight: 500;
     font-size: 18px;
