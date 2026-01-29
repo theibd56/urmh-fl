@@ -71,7 +71,6 @@
                 padding-bottom: 16px;
             }
             ul {
-                // margin-top: 16px;
                 margin: 0;
                 display: flex;
                 flex-direction: column;
@@ -153,7 +152,6 @@
         flex-direction: column;
         gap: 16px;
         &-list {
-            // margin-top: 16px;
             display: flex;
             justify-content: space-between;
         }
@@ -322,6 +320,8 @@
         &-block {
             h4 {
                 line-height: 103%;
+                margin-bottom: 16px;
+                
                 strong {
                     font-weight: 600;
                 }
@@ -329,7 +329,6 @@
         }
         &-form {
             width: 300px;
-            margin-top: 16px;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -342,7 +341,6 @@
 
                 font-weight: 500;
                 font-size: 16px;
-                color: #cdd1d2;
                 &::placeholder {
                     color: #cdd1d2;
                 }
@@ -351,19 +349,13 @@
                 }
             }
         }
-        &-checkbox {
-            input {
-                width: 24px;
-                height: 24px;
-                border-radius: 4px;
-            }
-        }
         &-image {
             &_item {
                 position: absolute;
                 &[data-pos="1"] {
                     height: 117px;
                     width: 240px;
+                    z-index: -1;
                     bottom: 70px;
                     right: 50px;
                     filter: blur(50px);
@@ -371,23 +363,27 @@
                 &[data-pos="2"] {
                     width: 240px;
                     height: 240px;
+                    z-index: -1;
                     right: -70px;
                     bottom: 1px;
                     filter: blur(50px);
                 }
                 &[data-pos="3"] {
+                    z-index: -1;
                     right: -40px;
                     top: 40px;
                     width: 240px;
                     height: 240px;
                 }
                 &[data-pos="4"] {
+                    z-index: -1;
                     right: 45px;
                     bottom: 100px;
                     width: 240px;
                     height: 240px;
                 }
                 &[data-pos="5"] {
+                    z-index: -1;
                     right: -80px;
                     bottom: 1px;
                     width: 240px;
@@ -396,7 +392,7 @@
             }
         }
         &-ribbon {
-        z-index: 2;
+        z-index: 1;
         position: absolute;
         padding: 2px 8px;
         background: linear-gradient(45deg, #0071e3 0%, #76c8df 100%);

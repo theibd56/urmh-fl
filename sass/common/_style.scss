@@ -194,6 +194,9 @@ p{
     flex: 1;
     min-width: 0;
   }
+  &-error {
+        padding: 32px 0;
+  }
 }
 
 
@@ -318,6 +321,11 @@ p{
     padding: 10px 20px;
     line-height: normal;
     height: 40px;
+  }
+  .kroshki {
+    &-error {
+          padding: 8px 0;
+    }
   }
 }
 

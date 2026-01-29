@@ -32,12 +32,16 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
               slidesPerView: 1.5,
               spaceBetween: 8,
           },
+          480: {
+              slidesPerView: 2.3,
+              spaceBetween: 16,
+          },
           600: {
-              slidesPerView: 2,
+              slidesPerView: 2.7,
               spaceBetween: 16,
           },
           768: {
-              slidesPerView: 2.5,
+              slidesPerView: 3,
               spaceBetween: 16,
           },
           900: {
