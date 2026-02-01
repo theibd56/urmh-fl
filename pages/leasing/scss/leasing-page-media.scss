@@ -537,6 +537,9 @@
             }
         }
         &__products {
+            .swiper-slide {
+                width: 188px !important;
+            }
             &_prev, &_next {
                 display: none;
             }
