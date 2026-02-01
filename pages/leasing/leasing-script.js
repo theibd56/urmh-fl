@@ -21,7 +21,7 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 //slider
   const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
       slidesPerView: 4,
-      spaceBetween: 16,
+      spaceBetween: 8,
       loop: true,
       navigation: {
           nextEl: '.leasing__products_next',
@@ -34,15 +34,15 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
           },
           480: {
               slidesPerView: 2.3,
-              spaceBetween: 16,
+              spaceBetween: 8,
           },
           600: {
               slidesPerView: 2.7,
-              spaceBetween: 16,
+              spaceBetween: 8,
           },
           768: {
               slidesPerView: 3,
-              spaceBetween: 16,
+              spaceBetween: 8,
           },
           900: {
               slidesPerView: 3,
@@ -69,22 +69,38 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
     spaceBetween: 8,
     loop: true,
     breakpoints: {
+      0: {
+        enabled: true,
+        slidesPerView: 1,
+      },
       200: {
         slidesPerView: 1,
       },
       360: {
         slidesPerView: 1.5,
       },
+      480: {
+        slidesPerView: 2.2,
+      },
+      600: {
+        slidesPerView: 2.9,
+      },
+      768: {
+        slidesPerView: 2.9,
+      },
+      900: {
+        slidesPerView: 3.5,
+        spaceBetween: 16,
+      },
       1024: {
-        slidesPerView: 5,
-        spaceBetween: 8,
+        enabled: false,
+        spaceBetween: 16, 
       },
     },
 });
-
-
 window.addEventListener("resize", initPartnersSwiper);
 window.addEventListener("load", initPartnersSwiper);
+
 
 //form
 const form = document.querySelector('.leasing__request-form');
