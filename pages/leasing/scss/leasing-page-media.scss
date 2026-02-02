@@ -43,8 +43,8 @@
         transform: rotate(-15deg);
         width: 500px;
 
-        bottom: 1px;
-        left: 20%;
+        bottom: 1%;
+        left: 30%;
         &-text {
           font-weight: 800 !important;
           font-size: 20px !important;
@@ -67,7 +67,7 @@
       flex-direction: column;
     }
     &__content {
-      width: auto;
+      width: 100%;
     }
     &__advantages {
       gap: 16px;
@@ -222,21 +222,21 @@
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
-  .leasing {
-    &__header {
-      display: flex;
-      flex-direction: column;
-    }
-    &__wrapper {
-      flex-direction: column;
-    }
-    &__content {
-      width: auto;
-    }
-    &__advantages {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
+    .leasing {
+        &__header {
+            display: flex;
+            flex-direction: column;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__advantages {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
 
       &-feature {
         width: 100%;
@@ -575,77 +575,79 @@
           font-size: 14px;
         }
 
-        &.is-active {
-          .leasing-faq__item_text {
+            &.is-active {
+                .leasing-faq__item_text {
+                padding: 16px;
+                margin-top: 8px;
+                }
+            }
+            }
+        }
+        &__request {
+            border-radius: 16px;
             padding: 16px;
-            margin-top: 8px;
-          }
-        }
-      }
-    }
-    &__request {
-      max-height: 440px;
-      border-radius: 16px;
-      padding: 16px;
-      &-form {
-        width: 300px;
-        gap: 8px;
-        input {
-          font-weight: 400;
-          font-size: 14px;
-        }
-      }
-      &-btn {
-        margin-top: 8px;
-      }
-      &-feedback {
-        margin-top: 8px !important;
-      }
-      &-image {
-        &_item {
-          position: absolute;
-          &_blur {
-            &:nth-child(1) {
-              width: 167px;
-              height: 81px;
-              bottom: -40px;
-              right: -50px;
-              filter: blur(50px);
+            &-form {
+                width: 300px;
+                gap: 8px;
+                input {
+                    height: 40px;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
             }
-            &:nth-child(2) {
-              width: 168px;
-              height: 167px;
-              right: -36%;
-              bottom: -30%;
-              filter: blur(50px);
+            &-btn {
+                margin-top: 8px;
+                font-size: 14px;
+                min-height: 40px;
             }
-          }
-          &:nth-child(1) {
-            left: 68%;
-            top: -10%;
-            width: 260px;
-            height: 260px;
-          }
-          &:nth-child(2) {
-            left: 58%;
-            top: 35%;
-            width: 260px;
-            height: 260px;
-          }
-          &:nth-child(3) {
-            left: 80%;
-            bottom: -5%;
-            width: 260px;
-            height: 260px;
-          }
-        }
-      }
-      &-ribbon {
-        position: absolute;
-        padding: 0 8px;
-        background: linear-gradient(45deg, #0071e3 0%, #76c8df 100%);
-        transform: rotate(-15deg);
-        width: 327px;
+            &-feedback {
+                margin-top: 8px !important;
+            }
+            &-image {
+                &_item {
+                    position: absolute;
+                    &_blur {
+                    &:nth-child(1) {
+                        width: 167px;
+                        height: 81px;
+                        bottom: -40px;
+                        right: -50px;
+                        filter: blur(50px);
+                    }
+                    &:nth-child(2) {
+                        width: 168px;
+                        height: 167px;
+                        right: -36%;
+                        bottom: -30%;
+                        filter: blur(50px);
+                    }
+                    }
+                    &:nth-child(1) {
+                        left: 68%;
+                        top: -10%;
+                        width: 260px;
+                        height: 260px;
+                    }
+                    &:nth-child(2) {
+                        left: 58%;
+                        top: 35%;
+                        width: 260px;
+                        height: 260px;
+                    }
+                    &:nth-child(3) {
+                        left: 80%;
+                        bottom: -5%;
+                        width: 260px;
+                        height: 260px;  
+                    }
+                }
+            }
+            &-ribbon {
+            position: absolute;
+            padding: 0 8px;
+            background: linear-gradient(45deg, #0071e3 0%, #76c8df 100%);
+            transform: rotate(-15deg);
+            width: 327px;
 
         bottom: 10px;
         left: 57%;
