@@ -14,9 +14,10 @@
     background: #fff;
     border-radius: 48px;
     padding: 8px 7px;
+    width: 200px;
     button {
       height: 47px;
-      padding: 0 16px;
+      padding: 0 15.5px;
 
       border-radius: 36px;
 
@@ -135,11 +136,12 @@
       font-weight: 500;
       font-size: 24px;
       color: #2C3336;
-      line-height: 1.25;
+      line-height: 1.292;
     }
     &_desc {
       font-weight: 400;
       font-size: 18px;
+      line-height: 1.25;
       color: #70828A;
     }
     &_bottom {
