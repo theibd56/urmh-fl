@@ -48,18 +48,18 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             slidesPerView: 3,
             spaceBetween: 16,
         },
-        1200: {
+        1024: {
             slidesPerView: 4,
             spaceBetween: 16,
         },
-        1550: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-        },
-        1860: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-        },
+        // 1550: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 16,
+        // },
+        // 1860: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 16,
+        // },
     }
 });
 

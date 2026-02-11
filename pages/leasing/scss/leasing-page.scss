@@ -15,7 +15,7 @@
   &__wrapper {
     padding-top: 32px;
     display: flex;
-        align-items: flex-start;    
+    align-items: flex-start;    
     gap: 16px;
   }
   &__content {
@@ -23,9 +23,10 @@
     flex-direction: column;
     gap: 32px;
 
+    max-width: 1221px;
+    width: 100%;
     border-radius: 32px;
     padding: 24px;
-    width: 1221px;
     height: auto;
     background: #fff;
   }
@@ -68,7 +69,7 @@
       margin: 8px 0 8px;
       min-width: 578px;
       h4 {
-        line-height: 78% !important;
+        // line-height: 78% !important;
         padding-bottom: 16px;
       }
       ul {
@@ -90,7 +91,7 @@
       background: #f7f7f8;
       min-width: 578px;
       h4 {
-        line-height: 78% !important;
+        // line-height: 78% !important;
         padding-bottom: 16px;
       }
       ul {
@@ -120,7 +121,7 @@
       width: 100%;
       height: 100%;
       &-title {
-        line-height: 1.3 !important;
+        line-height: 1.28 !important;
         font-weight: 600;
         font-size: 18px;
       }
@@ -135,7 +136,7 @@
         height: auto;
       }
       P {
-        line-height: 1.29;
+        line-height: 1.28;
       }
     }
 
@@ -243,9 +244,10 @@
       margin: 0 auto;
       border: 1px solid #e1e1e1;
       border-radius: 16px;
-      padding: 8px 16px;
-            height: auto;
+      padding: 10px 16px;
+      height: auto;
 
+      line-height: 1.07;
       font-weight: 500;
       font-size: 16px;
       color: #2c3336;
@@ -328,7 +330,8 @@
 
     //aside
     &__request {
-        position: relative;
+        position: sticky;
+        top: 150px;
         overflow: hidden;
         display: flex;
 
@@ -451,6 +454,11 @@
     }
   }
 
+  &__advantages{
+    &-icon {
+      height: 36px;
+    }
+  }
   &__icon {
     width: 44px;
     height: 44px;

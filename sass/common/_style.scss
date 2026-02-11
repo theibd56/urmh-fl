@@ -105,7 +105,8 @@ body {
 
 .main {
   min-height: 100vh;
-  overflow: hidden;
+  // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
+  // overflow: hidden;
   
     &.error__page {
         min-height: auto;
