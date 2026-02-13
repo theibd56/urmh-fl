@@ -6,6 +6,7 @@
     h1 {
       font-weight: 600;
       font-size: 56px;
+      line-height: 1.08;
     }
     p {
       font-weight: 500;
@@ -19,12 +20,13 @@
     gap: 16px;
   }
   &__content {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 32px;
 
-    max-width: 1221px;
-    width: 100%;
+    width: calc(100% - 602px - 16px);  
+    // width: 100%;
     border-radius: 32px;
     padding: 24px;
     height: auto;
@@ -132,7 +134,7 @@
         border-radius: 24px;
         padding: 24px;
         background: #f7f7f8;
-        width: auto;
+        // width: auto;
         height: auto;
       }
       P {
@@ -142,7 +144,9 @@
 
     &-image {
       margin-bottom: 16px;
-      width: 173px;
+      // width: 173px;
+      width: 100%;
+      max-width: 173px;
       height: 173px;
       img {
         width: 100%;
@@ -217,7 +221,7 @@
     }
     &_prev, &_next {
       position: absolute;
-      top: 40%;
+      top: 44%;
       transform: translateY(-50%);
       z-index: 2;
       width: 52px;
@@ -335,7 +339,8 @@
         overflow: hidden;
         display: flex;
 
-        width: 100% ;
+        // width: 100%;
+        max-width: 602px;
         border-radius: 16px;
         padding: 24px;
         background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);

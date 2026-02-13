@@ -36,8 +36,25 @@
             bottom: 80px;
         }
         &__aside {
+            min-width: 100% ;
             padding-bottom: 72px;
-            margin: 0 auto;
+        }
+        &__equipment {
+            &_content {
+                display: flex;
+                gap: 16px;
+                flex: 1; 
+                justify-content: flex-start;
+            }
+            &_bottom {
+                flex : 1; 
+                flex-wrap:nowrap;
+                gap: 17px;
+                height: fit-content
+            }
+            &_price {
+                white-space: nowrap;
+            }
         }
     }
 }   
@@ -89,15 +106,6 @@
 }
 
 @media (max-width: 900px) {
-    .assets {
-                &__products {
-            &_slider {
-                .swiper {
-                    overflow: visible !important;
-                }
-            }
-        }
-    }
     .assets__table table tbody tr {
         align-items: center;
     }
@@ -330,6 +338,7 @@
                 }
             }
             &_content {
+                display: block;
                 padding: 16px;
             }
             &_top {

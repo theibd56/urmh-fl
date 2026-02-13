@@ -33,29 +33,25 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             spaceBetween: 8,
         },
         480: {
-            slidesPerView: 2.3,
+            slidesPerView: 2.2,
             spaceBetween: 8,
         },
         600: {
-            slidesPerView: 2.7,
-            spaceBetween: 8,
-        },
-        768: {
             slidesPerView: 3,
             spaceBetween: 8,
         },
         900: {
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             spaceBetween: 16,
         },
         1024: {
+            slidesPerView: 3.1,
+            spaceBetween: 16,
+        },
+        1250: {
             slidesPerView: 4,
             spaceBetween: 16,
         },
-        // 1550: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 16,
-        // },
         // 1860: {
         //     slidesPerView: 4,
         //     spaceBetween: 16,
@@ -64,39 +60,47 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
 });
 
 const partnersSwiper = new Swiper(".leasing__partners_slider", {
-    slidesPerView: 5,
+    slidesPerView: 1,
     spaceBetween: 8,
     loop: true,
+    autoplay: {
+        delay: 8000,
+    },
     breakpoints: {
         0: {
             enabled: true,
             slidesPerView: 1,
         },
         200: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
+        },
+        320: {
+            slidesPerView: 1.3,
         },
         360: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.6,
         },
         480: {
-            slidesPerView: 2.2,
+            slidesPerView: 2.3,
+        },
+        540: {
+            slidesPerView: 2.65,
         },
         600: {
-            slidesPerView: 2.9,
-        },
-        768: {
-            slidesPerView: 2.9,
+            slidesPerView: 3,
         },
         900: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.38,
             spaceBetween: 16,
         },
         1024: {
             enabled: false,
+            slidesPerView: 5,
             spaceBetween: 16,
         },
     },
 });
+
 
 //form
 const form = document.querySelector('.leasing__request-form');
