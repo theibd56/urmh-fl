@@ -64,18 +64,22 @@
                 font-weight: 600;
                 font-size: 22px;
             }
+        }   
+        &__wrapper {
+            position: relative;
+            gap: 0;
         }
         &__content {
-            //////
+            order: 2;
             gap: 16px;
 
-            border-radius: 16px;
+            border-radius: 0 0 16px 16px;
             padding: 16px;
+            margin-bottom: 16px;
         }
         &__category {
             ////////
-            border-bottom: none;
-            padding: 0;
+            padding-bottom: 16px;
 
         &-title {
             font-size: 22px;
@@ -103,7 +107,14 @@
         }
         }
         }
+        &__aside {
+            display: contents;
+        }
         &__nav {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 100%;
+            order: 1;
             padding: 16px;
             line-height: 1.25;
             ol {
@@ -155,6 +166,8 @@
             }
         } 
         &__feedback {
+            width: 100%;
+            order: 3;
             line-height: 1.04;
             padding: 16px;
             gap: 16px;
@@ -224,7 +237,7 @@
             width: 200px;
             height: 200px;
 
-            left: 56%;
+            left: 60%;
             top: 37%;
             }
             &-form {
@@ -253,7 +266,7 @@
     .faq {
         &__feedback {
             img {
-            left: 70%;
+            left: 74%;
             }
         }
     }

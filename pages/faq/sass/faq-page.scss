@@ -136,21 +136,23 @@
             width: 100%;
             min-height: 40px;
             
-            &:active {
+            &.active {
+                .faq__nav-title {
+                    color: #0071e3;
+                }
 
-            .faq__nav-title {
-                color: #0071e3;
-            }
+                .faq__nav-icon {
+                    background: #0071e3;
+                    color: #fff;
+                }
 
-            .faq__nav-icon {
-            background: #0071e3;
-            color: #fff; 
-            }
+                .faq__nav-icon svg path {
+                    fill: currentColor;
+                }
 
-            .faq__nav-icon svg path{
-                background: #0071e3;
-                fill: currentColor;
-            }
+                .faq__nav-text {
+                        color: #0071e3;
+                }
             }
         }
         &-icon {
@@ -159,6 +161,7 @@
             background: #e2e3e9;
             width: 40px;
             height: 40px;
+            color: #2c3336; // важно!
         }
         &-text {
             display: flex;
