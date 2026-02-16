@@ -32,12 +32,24 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             slidesPerView: 1.5,
             spaceBetween: 8,
         },
+        425: {
+            slidesPerView: 2,
+            spaceBetween: 8,
+        },
         480: {
-            slidesPerView: 2.2,
+            slidesPerView: 2.5,
             spaceBetween: 8,
         },
         600: {
+            slidesPerView: 2.6,
+            spaceBetween: 8,
+        },
+        730: {
             slidesPerView: 3,
+            spaceBetween: 8,
+        },
+        768: {
+            slidesPerView: 3.6,
             spaceBetween: 8,
         },
         900: {
@@ -45,17 +57,9 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             spaceBetween: 16,
         },
         1024: {
-            slidesPerView: 3.1,
-            spaceBetween: 16,
-        },
-        1250: {
             slidesPerView: 4,
             spaceBetween: 16,
         },
-        // 1860: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 16,
-        // },
     }
 });
 

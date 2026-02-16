@@ -99,6 +99,14 @@
         &__video {
             height: 360px;
         }
+        &__more {
+        &_item {
+            line-height: 1.27;
+        }
+        &_link {
+            line-height: 1.13;
+        }
+    }
     }
     .product__card-image {
         max-height: 240px;

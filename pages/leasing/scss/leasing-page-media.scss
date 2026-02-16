@@ -212,12 +212,25 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1300px) {
   .leasing {
     &__partners {
       &-image {
         width: auto;
         height: auto;
+      }
+    }
+    &__products {
+        &-card {
+        &_image {
+          height: 211px;
+        }
+        &_content {
+          p {
+            text-align: center;
+            color: #2c3336;
+          }
+        }
       }
     }
   }

@@ -331,6 +331,10 @@
     position: relative;
     .product__card-image {
       background: #F7F7F8;
+      height: 281px;
+    }
+    .product__card-info {
+      padding-bottom: 17px;
     }
     &_title {
       margin-bottom: 24px;
@@ -562,5 +566,8 @@
 
       margin-top: 16px;
     }
+  }
+  &__back {
+    line-height: 1.13;
   }
 }

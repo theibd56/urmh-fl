@@ -17,6 +17,7 @@ export default defineConfig({
                 assetsPage: resolve(__dirname, './pages/assets/assets-page.html'),
                 errorPage: resolve(__dirname, './pages/error/error-page.html'),
                 leasingPage: resolve(__dirname, './pages/leasing/leasing-page.html'),
+                faqPage: resolve(__dirname, './pages/faq/faq-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

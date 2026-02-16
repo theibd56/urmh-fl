@@ -165,6 +165,7 @@
       color: #70828A;
       display: inline-block;
       box-sizing: border-box;
+      line-height: 1.25;
       padding: 9px 15px;
       border: 1px solid #E1E1E5;
       border-radius: 16px;
@@ -172,6 +173,14 @@
       &:hover {
         color: #fff;
         background: #0071E3;
+      }
+    }
+  }
+  &__pagger {
+    .active {
+      &:hover {
+        background: #1087fe;
+        border-color: #1087fe;
       }
     }
   }
