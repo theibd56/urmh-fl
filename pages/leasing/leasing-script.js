@@ -32,23 +32,31 @@ const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             slidesPerView: 1.5,
             spaceBetween: 8,
         },
+        350: {
+            slidesPerView: 2.4,
+            spaceBetween: 8,
+        },
         425: {
-            slidesPerView: 2,
+            slidesPerView: 2.8,
             spaceBetween: 8,
         },
         480: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.9,
             spaceBetween: 8,
         },
-        600: {
-            slidesPerView: 2.6,
-            spaceBetween: 8,
-        },
-        730: {
+        530: {
             slidesPerView: 3,
             spaceBetween: 8,
         },
-        768: {
+        600: {
+            slidesPerView: 3.1,
+            spaceBetween: 8,
+        },
+        650: {
+            slidesPerView: 3.4,
+            spaceBetween: 8,
+        },
+        730: {
             slidesPerView: 3.6,
             spaceBetween: 8,
         },
@@ -79,10 +87,19 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
             slidesPerView: 1.2,
         },
         320: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.4,
         },
-        360: {
+        340: {
             slidesPerView: 1.6,
+        },
+        400: {
+            slidesPerView: 1.9,
+        },
+        430: {
+            slidesPerView: 2,
+        },
+        450: {
+            slidesPerView: 2.4,
         },
         480: {
             slidesPerView: 2.3,
@@ -92,6 +109,9 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
         },
         600: {
             slidesPerView: 3,
+        },
+        700: {
+            slidesPerView: 3.6,
         },
         900: {
             slidesPerView: 3.38,

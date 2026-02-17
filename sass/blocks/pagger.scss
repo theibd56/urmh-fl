@@ -14,8 +14,9 @@
   > a {
     transition: background .3s ease, border-color .3s ease;
     &:hover {
-      background: #1087fe !important;
-      border-color: #1087fe !important;
+      background: #0071e3 !important;
+      border-color: #0071e3 !important;
+      color: #fff;
     }
   }
   li {
