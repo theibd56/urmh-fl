@@ -11,6 +11,13 @@
     align-items: center;
     gap: 8px;
   }
+  > a {
+    transition: background .3s ease, border-color .3s ease;
+    &:hover {
+      background: #1087fe !important;
+      border-color: #1087fe !important;
+    }
+  }
   li {
     border-radius: 16px;
     overflow: hidden;
