@@ -3,22 +3,6 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
-const items = document.querySelectorAll('.leasing-faq__item');
-
-if (items.length) {
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            const isActive = item.classList.contains('is-active');
-
-            items.forEach(el => el.classList.remove('is-active'));
-
-            if (!isActive) {
-                item.classList.add('is-active');
-            }
-        });
-    });
-}
-
 const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
     slidesPerView: 4,
     spaceBetween: 8,

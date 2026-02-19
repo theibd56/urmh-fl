@@ -1472,3 +1472,20 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 });
+
+// ----------------------------accordion----------------------------
+const items = document.querySelectorAll('.accordion-item');
+
+if (items.length) {
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const isActive = item.classList.contains('is-active');
+
+            items.forEach(el => el.classList.remove('is-active'));
+
+            if (!isActive) {
+                item.classList.add('is-active');
+            }
+        });
+    });
+}

@@ -3,23 +3,6 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
-
-const items = document.querySelectorAll('.faq__category-item');
-
-if (items.length) {
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            const isActive = item.classList.contains('is-active');
-
-            items.forEach(el => el.classList.remove('is-active'));
-
-            if (!isActive) {
-                item.classList.add('is-active');
-            }
-        });
-    });
-}
-
 //form
 const form = document.querySelector('.faq__feedback-form');
 const inputs = form.querySelectorAll('.input-field');
