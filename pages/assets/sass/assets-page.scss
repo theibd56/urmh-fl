@@ -1,8 +1,10 @@
 .assets {
   padding: 24px 0 80px;
-
   display: flex;
   gap: 17px;
+  &__container {
+    padding: 0 40px !important;
+  }
   &__content {
     flex: 1;
     min-width: 0;
@@ -341,22 +343,7 @@
       font-weight: 600;
     }
     &_next, &_prev {
-      position: absolute;
-      top: 38%;
-      transform: translateY(-50%);
-      z-index: 2;
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      background: #FFFFFF;
-      box-shadow: 0 4px 8px 0 #0000000F;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all .2s ease;
-      border: none;
-      color: #2C3336;
+      top: 38% !important;
     }
 
     &_next {

@@ -110,11 +110,18 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
         600: {
             slidesPerView: 3,
         },
+        670: {
+            slidesPerView: 3.4,
+        },
         700: {
             slidesPerView: 3.6,
         },
         900: {
             slidesPerView: 3.38,
+            spaceBetween: 16,
+        },
+        990: {
+            slidesPerView: 4.1,
             spaceBetween: 16,
         },
         1024: {

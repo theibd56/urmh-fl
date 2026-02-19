@@ -17,6 +17,7 @@
       background: #0071e3 !important;
       border-color: #0071e3 !important;
       color: #fff;
+      font-weight: 500;
     }
   }
   li {
@@ -27,6 +28,15 @@
     border-color: #0071E3;
     background-color: #0071E3;
     color: #fff;
+    font-weight: 500;
+  }
+    li.active span {
+    min-width: 38px; 
+    min-height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
   }
   a {
     border: 1px solid #E1E1E1;

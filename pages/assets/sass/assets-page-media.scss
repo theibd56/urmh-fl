@@ -60,7 +60,7 @@
 }   
 
 @media  (max-width: 1024px) {
-.assets {
+    .assets {
         &__banner {
             height: 400px;
         }
@@ -122,6 +122,9 @@
 @media  (max-width: 768px) {
     .assets {
         padding: 0 0 16px;
+        &__container {
+            padding: 0 16px !important;
+        }
         &__content {
             &_inner {
                 border-radius: 16px;

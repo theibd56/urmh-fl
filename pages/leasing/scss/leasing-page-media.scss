@@ -28,7 +28,7 @@
       &-list {
         gap: 16px;
       }
-      &-card {
+      &-item {
         min-width: 163px;
         width: 100%;
         height: auto;
@@ -106,11 +106,11 @@
       &-list {
         gap: 16px;
       }
-      &-card {
+      &-item {
         min-width: 166px;
         width: 100%;
-        // min-height: 222px;
-        height: auto;
+        height: 222px;
+        // height: auto;
         &:last-child {
           grid-column: span 2;
         }
@@ -119,11 +119,10 @@
     &__request {
       min-width: 100%;
       &-form {
-        width: 300px;
+        width: 620px;
         height: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
         .leasing__request-btn:nth-child(5),
         .feedback-popup_privacy:nth-child(6) {
           grid-column: span 2;
@@ -212,12 +211,27 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1300px) {
+@media (max-width: 1024px) {
   .leasing {
     &__partners {
+      &_slider {
+        max-width: 896px;
+      }
       &-image {
-        width: auto;
-        height: auto;
+        max-width: 118px;
+        max-height: 118px;
+      }
+      &-card {
+        max-width: 166px;
+      }
+    }
+    &__steps {
+      &-item {
+        height: 222px;
+        max-width: 166px;
+        p {
+          min-width: 92px;
+        }
       }
     }
     &__products {
@@ -225,18 +239,13 @@
         &_image {
           height: 211px;
         }
-        &_content {
-          p {
-            text-align: center;
-            color: #2c3336;
-          }
-        }
       }
     }
   }
 }
 
-@media (min-width: 768px) and (max-width: 990px) {
+
+@media (min-width: 768px) and (max-width: 1023px) {
     .leasing {
         &__header {
             display: flex;
@@ -274,6 +283,18 @@
         }
       }
     }
+    &__partners {
+      &_slider {
+        max-width: none;
+      }
+      &-image {
+        max-width: none;
+        max-height: none;
+      }
+      &-card {
+        max-width: none;
+      }
+    }
     &__steps {
       &-list {
         display: grid;
@@ -281,9 +302,11 @@
         grid-template-rows: repeat(3, 1fr);
         gap: 16px;
       }
-      &-card {
+      &-item {
+        max-width: none;
         gap: 16px;
         width: auto;
+        height: auto;
         &:last-child {
           grid-column: span 2;
         }
@@ -546,7 +569,7 @@
         grid-template-rows: repeat(3, 1fr);
         gap: 8px;
       }
-      &-card {
+      &-item {
         gap: 8px;
         border-radius: 16px;
         padding: 16px;
@@ -599,17 +622,6 @@
         &_subtitle {
           font-size: 16px;
         }
-
-        &_text {
-          font-size: 14px;
-        }
-
-            &.is-active {
-                .leasing-faq__item_text {
-                padding: 16px;
-                margin-top: 8px;
-                }
-            }
             }
         }
         &__request {
