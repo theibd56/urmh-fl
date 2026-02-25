@@ -105,5 +105,10 @@
         &__cards {
             line-height: 1.28;
         }
+        &__pagger {
+            &-more {
+            min-width: 127px;
+            }
+        }
     }
 }

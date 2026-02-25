@@ -71,7 +71,7 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
             slidesPerView: 1.2,
         },
         320: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.34,
         },
         340: {
             slidesPerView: 1.6,
@@ -83,10 +83,10 @@ const partnersSwiper = new Swiper(".leasing__partners_slider", {
             slidesPerView: 2,
         },
         450: {
-            slidesPerView: 2.4,
+            slidesPerView: 2.2,
         },
         480: {
-            slidesPerView: 2.3,
+            slidesPerView: 2.16,
         },
         540: {
             slidesPerView: 2.65,

@@ -34,6 +34,7 @@
         padding-bottom: 41px;
 
         &:last-child {
+            padding: 0;
             border-bottom: none;
         }
     &-title {
@@ -46,6 +47,7 @@
     gap: 16px;
     }
     &-item {
+    line-height: 1.29;
     &_header {
         display: flex;
         align-items: center;
@@ -58,31 +60,6 @@
         font-size: 24px;
         color: #2C3336;
     }
-
-    // &_arrow {
-    //     color: #2C3336;
-    //     transition: transform 0.35s ease, color 0.35s ease;
-    // }
-
-    // &_text {
-    //     background: #fff;
-    //     padding: 0 24px;
-    //     margin-top: 0;
-    //     font-size: 18px;
-    //     color: #70828A;
-    //     border-radius: 16px;
-
-    //     line-height: 1.28;
-    //     max-height: 0;
-    //     overflow: hidden;
-    //     opacity: 0;
-
-    //     transition:
-    //             max-height 0.45s ease,
-    //             opacity 0.25s ease,
-    //             padding 0.35s ease,
-    //             margin 0.35s ease;
-    // }
     }
     }
 
@@ -117,8 +94,10 @@
             width: 100%;
             min-height: 40px;
             
+            &:hover,
             &.active {
                 .faq__nav-title {
+                    font-weight: 500;
                     color: #0071e3;
                 }
 
@@ -132,7 +111,7 @@
                 }
 
                 .faq__nav-text {
-                        color: #0071e3;
+                    color: #0071e3;
                 }
             }
         }
