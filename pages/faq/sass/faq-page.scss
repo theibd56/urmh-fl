@@ -10,6 +10,9 @@
             line-height: normal;
         }
     }
+    &__container {
+        padding: 0 40px !important;
+    }
     &__wrapper {
         display: flex;
         gap: 16px;
@@ -126,7 +129,9 @@
         &-text {
             display: flex;
             align-items: center;
+            flex-shrink: 0; 
             gap: 16px;
+            width: 100%;
             svg {
                 display: none;
             }

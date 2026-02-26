@@ -46,7 +46,6 @@
       border-radius: 24px;
       padding: 24px;
 
-      width: 100%;
       background: #f7f7f8;
     }
   }
@@ -138,7 +137,6 @@
     &-image {
       margin: 0 auto;
       width: 100%;
-      max-width: 173px;
       img {
         width: 100%;
         height: 100%;
@@ -334,6 +332,10 @@
         }
         &-feedback {
           text-align: left;
+          input {
+            top: 20px;
+            left: -4px !important;
+          }
           span {
             display: inline-block;
           }
@@ -405,7 +407,11 @@
 
   &__advantages{
     &-icon {
-      height: 36px;
+        height: 36px;
+      svg {
+        height: 36px;
+        width: 36px;
+      }
     }
   }
   &__icon {
@@ -417,6 +423,10 @@
     height: 44px;
     border-radius: 12px;
     background: #0071e3;
+    svg {
+      height: 24px;
+      width: 24px;
+    }
   }
   h4:not(.leasing__partners-card-title, .leasing__request-ribbon-text, .leasing__request-title) {
     font-weight: 500;

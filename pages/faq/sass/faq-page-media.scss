@@ -12,12 +12,23 @@
 @media  (max-width: 1024px) {
     .faq {
         &__wrapper {
+            position: relative;
             flex-direction: column; 
+        }
+        &__content {
+            order: 2;
         }
         &__aside {
             max-width: 100%;
+            display: contents;
+        }
+        &__nav {
+            width: 100%;
+            order: 1;
         }
         &__feedback {
+            width: 100%;
+            order: 3;
             img {
             position: absolute;
             left: 75%;
@@ -65,12 +76,13 @@
                 font-size: 22px;
             }
         }   
+        &__container {
+            padding: 0 16px;
+        }
         &__wrapper {
-            position: relative;
             gap: 0;
         }
         &__content {
-            order: 2;
             gap: 16px;
 
             border-radius: 0 0 16px 16px;
@@ -78,7 +90,6 @@
             margin-bottom: 16px;
         }
         &__category {
-            ////////
             padding-bottom: 16px;
 
         &-title {
@@ -97,14 +108,9 @@
         }
         }
         }
-        &__aside {
-            display: contents;
-        }
         &__nav {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
-            width: 100%;
-            order: 1;
             padding: 16px;
             line-height: 1.25;
             ol {
@@ -142,9 +148,7 @@
                 background: #0071e3;
             }
             &-text {
-                width: 100%;
                 justify-content: space-between;
-                flex-shrink: 0; 
                 svg {
                     display: block;
                 }
@@ -156,8 +160,6 @@
             }
         } 
         &__feedback {
-            width: 100%;
-            order: 3;
             line-height: 1.04;
             padding: 16px;
             gap: 16px;

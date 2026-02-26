@@ -488,6 +488,7 @@
 @media (max-width: 576px) {
     #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup,
     .datetime-picker{
+        line-height: 1.36;
         border-radius: 16px;
         padding: 16px;
         width: 328px;
@@ -495,7 +496,7 @@
 
     .feedback-popup_title{
         font-size: 20px;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
     }
     .feedback-popup .close-popup{
         top: 8px;
