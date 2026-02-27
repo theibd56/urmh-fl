@@ -3,143 +3,148 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
-const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
-    slidesPerView: 4,
-    spaceBetween: 8,
-    loop: true,
-    navigation: {
-        nextEl: '.leasing__products_next',
-        prevEl: '.leasing__products_prev',
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1.5,
-            spaceBetween: 8,
-        },
-        350: {
-            slidesPerView: 2.4,
-            spaceBetween: 8,
-        },
-        425: {
-            slidesPerView: 2.8,
-            spaceBetween: 8,
-        },
-        480: {
-            slidesPerView: 2.9,
-            spaceBetween: 8,
-        },
-        530: {
-            slidesPerView: 3,
-            spaceBetween: 8,
-        },
-        600: {
-            slidesPerView: 3.1,
-            spaceBetween: 8,
-        },
-        650: {
-            slidesPerView: 3.4,
-            spaceBetween: 8,
-        },
-        730: {
-            slidesPerView: 3.6,
-            spaceBetween: 8,
-        },
-        900: {
-            slidesPerView: 3.5,
-            spaceBetween: 16,
-        },
-        1024: {
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.leasing__products_slider .swiper')) { 
+        const leasingProductSlider = new Swiper('.leasing__products_slider .swiper', {
             slidesPerView: 4,
-            spaceBetween: 16,
-        },
-    }
-});
-
-const partnersSwiper = new Swiper(".leasing__partners_slider", {
-    slidesPerView: 1,
-    spaceBetween: 8,
-    loop: true,
-    autoplay: {
-        delay: 8000,
-    },
-    breakpoints: {
-        0: {
-            enabled: true,
-            slidesPerView: 1,
-        },
-        200: {
-            slidesPerView: 1.2,
-        },
-        320: {
-            slidesPerView: 1.34,
-        },
-        340: {
-            slidesPerView: 1.6,
-        },
-        400: {
-            slidesPerView: 1.9,
-        },
-        430: {
-            slidesPerView: 2,
-        },
-        450: {
-            slidesPerView: 2.2,
-        },
-        480: {
-            slidesPerView: 2.16,
-        },
-        540: {
-            slidesPerView: 2.65,
-        },
-        600: {
-            slidesPerView: 3,
-        },
-        670: {
-            slidesPerView: 3.4,
-        },
-        700: {
-            slidesPerView: 3.6,
-        },
-        900: {
-            slidesPerView: 3.38,
-            spaceBetween: 16,
-        },
-        990: {
-            slidesPerView: 4.1,
-            spaceBetween: 16,
-        },
-        1024: {
-            enabled: false,
-            slidesPerView: 5,
-            spaceBetween: 16,
-        },
-    },
-});
-
-
-//form
-const form = document.querySelector('.leasing__request-form');
-const inputs = form.querySelectorAll('.input-field');
-
-if (form && inputs) {
-    form.addEventListener('submit', (e) => {
-        let hasError = false;
-
-        inputs.forEach(input => {
-            const errorEl = input.nextElementSibling;
-
-            if (input.value.trim() === '') {
-                errorEl.textContent = 'Заполните это поле';
-                input.classList.add('error');
-                hasError = true;
-            } else {
-                errorEl.textContent = '';
-                input.classList.remove('error');
+            spaceBetween: 8,
+            loop: true,
+            navigation: {
+                nextEl: '.leasing__products_next',
+                prevEl: '.leasing__products_prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 8,
+                },
+                350: {
+                    slidesPerView: 2.4,
+                    spaceBetween: 8,
+                },
+                425: {
+                    slidesPerView: 2.8,
+                    spaceBetween: 8,
+                },
+                480: {
+                    slidesPerView: 2.9,
+                    spaceBetween: 8,
+                },
+                530: {
+                    slidesPerView: 3,
+                    spaceBetween: 8,
+                },
+                600: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 8,
+                },
+                650: {
+                    slidesPerView: 3.4,
+                    spaceBetween: 8,
+                },
+                730: {
+                    slidesPerView: 3.6,
+                    spaceBetween: 8,
+                },
+                900: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 16,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 16,
+                },
             }
         });
+    }
 
-        if (hasError) {
-            e.preventDefault();
-        }
-    });
-}
+    if (document.querySelector('.leasing__partners_slider')) {
+        const partnersSwiper = new Swiper(".leasing__partners_slider", {
+            slidesPerView: 1,
+            spaceBetween: 8,
+            loop: true,
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                0: {
+                    enabled: true,
+                    slidesPerView: 1,
+                },
+                200: {
+                    slidesPerView: 1.2,
+                },
+                320: {
+                    slidesPerView: 1.34,
+                },
+                340: {
+                    slidesPerView: 1.6,
+                },
+                400: {
+                    slidesPerView: 1.9,
+                },
+                430: {
+                    slidesPerView: 2,
+                },
+                450: {
+                    slidesPerView: 2.2,
+                },
+                480: {
+                    slidesPerView: 2.16,
+                },
+                540: {
+                    slidesPerView: 2.65,
+                },
+                600: {
+                    slidesPerView: 3,
+                },
+                670: {
+                    slidesPerView: 3.4,
+                },
+                700: {
+                    slidesPerView: 3.6,
+                },
+                900: {
+                    slidesPerView: 3.38,
+                    spaceBetween: 16,
+                },
+                990: {
+                    slidesPerView: 4.1,
+                    spaceBetween: 16,
+                },
+                1024: {
+                    enabled: false,
+                    slidesPerView: 5,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    }
+
+    //form
+    const form = document.querySelector('.leasing__request-form');
+    const inputs = form.querySelectorAll('.input-field');
+
+    if (form && inputs) {
+        form.addEventListener('submit', (e) => {
+            let hasError = false;
+
+            inputs.forEach(input => {
+                const errorEl = input.nextElementSibling;
+
+                if (input.value.trim() === '') {
+                    errorEl.textContent = 'Заполните это поле';
+                    input.classList.add('error');
+                    hasError = true;
+                } else {
+                    errorEl.textContent = '';
+                    input.classList.remove('error');
+                }
+            });
+
+            if (hasError) {
+                e.preventDefault();
+            }
+        });
+    }
+})

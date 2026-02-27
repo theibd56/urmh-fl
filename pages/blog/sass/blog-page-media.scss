@@ -77,7 +77,6 @@
 
             gap: 8px;
             &_image {
-                max-height: 235px;
                 height: auto;
                 border-radius: 8px;
             }
@@ -87,6 +86,7 @@
                 }
             }
             &_title {
+                line-height: 1.25;
                 font-size: 16px;
             }
             &_desc {

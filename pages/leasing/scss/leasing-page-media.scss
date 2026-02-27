@@ -102,9 +102,6 @@
     }
     &__products {
       &-card {
-        // &_image {
-        //   min-height:211px;
-        // }
         &_content {
           p {
             line-height: 1.28;
@@ -529,8 +526,12 @@
   .leasing {
     &__steps {
       &-list {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+      }
+      &-item {
+        &:last-child {
+          grid-column: auto;
+        }
       }
     }
   }

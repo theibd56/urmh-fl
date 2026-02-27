@@ -3,7 +3,7 @@
     .faq {
         &__feedback {
             img {
-            left: 90%;
+            left: 65%;
             }
         }
     }
@@ -46,25 +46,9 @@
     }
 }
 
-@media (max-width: 986px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 87%;
-            }
-        }
-    }
-}
+@media (max-width: 986px) {.faq {&__feedback { img { left: 80%;}}}}
 
-@media (max-width: 850px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 96%;
-            }
-        }
-    }
-}
+// @media (max-width: 878px) {.faq {&__feedback {img {left: 85%;}}}}
 
 @media  (max-width: 768px) {
     .faq {
@@ -174,7 +158,7 @@
             height: 300px;
 
             position: absolute;
-            left: 60%;
+            left: 67%;
             top: 15%;
             }
             &-form {
@@ -209,9 +193,9 @@
 @media  (max-width: 578px) {
     .faq {
         &__feedback {
-            img {
-            left: 72%;
-            }
+            // img {
+            // left: 83%;
+            // }
             &-privacy {
                 label {
                     top: 15px !important;
@@ -229,7 +213,7 @@
             width: 200px;
             height: 200px;
 
-            left: 60%;
+            left: 68%;
             top: 37%;
             }
             &-form {
@@ -258,29 +242,11 @@
     .faq {
         &__feedback {
             img {
-            left: 74%;
+            left: 71%;
             }
         }
     }
 }
 
-@media  (max-width: 360px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 80%;
-            }
-        }
-    }
-}
 
-@media  (max-width: 320px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 90%;
-            }
-        }
-    }
-}
 
