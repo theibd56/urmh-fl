@@ -305,7 +305,7 @@
         }
       }
       .swiper-slide {
-        min-width: 188px !important;
+        //min-width: 188px !important;
       }
       &_prev, &_next {
         display: none !important;
@@ -313,6 +313,7 @@
       &-card {
         &_image {
           min-height: 188px;
+          max-height: 188px;
         }
       }
       &_link {
@@ -433,16 +434,12 @@
 }
 
 @media (max-width: 576px) {
-  .leasing {
-    &__request {
-        &-feedback {
-          label {
-            top: 20px !important; 
-          }
-          input {
-            top: 15px;
-          }
-        } 
+  .leasing__request-feedback {
+    label {
+      top: 20px !important;
+    }
+    input {
+      top: 15px;
     }
   }
 }
@@ -492,45 +489,28 @@
 }
 
 @media (max-width: 450px) {
-  .leasing {
-    &__request {
-      &-feedback {
-        label {
-          top: 30px !important; 
-        }
-        input {
-          top: 25px;
-        }
-      } 
-      &-image {
-        &_item {
-          &:nth-child(1) {
-            left: 77%;
-            top: 50%;
-          }
-          &:nth-child(2) {
-            left: 60%;
-            top: 77%;
-          }
-          &:nth-child(3) {
-            left: 89%;
-            bottom: -20%;
-          }
-        }
+  .leasing__request {
+    &-feedback {
+      label {
+        top: 30px !important;
+      }
+      input {
+        top: 25px;
       }
     }
-  }
-}
-
-@media (max-width: 450px) {
-  .leasing {
-    &__steps {
-      &-list {
-        grid-template-columns: 1fr;
-      }
-      &-item {
-        &:last-child {
-          grid-column: auto;
+    &-image {
+      &_item {
+        &:nth-child(1) {
+          left: 77%;
+          top: 50%;
+        }
+        &:nth-child(2) {
+          left: 60%;
+          top: 77%;
+        }
+        &:nth-child(3) {
+          left: 89%;
+          bottom: -20%;
         }
       }
     }

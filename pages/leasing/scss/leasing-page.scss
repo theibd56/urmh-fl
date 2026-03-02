@@ -204,8 +204,12 @@
       &_image {
         border-radius: 16px;
         padding: 24px;
-        min-height: 280px;
+        //min-height: 280px;
         background: #f7f7f8;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
           height: 100%;
           width: 100%;

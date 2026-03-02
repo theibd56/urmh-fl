@@ -15,34 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.6,
                     spaceBetween: 8,
                 },
-                350: {
-                    slidesPerView: 2.4,
-                    spaceBetween: 8,
-                },
-                425: {
-                    slidesPerView: 2.8,
-                    spaceBetween: 8,
-                },
-                480: {
-                    slidesPerView: 2.9,
-                    spaceBetween: 8,
-                },
-                530: {
-                    slidesPerView: 3,
-                    spaceBetween: 8,
-                },
-                600: {
-                    slidesPerView: 3.1,
+                450: {
+                    slidesPerView: 2.5,
                     spaceBetween: 8,
                 },
                 650: {
-                    slidesPerView: 3.4,
+                    slidesPerView: 3.2,
                     spaceBetween: 8,
                 },
-                730: {
+                768: {
                     slidesPerView: 3.6,
                     spaceBetween: 8,
                 },
@@ -142,9 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            if (hasError) {
-                e.preventDefault();
-            }
+            if (hasError) e.preventDefault();
         });
     }
 })
