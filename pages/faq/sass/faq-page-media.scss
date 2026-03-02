@@ -1,18 +1,9 @@
 
-@media (max-width: 1250px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 65%;
-            }
-        }
-    }
-}
+@media (max-width: 1250px) {.faq { &__feedback {img {left: 65%;}}}}
 
 @media  (max-width: 1024px) {
     .faq {
         &__wrapper {
-            position: relative;
             flex-direction: column; 
         }
         &__content {
@@ -56,7 +47,6 @@
         &__title {
             margin-bottom: 16px;
             h1 {
-                font-weight: 600;
                 font-size: 22px;
             }
         }   
@@ -97,9 +87,6 @@
             border-bottom-right-radius: 0;
             padding: 16px;
             line-height: 1.25;
-            ol {
-                gap: 16px;
-            }
             &-link {
                 flex-direction: column;
                 align-items: flex-start;
@@ -128,17 +115,14 @@
                     fill: currentColor;
                 }
             }
-            &-icon {
-                background: #0071e3;
-            }
             &-text {
                 justify-content: space-between;
+                width: 100%;
                 svg {
                     display: block;
                 }
             }
             &-title {
-                flex: 1;
                 font-weight: 500;
                 font-size: 16px;
             }
@@ -177,7 +161,6 @@
             max-height: 40px;
             }
             &-privacy {
-                height: 90px;
                 label {
                     top: 30px !important;
                 }
@@ -190,20 +173,7 @@
     }
 }
 
-@media  (max-width: 578px) {
-    .faq {
-        &__feedback {
-            // img {
-            // left: 83%;
-            // }
-            &-privacy {
-                label {
-                    top: 15px !important;
-                }
-            }
-        }
-    }
-}
+@media  (max-width: 578px) {.faq {&__feedback {&-privacy {label {top: 15px !important;}}}}}
 
 
 @media  (max-width: 480px) {
@@ -238,15 +208,7 @@
     }
 }
 
-@media  (max-width: 425px) {
-    .faq {
-        &__feedback {
-            img {
-            left: 71%;
-            }
-        }
-    }
-}
+@media  (max-width: 425px) {.faq {&__feedback {img {left: 71%;}}}}
 
 
 

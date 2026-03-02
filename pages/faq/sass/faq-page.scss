@@ -10,13 +10,9 @@
             line-height: normal;
         }
     }
-    &__container {
-        padding: 0 40px !important;
-    }
     &__wrapper {
         display: flex;
         gap: 16px;
-        align-items: flex-start;
     }
 
     &__content {
@@ -83,7 +79,7 @@
         border-radius: 16px;
         padding: 24px;
         background: #fff;
-        ol {
+        ul {
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -94,8 +90,6 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            width: 100%;
-            min-height: 40px;
             
             &:hover,
             &.active {
@@ -125,13 +119,16 @@
             width: 40px;
             height: 40px;
             color: #2c3336; // важно!
+            svg {
+                width: 24px;
+                height: 24px;
+            }
         }
         &-text {
             display: flex;
             align-items: center;
             flex-shrink: 0; 
             gap: 16px;
-            width: 100%;
             svg {
                 display: none;
             }
@@ -139,7 +136,6 @@
         &-title {
             font-weight: 400;
             font-size: 18px;
-            color: #2c3336;
         }
         li {
             list-style: none;

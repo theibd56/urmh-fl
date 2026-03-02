@@ -101,9 +101,12 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 32.5px; // было 34px
+  &.faq__container, &.assets__container, &.leasing__container {
+    padding: 0 40px;
+  }
 }
 
-.main {
+.main:not(.main_faq) {
   min-height: 100vh;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
   // overflow: hidden;
@@ -291,7 +294,7 @@ b {
 }
 @media screen and (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding: 0 16px !important;
   }
   h2, .page__title_56{
     font-size: 32px;
