@@ -88,7 +88,6 @@
         }
         &-link {
             display: flex;
-            align-items: center;
             gap: 16px;
             
             &:hover,
@@ -136,9 +135,6 @@
         &-title {
             font-weight: 400;
             font-size: 18px;
-        }
-        li {
-            list-style: none;
         }
     } 
 
