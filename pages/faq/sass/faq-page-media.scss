@@ -154,8 +154,8 @@
             max-height: 40px;
             }
             &-privacy {
-                label {
-                    top: 30px !important;
+                &.feedback-popup_privacy label {
+                    top: 30px;
                 }
                 span {
                     font-weight: 300;
@@ -166,7 +166,11 @@
     }
 }
 
-@media  (max-width: 578px) {.faq {&__feedback {&-privacy {label {top: 15px !important;}}}}}
+@media  (max-width: 578px) {
+  .faq__feedback-privacy.feedback-popup_privacy label {
+    top: 15px;
+  }
+}
 
 
 @media  (max-width: 480px) {
@@ -201,7 +205,11 @@
     }
 }
 
-@media  (max-width: 425px) {.faq {&__feedback {img {left: 71%;}}}}
+@media  (max-width: 425px) {
+  .faq__feedback img {
+    left: 71%;
+  }
+}
 
 
 
