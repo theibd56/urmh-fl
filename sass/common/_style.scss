@@ -101,13 +101,15 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 32.5px; // было 34px
-  &.faq__container, &.assets__container, &.leasing__container {
+  &.faq__container, &.assets__container, &.leasing__container,
+  &.about__container{
     padding: 0 40px;
   }
 }
 
 .main:not(.main_faq) {
   min-height: 100vh;
+    overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
   // overflow: hidden;
   
@@ -133,6 +135,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+b {
+  font-weight: 600;
+  color: #2c3336;
 }
 
 ul {
