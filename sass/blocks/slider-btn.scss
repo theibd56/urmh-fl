@@ -18,3 +18,9 @@
     border: none;
     color: #2C3336;
 }
+
+@media (max-width: 768px) {
+.slider__next , .slider__prev {
+    display: none;
+}
+}

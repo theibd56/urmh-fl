@@ -107,8 +107,8 @@ body {
   }
 }
 
-.main:not(.main_faq) {
-  min-height: 100vh;
+.main:not(.main_faq, .leasing-main, .about-main) {
+    min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
   // overflow: hidden;
