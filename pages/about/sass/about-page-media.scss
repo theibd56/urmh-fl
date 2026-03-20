@@ -20,10 +20,12 @@
         &__feedback {
             &_content {
                 max-width: unset;
-                width: 62%;
+                width: 53%;
             }
-            &_img {
-                left: 60%;
+            &_privacy{
+                label {
+                    top: 9%;
+                }
             }
         }
     }
@@ -60,6 +62,21 @@
                             width: max-content;
                     }
                 }
+            }
+        }
+        &__feedback {
+            &_content{
+                width: 100%;
+                form{
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            &_img {
+                display: none;
             }
         }
     }
@@ -115,6 +132,13 @@
                 }
             }
         }
+        &__feedback {
+            &_privacy{
+                label {
+                    top: 7%;
+                }
+            }
+        }
     }
 }
 
@@ -146,11 +170,6 @@
             &-head {
                 a {
                     display: none;
-                }
-            }
-            &_slider {
-                .swiper {
-                overflow: visible;
                 }
             }
             &_link {
@@ -302,10 +321,6 @@
 
         &__gallery {    
 
-            .swiper {
-            overflow: visible;
-            }
-
             &_slider {
             &-pagger {
                 display: none;
@@ -326,13 +341,15 @@
         min-height: 442px;
         background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
 
-        h2{
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
-        p {
-            font-size: 14px;
+        &_head {
+            gap: 16px;
+            h2{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 14px;
+            }
         }
         &_wrapper {
             padding: 0;
@@ -363,10 +380,6 @@
         &_privacy{
             margin-top: 8px;
             font-size: 14px;
-
-            label{
-                top: 6px;
-            }
         }
         &_content form span{
             line-height: 1.07;
