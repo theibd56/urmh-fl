@@ -19,6 +19,7 @@ export default defineConfig({
                 leasingPage: resolve(__dirname, './pages/leasing/leasing-page.html'),
                 faqPage: resolve(__dirname, './pages/faq/faq-page.html'),
                 faqPage: resolve(__dirname, './pages/about/about-page.html'),
+                faqPage: resolve(__dirname, './pages/dealers/dealers-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

@@ -102,12 +102,12 @@ body {
   margin: 0 auto;
   padding: 0 32.5px; // было 34px
   &.faq__container, &.assets__container, &.leasing__container,
-  &.about__container{
+  &.about__container, &.dealers__container{
     padding: 0 40px;
   }
 }
 
-.main:not(.main_faq, .leasing-main, .about-main) {
+.main:not(.main_faq, .leasing-main, .about-main, .dealers-main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
