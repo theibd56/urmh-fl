@@ -120,11 +120,6 @@
 @media  (max-width: 990px) {
     .about {
         &__locations {
-            &_text{
-                p {
-                    padding: 0;
-                }
-            }
             &_info {
                 flex-direction: column;
                 &-content {
@@ -171,6 +166,11 @@
                 a {
                     display: none;
                 }
+            }
+            &-card {
+            &_image {
+                height: 188px;
+            }
             }
             &_link {
                 line-height: 1.29;
@@ -299,6 +299,7 @@
                 flex-direction: column;
                 gap: 16px;
                 p {
+                    padding: 0;
                     font-size: 14px;
                 }
             }
@@ -322,6 +323,9 @@
         &__gallery {    
 
             &_slider {
+            .swiper-slide {
+                height: 264px;
+            }
             &-pagger {
                 display: none;
             }
@@ -330,7 +334,6 @@
             &_item {
             border-radius: 16px;
             padding: 16px;
-            height: 264px !important;
             }
         }
 
@@ -386,7 +389,10 @@
             text-align: left;
             font-weight: 400;
         }
-    }
+        }
+        h4 {
+            font-size: 18px !important;
+        }
     }
 }
 

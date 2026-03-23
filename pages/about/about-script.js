@@ -31,16 +31,8 @@ const aboutProductSlider = new Swiper('.about__products_slider .swiper', {
             slidesPerView: 2.16,
             spaceBetween: 8,
         },
-        530: {
-            slidesPerView: 3,
-            spaceBetween: 8,
-        },
         600: {
             slidesPerView: 3.1,
-            spaceBetween: 8,
-        },
-        650: {
-            slidesPerView: 3.4,
             spaceBetween: 8,
         },
         730: {
@@ -53,10 +45,6 @@ const aboutProductSlider = new Swiper('.about__products_slider .swiper', {
         },
         1024: {
             slidesPerView: 4,
-            spaceBetween: 16,
-        },
-        1100: {
-            slidesPerView: 4.5,
             spaceBetween: 16,
         },
         1277: {
