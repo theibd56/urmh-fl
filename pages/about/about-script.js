@@ -5,7 +5,7 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    const aboutProductSlider = new Swiper('.about__products_slider .swiper', {
+    const AboutProductSlider = new Swiper('.about__products_slider .swiper', {
         slidesPerView: 5,
         spaceBetween: 8,
         loop: true,
@@ -54,17 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const VideosSlider = document.querySelector('.about__videos_slider');
-    const VideosItem = sliderEl.querySelectorAll('.about__videos_item');
+    const AboutVideosSlider = document.querySelector('.about__videos_slider');
+    const AboutVideosItem = AboutVideosSlider.querySelectorAll('.about__videos_item');
 
-    const VideosNextBtn = document.querySelector('.about__videos_next');
-    const VideosPrevBtn = document.querySelector('.about__videos_prev');
+    const AboutVideosNextBtn = document.querySelector('.about__videos_next');
+    const AboutVideosPrevBtn = document.querySelector('.about__videos_prev');
 
-    if (slides.length <= 1) {
+    if (AboutVideosItem.length <= 1) {
         sliderEl.classList.remove('swiper');
         slides.forEach(slide => slide.style.width = '100%');
-        if (nextBtn) nextBtn.style.display = 'none';
-        if (prevBtn) prevBtn.style.display = 'none';
+        if (AboutVideosPrevBtn) nextBtn.style.display = 'none';
+        if (AboutVideosNextBtn) prevBtn.style.display = 'none';
     } else {
         new Swiper('.about__videos_slider', {
             slidesPerView: 1,
@@ -101,18 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const GallerySlider = document.querySelector('.about__gallery_slider');
-    const GalleryItem = sliderEl.querySelectorAll('.about__gallery_item');
+        const GallerySlider = document.querySelector('.about__gallery_slider');
+        const GalleryItem = GallerySlider.querySelectorAll('.about__gallery_item');
 
-    const nextBtn = document.querySelector('.about__gallery_next');
-    const prevBtn = document.querySelector('.about__gallery_prev');
+        const nextBtn = document.querySelector('.about__gallery_next');
+        const prevBtn = document.querySelector('.about__gallery_prev');
 
-    if (slides.length <= 1) {
-        sliderEl.classList.remove('swiper');
-        slides.forEach(slide => slide.style.width = '100%');
-        if (nextBtn) nextBtn.style.display = 'none';
-        if (prevBtn) prevBtn.style.display = 'none';
-    } else {
+        if (GalleryItem.length <= 1) {
+            GallerySlider.classList.remove('swiper');
+            GalleryItem.forEach(slide => slide.style.width = '100%');
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (prevBtn) prevBtn.style.display = 'none';
+        } else {
         new Swiper('.about__gallery_slider', {
             slidesPerView: 1,
             spaceBetween: 8,
@@ -186,23 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const option = e.target.closest('.about-sort__option');
             if (!option) return;
             optionsWrap.appendChild(selectedOption);
-            selectedOption = option;
-            value.textContent = option.textContent;
-            option.remove();
-
-            sort.classList.remove('active');
-        });
-
-        document.addEventListener('click', e => {
-            if (!sort.contains(e.target)) {
-                sort.classList.remove('active');
-            }
-        });
-        optionsWrap.addEventListener('click', e => {
-            const option = e.target.closest('.about-sort__option');
-            if (!option) return;
-
-            optionsWrap.appendChild(selectedOption);
 
             selectedOption = option;
             value.textContent = option.textContent;
@@ -218,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (map.dataset.map === country) {
                     map.classList.add('active');
-                }
+            }
             });
         });
     });

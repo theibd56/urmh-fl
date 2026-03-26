@@ -51,6 +51,9 @@
                     flex-direction: row;
                 }
             }
+            &_privacy {
+                column-gap: 36px;
+            }
             &-image {
                 left: 70%;
                 top: -15%;
