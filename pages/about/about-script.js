@@ -3,66 +3,62 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
-
-//productSlider
-
-const aboutProductSlider = new Swiper('.about__products_slider .swiper', {
-    slidesPerView: 5,
-    spaceBetween: 8,
-    loop: true,
-    navigation: {
-        nextEl: '.slider__next',
-        prevEl: '.slider__prev',
-    },
-    pagination: {
-        el: '.about__products_slider-pagger',
-        clickable: true,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1.34,
-            spaceBetween: 8,
-        },
-        350: {
-            slidesPerView: 1.65,
-            spaceBetween: 8,
-        },
-        480: {
-            slidesPerView: 2.16,
-            spaceBetween: 8,
-        },
-        600: {
-            slidesPerView: 3.1,
-            spaceBetween: 8,
-        },
-        730: {
-            slidesPerView: 3,
-            spaceBetween: 8,
-        },
-        900: {
-            slidesPerView: 3.5,
-            spaceBetween: 16,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-        },
-        1277: {
-            slidesPerView: 5,
-            spaceBetween: 16,
-        },
-        
-    }
-});
-
-//video_Slider
-
 document.addEventListener('DOMContentLoaded', () => {
-    const sliderEl = document.querySelector('.about__videos_slider');
-    const slides = sliderEl.querySelectorAll('.about__videos_item');
+    
+    const aboutProductSlider = new Swiper('.about__products_slider .swiper', {
+        slidesPerView: 5,
+        spaceBetween: 8,
+        loop: true,
+        navigation: {
+            nextEl: '.slider__next',
+            prevEl: '.slider__prev',
+        },
+        pagination: {
+            el: '.about__products_slider-pagger',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.34,
+                spaceBetween: 8,
+            },
+            350: {
+                slidesPerView: 1.65,
+                spaceBetween: 8,
+            },
+            480: {
+                slidesPerView: 2.16,
+                spaceBetween: 8,
+            },
+            600: {
+                slidesPerView: 3.1,
+                spaceBetween: 8,
+            },
+            730: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+            },
+            900: {
+                slidesPerView: 3.5,
+                spaceBetween: 16,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
+            1277: {
+                slidesPerView: 5,
+                spaceBetween: 16,
+            },
+            
+        }
+    });
 
-    const nextBtn = document.querySelector('.about__videos_next');
-    const prevBtn = document.querySelector('.about__videos_prev');
+    const VideosSlider = document.querySelector('.about__videos_slider');
+    const VideosItem = sliderEl.querySelectorAll('.about__videos_item');
+
+    const VideosNextBtn = document.querySelector('.about__videos_next');
+    const VideosPrevBtn = document.querySelector('.about__videos_prev');
 
     if (slides.length <= 1) {
         sliderEl.classList.remove('swiper');
@@ -103,13 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
 
-//gallery_Slider
 
-document.addEventListener('DOMContentLoaded', () => {
-    const sliderEl = document.querySelector('.about__gallery_slider');
-    const slides = sliderEl.querySelectorAll('.about__gallery_item');
+    const GallerySlider = document.querySelector('.about__gallery_slider');
+    const GalleryItem = sliderEl.querySelectorAll('.about__gallery_item');
 
     const nextBtn = document.querySelector('.about__gallery_next');
     const prevBtn = document.querySelector('.about__gallery_prev');
@@ -173,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
 
 
     document.querySelectorAll('.js-about-sort').forEach(sort => {
@@ -219,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sort.classList.remove('active');
 
             const country = option.dataset.value;
-
             const maps = document.querySelectorAll('.about__locations_map-item');
 
             maps.forEach(map => {
@@ -228,6 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (map.dataset.map === country) {
                     map.classList.add('active');
                 }
+            });
         });
     });
-    });
+
+});

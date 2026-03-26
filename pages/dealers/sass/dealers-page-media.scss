@@ -1,8 +1,13 @@
-@media (max-width: 1700px) {
+@media (max-width: 1600px) {
     .dealers {
         &__wrapper {
             flex-direction: column;
             align-items: normal;    
+        }
+        &__banner {
+            &-image {
+                right: -1%;
+            }
         }
         &__request {
             max-width: none;
@@ -11,12 +16,11 @@
             }
             &-image {
                 left: 70%;
-                top: -1%;
-                height: 600px;
-                max-width: 650px;
+                top: 1%;
+                max-width: 600px;
             }
             &-blur {
-                left: 70%;
+                left: 68%;
                 top: 67%;
             }
         }
@@ -25,41 +29,61 @@
 
 @media (max-width: 1024px) {
     .dealers {
-        &__steps {
-            &-list {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            &-item {
-                &:last-child {
-                    grid-column: span 2 ;
-                }
-            }
-        }
-        &__advant {
-            &-list {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            &-item {
-                &:last-child {
-                    grid-column: span 1
-                }
-            }
-        }
-        &__request {
-            &-form {
-                max-width: 400px;
+        &__banner {
+            padding: 65px 64px;
+            &-desc {
+                max-width: 552px;
             }
             &-image {
-                left: 65%;
+                left: 45%;
+                right: 0;
+            }
+        }
+        &__request {  
+            &-form {
+                max-width: 840px;
+                &_wrap {
+                    max-width: 616px;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                &_actions {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+            &-image {
+                left: 70%;
+                top: -15%;
+                max-width: 430px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             &-blur {
-                left: 60%;
+                left: 65%;
+                top: 80%;
             }
         }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .dealers {
+        &__advant {
+            &-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            &-item {
+                &:last-child {
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:  768px) {
     .dealers {
         padding: 8px 0 16px;
         &__content {
@@ -69,30 +93,44 @@
         }
         &__banner {
             border-radius: 16px;
-            padding: 24px 36px;
+            padding: 195px 16px 16px;
             &-desc {
-                gap: 32px;
-                max-width: 450px;
+                align-items:center;
+                gap: 16px;
+                max-width: none;
             }
             &-title {
                 h1 {
-                    font-size: 32px;
+                    font-size: 19px;
                 }
             }
             &-subtitle {
                 span {
-                    font-size: 18px;
+                    font-size: 13px;
                 }
                 & span:last-child {
-                    font-size: 24px;
+                    align-self:center;
+                    font-size: 14px;
                 }
             }
             &-text {
-                gap: 16px;
+                text-align: center;
             }
             &-image {
-                    width: max-content;
-                left: 70%;
+                top: 0%;
+                // max-width: 420px;
+                max-height: 230px;
+                left: -10%;
+                &::before {
+                    content: "";
+                    background: linear-gradient(
+                        to top,
+                        #f4f5f7 0%,
+                        rgba(244, 245, 247, 0.9) 15%,
+                        rgba(244, 245, 247, 0.6) 40%,
+                        rgba(244, 245, 247, 0) 65%
+                    );
+                }
             }
         }
         &__steps {
@@ -101,8 +139,12 @@
                 gap: 8px;
             }
             &-item {
-                gap: 8px;
+                padding: 16px;
+                gap: 12px;
                 border-radius: 16px;
+                &_icon {
+                    padding: 8px;
+                }
                 &:last-child {
                     grid-column: span 1;
                 }
@@ -113,33 +155,48 @@
                 gap: 8px;
             }
             &-item {
+                padding: 16px;
+                gap: 12px;
                 border-radius: 16px;
-                svg {
-                    width: 34px;
-                    height: 26px;
+                &_icon {
+                    padding: 7px;
+                    max-width: 40px;
                 }
             }
         }
         &__links {
+            flex-direction: column;
+            justify-content: unset;
+            align-items: unset;
+            text-align: center;
             a {
+                height: 40px;
+                font-size: 14px;
+                justify-content: center;
                 svg {
-                    width: 34px;
-                    height: 30px;
+                    width: 31px;
+                    height: 28px;
                 }
             }
         }
         &__request { 
-            min-width: fit-content;
-            &-title {
-                max-width: 200px;
+            &-block {
+                gap: 16px;
             }
             &-form {
-                gap: 8px;
-                max-width: 350px;
+                max-width: none;
                 input {
                     padding: 10px 16px;
                     height: 40px;
                     font-size: 14px;
+                }
+                &_wrap {
+                    max-width: none;
+                    gap: 8px;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                &_actions {
+                    flex-direction: column;
                 }
             }
             &-btn {
@@ -150,31 +207,35 @@
             &_privacy {
                 column-gap: 30px;
             }
+            &-image {
+                display: none;
+            }
             &-blur {
-                left: 58%;
-                top: 77%;
+                display: none;
             }
         }
 
         h4 {
             font-size: 18px !important;
         }
+        p {
+            font-size: 14px;
+        }
     }
 }
 
-@media (max-width: 477px) {
+
+
+@media (max-width: 340px) {
     .dealers {
-        &__links {
-            flex-direction: column;
-            justify-content: unset;
-            align-items: unset;
-        }
-        &__request { 
-            &-form {
-                max-width: 250px;
+        &__advant {
+            &-list {
+                grid-template-columns: repeat(1, 1fr);
             }
-            &-image {
-                right: -50%;
+            &-item {
+                &:last-child {
+                    grid-column: span 1;
+                }
             }
         }
     }

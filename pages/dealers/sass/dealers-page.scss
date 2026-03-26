@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             gap: 40px;
-            max-width: 619px;
+            max-width: 620px;
             z-index: 1;
         }
         &-title {
@@ -52,22 +52,29 @@
                 font-size: 32px;
             }
         }
-        &-text {
-            display: flex;
-            flex-direction: column;
-            gap: 23px;
-        }
         &-image {
             position: absolute;
             top: 0%;
-            left: 50%;
             height: 100%;
-            width: 100%;
+            left: 62%;
             z-index: 0;
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    to right,
+                    #f4f5f7 0%,
+                    rgba(244, 245, 247, 0.9) 15%,
+                    rgba(244, 245, 247, 0.6) 40%,
+                    rgba(244, 245, 247, 0) 100%
+                );
+                z-index: 1;
             }
         }
     }
@@ -79,6 +86,7 @@
         &-list {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));;
             gap: 16px;
             padding: 0;
         }
@@ -96,7 +104,7 @@
                 padding: 10px;
                 border-radius: 12px;
                 background: #0071e3;
-                line-height: 0.5;
+                line-height: 0;
             }
         }
     }
@@ -119,9 +127,19 @@
             border-radius: 24px;
             padding: 24px;
             background: #f7f7f8;
-            svg {
-                width: 36px;
-                height: 43px;
+            &_icon {
+                display: flex;
+                justify-content: center;
+                align-items:center;
+
+                border: 1px solid #0071e3;
+                border-radius: 28px;
+                padding: 9px;
+                max-width: 44px;
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
             }
             p {
                 font-weight: 500;
@@ -143,13 +161,14 @@
             gap: 8px;
 
             border: 1px solid #e1e1e5;
+            transition: 0.3s ease;
             border-radius: 16px;
             padding: 0 24px;
             height: 46px;
-
             font-weight: 600;
-            span {
-                text-decoration: underline;
+
+            .dealers__icon {
+                height: 24px;
             }
             svg {
                 width: 36px;
@@ -205,18 +224,22 @@
                     color: #2C3336;
                 }
             }
+            &_wrap {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 16px;
+            }
+            &_actions {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
         }
-        &-btn {
-            border-radius: 16px;
-            border: none;
-            padding: 11px 24px; 
-            background: #0071e3;
-
+        .btn {
+            padding: 14px 24px; 
             height: auto;
-            line-height: 1.63;
-            font-weight: 500;
+            line-height: 1.25;
             font-size: 16px;
-            color: #fff;
         }
         &_privacy {
             display: flex;
@@ -226,6 +249,7 @@
             position: relative;
 
             input[type="checkbox"]{
+                opacity: 0;
                 width: 4px;
                 height: 4px;
                 border-radius: 4px;
@@ -237,7 +261,6 @@
             label{
                 position: absolute;
                 left: 0%;
-                top: 35%;
                 flex-shrink: 0;
                 width: 24px;
                 height: 24px;
@@ -263,10 +286,10 @@
         }
         &-image {
             position: absolute;
-            right: -25%;
+            left: 60%;
             top: 15%;
-            height: 460px;
-            max-width: 436px;
+            width: 100%;
+            max-width: 505px;
             z-index: 1;
             img {
                 width: 100%;
@@ -275,7 +298,7 @@
         }
         &-blur {
             position: absolute;
-            left: 45%;
+            left: 55%;
             top: 65%;
             z-index: 0;
         }

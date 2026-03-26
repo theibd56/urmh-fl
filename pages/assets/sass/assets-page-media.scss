@@ -3,9 +3,6 @@
     .assets {
         position: relative;
         flex-direction: column;
-        &__content {
-            
-        }
             &__table {
                 overflow: auto;
                 scrollbar-width: thin;
@@ -61,14 +58,6 @@
 
 @media  (max-width: 1024px) {
     .assets {
-        &__banner {
-            height: 400px;
-        }
-        &__gallery {
-            &_item {
-                height: 360px !important;
-            }
-        }
         &__images {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -117,6 +106,13 @@
     .assets__table table tbody tr {
         align-items: center;
     }
+    .assets {
+        &__products {
+            .product__card-footer {
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
 
 @media  (max-width: 768px) {
@@ -148,9 +144,6 @@
         &__text {
             gap: 8px;
             a {
-                color: #0071E3;
-                text-decoration: underline;
-                transition: opacity 0.3s ease;
                 &:hover {
                 opacity: 0.7;
                 }
@@ -159,7 +152,6 @@
                 font-size: 14px;
                 &.filled {
                 padding: 16px;
-                border-radius: 24px;
                 }
             }
             ul {
@@ -172,7 +164,6 @@
             }
         }
         &__gallery {
-            position: relative;
             &_slider {
                 border-radius: 8px;
                 &-pagger {
@@ -180,22 +171,16 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 16px;
-                    fill: #e1e1e5;
-
-                    width: 100%;
-                    box-sizing: border-box;
+                    gap: 8px;
                 }
             }
+            .swiper-slide {
+                height: 240px
+            }
             &_item {
-                display: block;
                 border-radius: 8px;
-                height: 240px !important;
                 font-weight: 400;
                 font-size: 14px;
-            }
-            &_next, &_prev {
-                display: none;
             }
         }
         &__images {
@@ -208,13 +193,12 @@
         }
         &__videos {
             &_slider {
-                border-radius: 8px;
                 &-pagger {
                     padding-top: 12px;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 16px;
+                    gap: 8px;
                     fill: #e1e1e5;
 
                     width: 100%;
@@ -228,18 +212,11 @@
                 font-weight: 400;
                 font-size: 14px;
             }
-
-            &_next, &_prev {
-                display: none;
-            }
             
         }
         &__video {
             border-radius: 8px;
-            padding: 32px;
             height: 240px;
-            font-weight: 400;
-            font-size: 14px;
 
             &_play {
                 width: 80px;
@@ -248,11 +225,8 @@
         }
 
         &__table {
-            &_title {
-                margin-bottom: 16px;
-            }
             table {
-                min-width: 768px;
+                min-width: fit-content;
                 border-radius: 8px;
             }
             thead {
@@ -280,16 +254,12 @@
             &_title {
                 margin-bottom: 16px;
             }
-            &_next, &_prev {
-                display: none;
-            }
         }
 
         &__share {
             padding: 16px;
             border-radius: 16px;
 
-            display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
@@ -306,7 +276,6 @@
 
         &__aside {
             padding: 0;
-            max-width: 736px;
             gap: 16px;
             &_title {
                 font-size: 20px;
@@ -314,8 +283,6 @@
             }
             }
             &__more {
-            display: flex;
-            flex-direction: column;
             gap: 8px;
             &_item {
                 padding: 16px;
@@ -338,12 +305,8 @@
             gap: 8px;
             &_image {
                 padding: 16px;
-                height: 116px;
-                width: 116px;
-                img {
-                    min-width: 100px;
-                    min-height: 100px;
-                }
+                max-width: 116px;
+                max-height: 116px;
             }
             &_content {
                 display: block;
@@ -368,10 +331,9 @@
             align-items: flex-start;    
             gap: 16px;
             padding: 16px;
-
-            height: 140px;
             h3 {
-                max-width: 52px;
+                max-width: 140px;
+                line-height: 1.1;
             }
             img {
                 width: 210px;
@@ -416,21 +378,11 @@
     }
 }
 
-// @media  (max-width: 480px) {
-//     .assets {
-//         &__share {
-//             h4 {
-//                 font-size: 18px !important;
-//             }
-//         }
-//     }
-// }
-
 
 @media  (max-width: 410px) {
     .assets {
         &__banner {
-            height: 190px;
+            max-height: 190px;
         }
         &__images {
             grid-template-columns: repeat(2, 1fr);

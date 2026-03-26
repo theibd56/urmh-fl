@@ -146,7 +146,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-h2, .page__title_56 {
+h2, .page__title_xl {
   font-weight: 600;
   font-size: 56px;
   color: #2C3336;
@@ -303,7 +303,7 @@ b {
   .container {
     padding: 0 16px !important;
   }
-  h2, .page__title_56{
+  h2, .page__title_xl{
     font-size: 32px;
   }
   h4{
@@ -346,7 +346,7 @@ b {
 }
 
 @media screen and (max-width: 576px) {
-  h2, .page__title_56{
+  h2, .page__title_xl{
     font-size: 22px;
   }
   h4:not(.assets__products_title, .assets__table_title){
