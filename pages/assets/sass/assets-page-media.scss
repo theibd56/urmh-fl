@@ -106,13 +106,6 @@
     .assets__table table tbody tr {
         align-items: center;
     }
-    .assets {
-        &__products {
-            .product__card-footer {
-                flex-wrap: wrap;
-            }
-        }
-    }
 }
 
 @media  (max-width: 768px) {
