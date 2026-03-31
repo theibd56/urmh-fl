@@ -213,11 +213,8 @@
   }
   &__video {
     border-radius: 32px;
-    padding: 32px;
     height: 360px;
     overflow: hidden;
-    font-weight: 500;
-    font-size: 18px;
     color: #FFFFFF;
     position: relative;
 
@@ -252,13 +249,9 @@
     }
 
     &_video {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 1;
     }
   }
   &__table {
