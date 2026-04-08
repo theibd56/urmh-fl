@@ -95,9 +95,6 @@
 @media (max-width: 1300px) {
     .about {
         &__feedback {
-            &_content {
-                width: 100%;
-            }
             &_img {
                 display: none;
                 position: static;
@@ -155,9 +152,6 @@
             padding-bottom: 16px;
             h1 {
                 font-size: 22px;
-            }
-            p {
-                font-size: 14px;
             }
         }
         &__content {
@@ -224,7 +218,6 @@
                 border-radius: 16px;
             }
             &-icon {
-                padding: 8px;
                 width: 40px;
                 height: 40px;
             }
@@ -314,7 +307,6 @@
                 gap: 16px;
                 p {
                     padding: 0;
-                    font-size: 14px;
                 }
             }
             &_info {
@@ -351,64 +343,61 @@
             }
         }
 
-    &__feedback{
-        margin: 0;
-        padding: 16px;
-        border-radius: 16px;
-        min-height: 442px;
-        background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
+        &__feedback{
+            margin: 0;
+            padding: 16px;
+            border-radius: 16px;
+            min-height: 442px;
+            background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
 
-        &_head {
-            gap: 16px;
-            h2{
-                font-size: 18px;
-                font-weight: 500;
+            &_head {
+                gap: 16px;
+                h2{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
             }
-            p {
-                font-size: 14px;
+            &_wrapper {
+                padding: 0;
+                border: none;
+                background:local;
             }
-        }
-        &_wrapper {
-            padding: 0;
-            border: none;
-            background:local;
-        }
-        &_content form{
-            margin-top: 16px;
-            gap: 8px;
-            flex-wrap: nowrap;
-            flex-direction: column;
+            &_content form{
+                margin-top: 16px;
+                gap: 8px;
 
-            textarea {
-                min-height: 88px;
-            }
+                textarea {
+                    min-height: 88px;
+                }
 
-            input,
-            textarea{
-                width: 100%;
-                font-size: 14px;
-                padding: 10px 16px;
-                height: 40px;
+                input,
+                textarea{
+                    font-size: 14px;
+                    padding: 10px 16px;
+                    height: 40px;
+                }
+                .btn{
+                    margin-top: 8px;
+                }
             }
-            .btn{
+            &_privacy{
                 margin-top: 8px;
+                font-size: 14px;
+            }
+            &_content form span{
+                line-height: 1.07;
+                text-align: left;
+                font-weight: 400;
             }
         }
-        &_privacy{
-            margin-top: 8px;
-            font-size: 14px;
-        }
-        &_content form span{
-            line-height: 1.07;
-            text-align: left;
-            font-weight: 400;
-        }
-        }
+        
         h4 {
-            font-size: 18px !important;
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
         }
     }
 }
-
 
 

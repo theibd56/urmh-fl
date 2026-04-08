@@ -170,12 +170,15 @@
             align-items: unset;
             text-align: center;
             a {
-                height: 40px;
+                padding: 7.1px 0;
                 font-size: 14px;
                 justify-content: center;
-                svg {
-                    width: 31px;
-                    height: 28px;
+                &:first-child {
+                    padding: 5.1px 24px;
+                    svg {
+                        width: 31px;
+                        height: 28px;
+                    }
                 }
             }
         }
@@ -213,7 +216,7 @@
         }
 
         h4 {
-            font-size: 18px !important;
+            font-size: 18px;
         }
         p {
             font-size: 14px;

@@ -349,7 +349,7 @@ b {
   h2, .page__title_xl{
     font-size: 22px;
   }
-  h4:not(.assets__products_title, .assets__table_title){
+  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4){
     font-size: 14px;
   }
   .page__title {
@@ -363,7 +363,7 @@ b {
   .swiper-pagination{
     gap: 8px;
   }
-  p{
+  p:not(.about p){
     font-size: 14px;
   }
   .btn{
