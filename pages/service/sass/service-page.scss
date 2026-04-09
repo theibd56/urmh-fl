@@ -1,0 +1,205 @@
+.service {
+    padding-bottom: 80px;
+    h1 {
+        font-weight: 600;
+        font-size: 56px;
+    }
+    &__wrapper {
+        margin-top: 32px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        border-radius: 32px;
+        padding: 24px;
+        background: #fff;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        ul {
+            margin: 0;
+            display: flex;
+            flex-direction:column;
+            gap: 16px;
+            li {
+                display: flex;
+                gap: 8px;
+                font-size: 18px;
+                color: #70828a;
+                span {
+                    color: #0071e3;
+                }
+            }
+        }
+        a {
+            color: #0071e3;
+            text-decoration: underline;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 24px;
+        padding: 24px;
+        background: #e2e3e9;
+        a {
+            color: #0071e3;
+            text-decoration: underline;
+        }
+    }
+    &__video {
+        border-radius: 24px;
+        height: 659px;
+        overflow: hidden;
+        color: #FFFFFF;
+        position: relative;
+
+        &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.3);
+        }
+        &_play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        z-index: 3;
+        cursor: pointer;
+        overflow: hidden;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.15);
+        }
+        }
+
+        &_video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    }
+
+    &__aside {
+        position: sticky;
+        top: 150px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        
+        max-width: 602px;
+    }
+    &__link {
+        overflow: hidden;
+        position: relative;
+        border-radius: 16px;
+        padding: 24px;
+        background: #fff;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            max-width: fit-content;
+            
+            h3 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.38;
+                z-index: 3;
+
+            }
+            .btn {
+                padding: 14px 24px;
+                font-size: 16px;
+                line-height:normal;
+                height: auto;
+            }
+        }
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 430px;
+            width: 145px;
+            height: 145px;
+            z-index: 2;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-blur {
+            position: absolute;
+            top: -45%;
+            left: 400px;
+            filter: blur(100px);
+            width: 294px;
+            height: 294px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-faq {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .accordion-item {
+            background: #fff;
+            &_text {
+                background: #f7f7f8;
+            }
+            &.is-active {
+                background: #fff;
+            }
+        }
+
+        &__item {
+        &_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        &_subtitle {
+            font-weight: 500;
+            font-size: 24px;
+            color: #2C3336;
+        }
+        }
+    }
+    
+    p, h4 {
+        line-height: 1.28;
+    }
+}

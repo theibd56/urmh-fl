@@ -20,6 +20,7 @@ export default defineConfig({
                 faqPage: resolve(__dirname, './pages/faq/faq-page.html'),
                 aboutPage: resolve(__dirname, './pages/about/about-page.html'),
                 dealersPage: resolve(__dirname, './pages/dealers/dealers-page.html'),
+                servicePage: resolve(__dirname, './pages/service/service-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',
