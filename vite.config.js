@@ -21,6 +21,8 @@ export default defineConfig({
                 aboutPage: resolve(__dirname, './pages/about/about-page.html'),
                 dealersPage: resolve(__dirname, './pages/dealers/dealers-page.html'),
                 servicePage: resolve(__dirname, './pages/service/service-page.html'),
+                searchPage: resolve(__dirname, './pages/catalog/search-page.html'),
+                searchEmptyPage: resolve(__dirname, './pages/catalog/searchempty-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

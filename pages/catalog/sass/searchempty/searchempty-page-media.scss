@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .searchempty {
+        padding-bottom: 0;
+        gap: 0;
+        &__head {
+            h1 {
+                font-size: 22px;
+            }
+        }
+        &__content {
+            padding: 235px 0 235px 0;
+            gap: 24px;
+            &-links {
+                flex-direction: column;
+                gap: 8px;
+                a {
+                    padding: 10.5px 56px;
+
+                    font-size: 14px;
+                    line-height: 1.23;
+                }
+            }
+        }
+    }
+}

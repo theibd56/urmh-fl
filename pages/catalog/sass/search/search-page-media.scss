@@ -1,0 +1,221 @@
+
+
+@media (max-width: 1024px) {
+  .search {
+    &-aside {
+      position: fixed;
+      z-index: 99999;
+      max-width: 100%;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition:
+              opacity .25s ease,
+              transform .25s ease,
+              visibility .25s;
+      &__wrapper {
+        width: 100%;
+        max-width: 328px;
+        overflow: auto;
+
+        position: absolute;
+        gap: 0;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 16px;
+      }
+      &__jalousie {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(68px);
+
+        opacity: 0;
+        transition: opacity .25s ease;
+      }
+
+      &__ads {
+        width: 100%;
+        border-radius: 0 0 16px 16px;
+        margin-top: -2px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        .search-aside__jalousie {
+          opacity: 1;
+        }
+      }
+    }
+    &-filter {
+      margin: 0;
+      border-radius: 16px 16px 0 0;
+      &__close {
+        display: block;
+      }
+      &__mobile-toggle {
+        display: flex;
+      }
+    }
+    &-content  {
+      .search__products.grid .product__card {
+        width: calc(50% - 8px);
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding-bottom: 16px;
+    gap: 16px;
+      &-head {
+        h1 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 14px;
+        }
+      }
+      &-categories {
+      &__info {
+        h3 {
+          font-size: 18px;
+          margin-bottom: 16px;
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+        }
+        p, li {
+          font-size: 14px;
+        }
+      }
+      &__toggle {
+        margin-top: 16px;
+        font-size: 14px;
+      }
+    }
+    &-divider {
+      margin: 16px 0;
+    }
+    &-top {
+      margin-bottom: 8px;
+      &__title {
+        margin-bottom: 16px;
+      }
+      &__item {
+        max-width: 222px;
+        padding: 16px;
+        img {
+          max-width: 91px;
+          max-height: 91px;
+        }
+        &_content {
+          gap: 8px;
+          font-size: 13px;
+        }
+      }
+    }
+    &-adv {
+      height: 110px;
+      margin-bottom: 0;
+    }
+    &-sort {
+      width: 171px;
+      font-size: 14px;
+    }
+    &-content {
+      overflow: hidden;
+    }
+      &-categories {
+        ul {
+          flex-wrap: nowrap;
+          overflow: auto;
+
+          /* Firefox */
+          scrollbar-width: thin;
+          scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
+
+          /* Chrome, Safari, Edge */
+          &::-webkit-scrollbar {
+            height: 1px; // горизонтальный скролл — делаем его тонким
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: rgba(137, 137, 137, 0.3);
+            border-radius: 4px;
+          }
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+      &__products {
+        &.grid {
+          gap: 8px;
+          .product__card {
+            width: 32%;
+          }
+        }
+        &.row {
+          gap: 8px;
+          .product__card {
+            gap: 0;
+            &-content {
+              flex-direction: column;
+              row-gap: 8px;
+              padding: 8px;
+            }
+            &-footer {
+              margin: 0;
+              width: 100%;
+              gap: 8px;
+            }
+            &-actions {
+              margin-left: auto;
+              max-width: 140px;
+            }
+            &-image {
+              width: 120px;
+              height: 120px;
+              padding: 16px;
+            }
+          }
+        }
+      }
+      .pagger {
+        padding: 16px 0 0 0 ;
+      }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .search {
+    &-content {
+      .search__products.grid {
+        .product__card {
+          width: calc(50% - 4px);
+        }
+      }
+    }
+  }
+}
