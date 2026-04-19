@@ -23,6 +23,8 @@ export default defineConfig({
                 servicePage: resolve(__dirname, './pages/service/service-page.html'),
                 searchPage: resolve(__dirname, './pages/catalog/search-page.html'),
                 searchEmptyPage: resolve(__dirname, './pages/catalog/searchempty-page.html'),
+                basketPage: resolve(__dirname, './pages/basket/basket-page.html'),
+                basketEmptyPage: resolve(__dirname, './pages/basket/basketEmpty-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

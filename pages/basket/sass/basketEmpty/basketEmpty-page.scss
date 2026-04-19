@@ -1,0 +1,37 @@
+.basketEmpty {
+  padding-bottom: 80px;
+  &__head {
+    h1 {
+      font-weight: 600;
+      font-size: 56px;
+    }
+  }
+  &__content {
+    padding: 296px 0 296px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  &__icon {
+    height: 192px;
+    svg {
+    width: 192px;
+    height: 192px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h4 {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .basketEmpty {
+    padding-bottom: 16px;
+    &__head {
+      h1 {
+        font-size: 22px;
+      }
+    }
+    &__content {
+      padding: 60px 0 60px;
+      gap: 24px;
+    }
+    &__icon {
+      height: 144px;
+      svg {
+      width: 144px;
+      height: 144px;
+      }
+    }
+    &__text {
+      gap: 0px;
+      h4 {
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+@media (max-width: 1680px) {
+  .basket { &-list_content {
+        flex-wrap: wrap;
+        padding: 24px;
+      }}}
+
+@media (max-width: 1300px) {
+  .basket {
+    &-list {
+      &_content {
+        flex-direction: column;
+        align-items:flex-start;
+        gap: 16px;
+      }
+      &_image {
+        margin-bottom: 184px;
+      }
+    }
+    &__availability {
+      width: 100%;
+      &-wrapper {
+        width: 100%;
+          flex-direction: column;
+          align-items: flex-end;
+      }
+      &-toggle {
+        max-width: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .basket {
+    &-order {
+      flex-direction: column;
+    }
+    &-summary {
+      max-width: none;
+      &_total {
+        margin: 0 auto;
+      }
+    }
+  }
+} 
+
+@media (max-width: 768px) {
+  .basket {
+    padding-bottom: 16px;
+    gap: 16px;
+    &-head {
+        h1 {
+          font-size: 22px;
+        }
+    }
+    &-content {
+      gap: 24px;
+    }
+    &-divider {
+      display: none;
+    }
+    &-list {
+      &_content {
+        gap: 8px;
+        padding: 16px 12px 8px 12px;
+      }
+      &_info {
+        max-width: max-content;
+        padding-left: 114px;
+        h4 {
+          font-size: 14px;
+          font-weight: 400;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      &_image {
+        position: absolute;
+        top: 0;
+        width: 116px;
+        height: 116px;
+        padding: 8px;
+        margin: 0;
+      }
+      &_price {
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    &__quantity {
+      height: 40px;
+      &-actions {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+      input {
+        font-size: 14px;
+      }
+    }
+    &__availability {
+      &-wrapper {
+        gap: 8px;
+      }
+    }
+    &__availability-toggle {
+      padding: 12px 23px 12px 20px;
+      height: 40px;
+    }
+    &__meta {
+      gap: 6px;
+      &-price {
+        p {
+          font-size: 12px;
+        }
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+    &__city  {
+      font-size: 14px;
+    }
+    &__availability-item {
+      .basket__city {
+          font-size: 14px;
+
+      }
+    }
+    &__availability-selected {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    &__status {
+      &-badge {
+        font-size: 14px;
+      }
+    }
+    &__availability-arrow {
+      right: 5px;
+    }
+    &-summary {
+      padding: 16px;
+      &_total {
+        p {
+          font-size: 14px;
+        }
+        span {
+          font-size: 24px;
+        }
+      }
+      &_links {
+        gap: 8px;
+        button {
+          padding: 8px 12px ;
+          font-size: 14px;
+          height: 40px;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+      &__related-header {
+        margin-bottom: 16px;
+      }
+      &__related-title {
+        font-size: 18px;
+      }
+      &__related-nav {
+        display: none;
+      }
+    &__related-item {
+        padding: 16px;
+        gap: 8px;
+    }
+    &__related-price {
+      font-size: 18px;
+    }
+    &__related-image {
+      width: 80px;
+      height: 80px;
+    }
+    &__related-btn {
+      font-size: 14px;
+    }
+    &__related-counter-value {
+      font-size: 14px;
+    }
+    &__related-item-last a {
+      font-size: 14px;
+    }
+  }
+} 
+
+@media (max-width: 330px) {
+  .basket {
+    &__quantity {
+      width: 100%;
+    }
+    &__quantity-actions {
+      flex-direction: column-reverse;
+      gap: 8px;
+    }
+  }
+}

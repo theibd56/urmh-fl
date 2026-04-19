@@ -1,5 +1,6 @@
 .callback-popup,
 .service-popup,
+.basket-popup,
 .subscribe-popup,
 .advantages-popup,
 .feedback-main-popup,
@@ -28,7 +29,7 @@
     }
 }
 
-#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup {
+#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #basket-popup {
     width: 460px;
     border-radius: 24px;
     padding: 40px;
@@ -50,6 +51,18 @@
         margin-bottom: 32px;
         margin-top: 0;
         color: #2C3336;
+    }
+    .basket-popup_title {
+        margin-bottom: 20px;
+    }
+    .basket-popup_subtitle {
+        margin-bottom: 32px;
+    }
+    .feedback-popup_subtitle{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: #70828a;
     }
     &_text{
         margin-top: -12px;
@@ -486,7 +499,7 @@
 
 
 @media (max-width: 576px) {
-    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup,
+    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #basket-popup
     .datetime-picker{
         line-height: 1.36;
         border-radius: 16px;
@@ -497,6 +510,17 @@
     .feedback-popup_title{
         font-size: 20px;
         margin-bottom: 16px;
+    }
+    .feedback-popup {
+    .basket-popup_title {
+        margin-bottom: 8px;
+    }
+    .basket-popup_subtitle {
+        margin-bottom: 16px;
+    }
+    .feedback-popup_subtitle{
+        font-size: 14px;
+    }
     }
     .feedback-popup .close-popup{
         top: 8px;

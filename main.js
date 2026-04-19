@@ -478,6 +478,79 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
+//dsfds
+document.addEventListener('DOMContentLoaded', function(){
+    const servicePopup = document.querySelector('.basket-popup')
+    const servicePopupShowBtns = document.querySelectorAll('.show-basket-popup')
+    const serviceCloseFormBtn = document.querySelector('.basket-popup .close-popup')
+    const serviceForm = document.querySelector('#basket-popup form')
+    const serviceSuccess = document.querySelector('.basket-popup .feedback-success')
+    const serviceSuccessBtn = document.querySelector('.basket-popup .success-btn')
+    
+    // Обработчики для открытия service-popup
+    servicePopupShowBtns.forEach(item => {
+        item.addEventListener('click', () => {
+            servicePopup.classList.add('active')
+            document.body.classList.add('no-scroll')
+        })
+    })
+    
+    // Обработчик закрытия по крестику
+    serviceCloseFormBtn.addEventListener('click', () => {
+        // Сначала сбрасываем форму
+        serviceForm.reset()
+        // Затем скрываем popup
+        servicePopup.classList.remove('active')
+        document.body.classList.remove('no-scroll')
+        // И только после закрытия возвращаем исходное состояние формы
+        setTimeout(() => {
+            serviceForm.style.display = 'block'
+            serviceSuccess.style.display = 'none'
+        }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+    })
+    
+    // Обработчик отправки формы сервиса
+    serviceForm.addEventListener('submit', (event) => {
+        event.preventDefault() // Предотвращаем стандартную отправку формы
+        
+        // Скрываем форму и показываем блок успеха
+        serviceForm.style.display = 'none'
+        serviceSuccess.style.display = 'block'
+    })
+    
+    // Обработчик кнопки "Хорошо" в блоке успеха сервиса
+    serviceSuccessBtn.addEventListener('click', () => {
+        // Сначала сбрасываем состояние для следующего использования
+        serviceForm.reset() // Очищаем форму
+        setTimeout(() => {
+            // Затем скрываем popup
+            servicePopup.classList.remove('active')
+            document.body.classList.remove('no-scroll')
+            // И только после этого возвращаем исходное состояние формы
+            setTimeout(() => {
+                serviceForm.style.display = 'block'
+                serviceSuccess.style.display = 'none'
+            }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+        }, 0)
+    })
+    
+    // Закрытие по клику вне формы
+    document.addEventListener('click', (event) => {
+        if (event.target === servicePopup) {
+            // Сначала сбрасываем форму
+            serviceForm.reset()
+            // Затем скрываем popup
+            servicePopup.classList.remove('active')
+            document.body.classList.remove('no-scroll')
+            // И только после закрытия возвращаем исходное состояние формы
+            setTimeout(() => {
+                serviceForm.style.display = 'block'
+                serviceSuccess.style.display = 'none'
+            }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+        }
+    });
+});
+
 // ----------------------------subscribe-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
     const subscribePopup = document.querySelector('.subscribe-popup')
