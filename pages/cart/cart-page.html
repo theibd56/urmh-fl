@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./sass/basket/index.scss" />
+    <link rel="stylesheet" href="./sass/cart/index.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HMRU</title>
 </head>
@@ -12,178 +12,172 @@
 <body>
     {{> _header}}
 
-    <main class="main page-content  basket__main">
-        <div class="container basket__container">
+    <main class="main page-content  cart__main">
+        <div class="container cart__container">
             <ol class="kroshki">
                 <li>
                     <a href="/public" title="Главная"> Главная </a>
                 </li>
             </ol>
-            <section class="basket">
-                <div class="basket-head">
+            <section class="cart">
+                <div class="cart-head">
                     <h1>Ваш заказ</h1>
                 </div>
-                <div class="basket-content">
-                    <div class="basket-order">
-                        <div class="basket-list">
+                <div class="cart-content">
+                    <div class="cart-order">
+                        <div class="cart-list">
 
-                            <div class="basket-list_product">
-                                <div class="basket-list_image">
+                            <div class="cart-list_product">
+                                <div class="cart-list_image">
                                     <img src="/images/popular-product-1.png"
                                         alt="Поступление вакуумного массажёра GRKL-2500">
                                 </div>
-                                <div class="basket-list_content">
-                                    <div class="basket-list_info">
+                                <div class="cart-list_content">
+                                    <div class="cart-list_info">
                                         <h4>Поступление вакуумного массажёра GRKL-2500</h4>
                                         <p>Расчетная производительность (кг/час): до 3600</p>
                                     </div>
-                                    <div class="basket__quantity-actions">
-                                        <div class="basket__quantity">
-                                            <button class="basket__quantity-btn basket__quantity-btn--minus"
-                                                type="button">
+                                    <div class="cart__quantity-actions">
+                                        <div class="cart__quantity">
+                                            <button class="cart__quantity-btn cart__quantity-btn--minus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 11H21V13H3V11Z" fill="black" />
                                                 </svg>
                                             </button>
-                                            <input type="number" class="basket__quantity-input" value="1" min="1">
-                                            <button class="basket__quantity-btn basket__quantity-btn--plus"
-                                                type="button">
+                                            <input type="number" class="cart__quantity-input" value="1" min="1">
+                                            <button class="cart__quantity-btn cart__quantity-btn--plus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 13H11V21H13V13H21V11H13V3H11V11H3V13Z" fill="black" />
                                                 </svg>
                                             </button>
                                         </div>
-                                        <div class="basket-list_price">
+                                        <div class="cart-list_price">
                                             <span><b>6 160 224</b> ₽</span>
                                         </div>
                                     </div>
 
-                                    <div class="basket__availability-wrapper">
-                                        <div class="basket__availability" aria-expanded="false">
-                                            <button class="basket__availability-toggle" type="button"
+                                    <div class="cart__availability-wrapper">
+                                        <div class="cart__availability" aria-expanded="false">
+                                            <button class="cart__availability-toggle" type="button"
                                                 aria-expanded="false" aria-haspopup="listbox">
-                                                <div class="basket__availability-selected">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                <div class="cart__availability-selected">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <svg class="basket__availability-arrow" width="28" height="28"
+                                                <svg class="cart__availability-arrow" width="28" height="28"
                                                     viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M17.8496 10.15L13.5596 14.45L9.26961 10.15L7.84961 11.57L13.5596 17.27L19.2696 11.57L17.8496 10.15Z"
                                                         fill="#2C3336" />
                                                 </svg>
                                             </button>
-                                                                                        <div class="basket__availability-dropdown" role="listbox">
-                                                <!-- В наличии (есть на складе) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                            <div class="cart__availability-dropdown" role="listbox">
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="in-stock" data-amount="10">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
 
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="in-stock" data-amount="5">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <!-- Под заказ (на складе 0) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Алма-Аты" data-status="order" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>5 781 982₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div class="basket__status-badge basket__status-badge--order">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--order">
                                                             <span>Под заказ</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <!-- Ожидается поступление (количество не учитываем) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
@@ -191,7 +185,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="basket-list_actions">
+                                        <div class="cart-list_actions">
                                             <button class="product__card-compare" type="button" aria-label="Сравнить">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -222,163 +216,157 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="basket-list_product">
-                                <div class="basket-list_image">
+                            <div class="cart-list_product">
+                                <div class="cart-list_image">
                                     <img src="/images/popular-product-1.png"
                                         alt="Поступление вакуумного массажёра GRKL-2500">
                                 </div>
-                                <div class="basket-list_content">
-                                    <div class="basket-list_info">
+                                <div class="cart-list_content">
+                                    <div class="cart-list_info">
                                         <h4>Поступление вакуумного массажёра GRKL-2500</h4>
                                         <p>Расчетная производительность (кг/час): до 3600</p>
                                     </div>
-                                    <div class="basket__quantity-actions">
-                                        <div class="basket__quantity">
-                                            <button class="basket__quantity-btn basket__quantity-btn--minus"
-                                                type="button">
+                                    <div class="cart__quantity-actions">
+                                        <div class="cart__quantity">
+                                            <button class="cart__quantity-btn cart__quantity-btn--minus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 11H21V13H3V11Z" fill="black" />
                                                 </svg>
                                             </button>
-                                            <input type="number" class="basket__quantity-input" value="1" min="1">
-                                            <button class="basket__quantity-btn basket__quantity-btn--plus"
-                                                type="button">
+                                            <input type="number" class="cart__quantity-input" value="1" min="1">
+                                            <button class="cart__quantity-btn cart__quantity-btn--plus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 13H11V21H13V13H21V11H13V3H11V11H3V13Z" fill="black" />
                                                 </svg>
                                             </button>
                                         </div>
-                                        <div class="basket-list_price">
+                                        <div class="cart-list_price">
                                             <span><b>6 160 224</b> ₽</span>
                                         </div>
                                     </div>
 
-                                    <div class="basket__availability-wrapper">
-                                        <div class="basket__availability" aria-expanded="false">
-                                            <button class="basket__availability-toggle" type="button"
+                                    <div class="cart__availability-wrapper">
+                                        <div class="cart__availability" aria-expanded="false">
+                                            <button class="cart__availability-toggle" type="button"
                                                 aria-expanded="false" aria-haspopup="listbox">
-                                                <div class="basket__availability-selected">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                <div class="cart__availability-selected">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <svg class="basket__availability-arrow" width="28" height="28"
+                                                <svg class="cart__availability-arrow" width="28" height="28"
                                                     viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M17.8496 10.15L13.5596 14.45L9.26961 10.15L7.84961 11.57L13.5596 17.27L19.2696 11.57L17.8496 10.15Z"
                                                         fill="#2C3336" />
                                                 </svg>
                                             </button>
-                                            <div class="basket__availability-dropdown" role="listbox">
-                                                <!-- В наличии (есть на складе) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                            <div class="cart__availability-dropdown" role="listbox">
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="in-stock" data-amount="10">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
 
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="in-stock" data-amount="5">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <!-- Под заказ (на складе 0) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Алма-Аты" data-status="order" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>5 781 982₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div class="basket__status-badge basket__status-badge--order">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--order">
                                                             <span>Под заказ</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <!-- Ожидается поступление (количество не учитываем) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
@@ -386,7 +374,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="basket-list_actions">
+                                        <div class="cart-list_actions">
                                             <button class="product__card-compare" type="button" aria-label="Сравнить">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -417,163 +405,157 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="basket-list_product">
-                                <div class="basket-list_image">
+                            <div class="cart-list_product">
+                                <div class="cart-list_image">
                                     <img src="/images/popular-product-1.png"
                                         alt="Поступление вакуумного массажёра GRKL-2500">
                                 </div>
-                                <div class="basket-list_content">
-                                    <div class="basket-list_info">
+                                <div class="cart-list_content">
+                                    <div class="cart-list_info">
                                         <h4>Поступление вакуумного массажёра GRKL-2500</h4>
                                         <p>Расчетная производительность (кг/час): до 3600</p>
                                     </div>
-                                    <div class="basket__quantity-actions">
-                                        <div class="basket__quantity">
-                                            <button class="basket__quantity-btn basket__quantity-btn--minus"
-                                                type="button">
+                                    <div class="cart__quantity-actions">
+                                        <div class="cart__quantity">
+                                            <button class="cart__quantity-btn cart__quantity-btn--minus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 11H21V13H3V11Z" fill="black" />
                                                 </svg>
                                             </button>
-                                            <input type="number" class="basket__quantity-input" value="1" min="1">
-                                            <button class="basket__quantity-btn basket__quantity-btn--plus"
-                                                type="button">
+                                            <input type="number" class="cart__quantity-input" value="1" min="1">
+                                            <button class="cart__quantity-btn cart__quantity-btn--plus" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 13H11V21H13V13H21V11H13V3H11V11H3V13Z" fill="black" />
                                                 </svg>
                                             </button>
                                         </div>
-                                        <div class="basket-list_price">
+                                        <div class="cart-list_price">
                                             <span><b>6 160 224</b> ₽</span>
                                         </div>
                                     </div>
 
-                                    <div class="basket__availability-wrapper">
-                                        <div class="basket__availability" aria-expanded="false">
-                                            <button class="basket__availability-toggle" type="button"
+                                    <div class="cart__availability-wrapper">
+                                        <div class="cart__availability" aria-expanded="false">
+                                            <button class="cart__availability-toggle" type="button"
                                                 aria-expanded="false" aria-haspopup="listbox">
-                                                <div class="basket__availability-selected">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                <div class="cart__availability-selected">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <svg class="basket__availability-arrow" width="28" height="28"
+                                                <svg class="cart__availability-arrow" width="28" height="28"
                                                     viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M17.8496 10.15L13.5596 14.45L9.26961 10.15L7.84961 11.57L13.5596 17.27L19.2696 11.57L17.8496 10.15Z"
                                                         fill="#2C3336" />
                                                 </svg>
                                             </button>
-                                            <div class="basket__availability-dropdown" role="listbox">
-                                                <!-- В наличии (есть на складе) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                            <div class="cart__availability-dropdown" role="listbox">
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="in-stock" data-amount="10">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
 
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="in-stock" data-amount="5">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--in-stock">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--in-stock">
                                                             <span>В наличии</span>
                                                         </div>
                                                     </div>
                                                 </button>
 
-                                                <!-- Под заказ (на складе 0) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Алма-Аты" data-status="order" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Алма Аты
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>5 781 982₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
-                                                        <div class="basket__status-badge basket__status-badge--order">
+                                                    <div class="cart__availability_status">
+                                                        <div class="cart__availability_status-badge cart__availability_status-badge--order">
                                                             <span>Под заказ</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <!-- Ожидается поступление (количество не учитываем) -->
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Новосибирск" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Новосибирск
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
 
                                                 </button>
 
-                                                <button class="basket__availability-item" type="button" role="option"
+                                                <button class="cart__availability-item" type="button" role="option"
                                                     data-city="Москва" data-status="expected" data-amount="0">
-                                                    <div class="basket__meta">
-                                                        <div class="basket__city">
+                                                    <div class="cart__availability_meta">
+                                                        <div class="cart__availability_meta-city">
                                                             Москва
                                                         </div>
-                                                        <div class="basket__meta-price">
+                                                        <div class="cart__availability_meta-price">
                                                             <p>6 311 356 ₽ </p>
                                                             <span>-15%</span>
                                                         </div>
                                                     </div>
-                                                    <div class="basket__status">
+                                                    <div class="cart__availability_status">
                                                         <div
-                                                            class="basket__status-badge basket__status-badge--expected">
+                                                            class="cart__availability_status-badge cart__availability_status-badge--expected">
                                                             <span>Ожидается к поступлению</span>
                                                         </div>
                                                     </div>
@@ -581,7 +563,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="basket-list_actions">
+                                        <div class="cart-list_actions">
                                             <button class="product__card-compare" type="button" aria-label="Сравнить">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -613,13 +595,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="basket-summary">
-                            <div class="basket-summary_total">
+                        <div class="cart-summary">
+                            <div class="cart-summary_total">
                                 <p>В корзине 2 товара</p>
                                 <span><b>6 160 224</b>₽</span>
                             </div>
-                            <div class="basket-summary_links">
-                                <button type="button" class="show-basket-popup">Оформить заказ</button>
+                            <div class="cart-summary_links">
+                                <button type="button" class="show-cart-popup">Оформить заказ</button>
                                 <button>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -633,13 +615,13 @@
                         </div>
                     </div>
 
-                    <div class="basket-divider"></div>
+                    <div class="cart-divider"></div>
 
-                    <div class="basket__related">
-                        <div class="basket__related-header">
-                            <h2 class="basket__related-title">С этим товаром покупают</h2>
-                            <div class="basket__related-nav">
-                                <button class="basket__related-nav-btn basket__related-nav-btn--prev" type="button"
+                    <div class="cart__related">
+                        <div class="cart__related-header">
+                            <h2 class="cart__related-title">С этим товаром покупают</h2>
+                            <div class="cart__related-nav">
+                                <button class="cart__related-nav-btn cart__related-nav-btn--prev" type="button"
                                     aria-label="Предыдущий">
                                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -647,7 +629,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </button>
-                                <button class="basket__related-nav-btn basket__related-nav-btn--next" type="button"
+                                <button class="cart__related-nav-btn cart__related-nav-btn--next" type="button"
                                     aria-label="Следующий">
                                     <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -657,32 +639,32 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="basket__related-wrapper">
-                            <div class="basket__related-slider swiper">
+                        <div class="cart__related-wrapper">
+                            <div class="cart__related-slider swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item">
-                                            <div class="basket__related-image">
+                                        <div class="cart__related-item">
+                                            <div class="cart__related-image">
                                                 <img src="/images/related-product-1.png" alt="Подъездная рампа">
                                             </div>
-                                            <div class="basket__related-info">
-                                                <h4 class="basket__related-name">Подъездная рампа</h4>
-                                                <div class="basket__related-price">23 900 <span>₽</span></div>
+                                            <div class="cart__related-info">
+                                                <h4 class="cart__related-name">Подъездная рампа</h4>
+                                                <div class="cart__related-price">23 900 <span>₽</span></div>
                                             </div>
-                                            <button class="basket__related-btn">Добавить</button>
-                                            <div class="basket__related-actions" style="display: none;">
-                                                <div class="basket__related-counter">
+                                            <button class="cart__related-btn">Добавить</button>
+                                            <div class="cart__related-actions" style="display: none;">
+                                                <div class="cart__related-counter">
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--minus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--minus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M5 11H19V13H5V11Z" fill="black" />
                                                         </svg>
                                                     </button>
-                                                    <span class="basket__related-counter-value">1</span>
+                                                    <span class="cart__related-counter-value">1</span>
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--plus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--plus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -691,7 +673,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <button class="basket__related-cart-icon" type="button"
+                                                <button class="cart__related-cart-icon" type="button"
                                                     aria-label="В корзине">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -711,28 +693,28 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item">
-                                            <div class="basket__related-image">
+                                        <div class="cart__related-item">
+                                            <div class="cart__related-image">
                                                 <img src="/images/related-product-1.png" alt="Подъездная рампа">
                                             </div>
-                                            <div class="basket__related-info">
-                                                <h4 class="basket__related-name">Подъездная рампа</h4>
-                                                <div class="basket__related-price">23 900 <span>₽</span></div>
+                                            <div class="cart__related-info">
+                                                <h4 class="cart__related-name">Подъездная рампа</h4>
+                                                <div class="cart__related-price">23 900 <span>₽</span></div>
                                             </div>
-                                            <button class="basket__related-btn">Добавить</button>
-                                            <div class="basket__related-actions" style="display: none;">
-                                                <div class="basket__related-counter">
+                                            <button class="cart__related-btn">Добавить</button>
+                                            <div class="cart__related-actions" style="display: none;">
+                                                <div class="cart__related-counter">
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--minus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--minus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M5 11H19V13H5V11Z" fill="black" />
                                                         </svg>
                                                     </button>
-                                                    <span class="basket__related-counter-value">1</span>
+                                                    <span class="cart__related-counter-value">1</span>
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--plus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--plus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -741,7 +723,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <button class="basket__related-cart-icon" type="button"
+                                                <button class="cart__related-cart-icon" type="button"
                                                     aria-label="В корзине">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -761,28 +743,28 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item">
-                                            <div class="basket__related-image">
+                                        <div class="cart__related-item">
+                                            <div class="cart__related-image">
                                                 <img src="/images/related-product-1.png" alt="Подъездная рампа">
                                             </div>
-                                            <div class="basket__related-info">
-                                                <h4 class="basket__related-name">Подъездная рампа</h4>
-                                                <div class="basket__related-price">23 900 <span>₽</span></div>
+                                            <div class="cart__related-info">
+                                                <h4 class="cart__related-name">Подъездная рампа</h4>
+                                                <div class="cart__related-price">23 900 <span>₽</span></div>
                                             </div>
-                                            <button class="basket__related-btn">Добавить</button>
-                                            <div class="basket__related-actions" style="display: none;">
-                                                <div class="basket__related-counter">
+                                            <button class="cart__related-btn">Добавить</button>
+                                            <div class="cart__related-actions" style="display: none;">
+                                                <div class="cart__related-counter">
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--minus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--minus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M5 11H19V13H5V11Z" fill="black" />
                                                         </svg>
                                                     </button>
-                                                    <span class="basket__related-counter-value">1</span>
+                                                    <span class="cart__related-counter-value">1</span>
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--plus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--plus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -791,7 +773,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <button class="basket__related-cart-icon" type="button"
+                                                <button class="cart__related-cart-icon" type="button"
                                                     aria-label="В корзине">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -811,28 +793,28 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item">
-                                            <div class="basket__related-image">
+                                        <div class="cart__related-item">
+                                            <div class="cart__related-image">
                                                 <img src="/images/related-product-1.png" alt="Подъездная рампа">
                                             </div>
-                                            <div class="basket__related-info">
-                                                <h4 class="basket__related-name">Подъездная рампа</h4>
-                                                <div class="basket__related-price">23 900 <span>₽</span></div>
+                                            <div class="cart__related-info">
+                                                <h4 class="cart__related-name">Подъездная рампа</h4>
+                                                <div class="cart__related-price">23 900 <span>₽</span></div>
                                             </div>
-                                            <button class="basket__related-btn">Добавить</button>
-                                            <div class="basket__related-actions" style="display: none;">
-                                                <div class="basket__related-counter">
+                                            <button class="cart__related-btn">Добавить</button>
+                                            <div class="cart__related-actions" style="display: none;">
+                                                <div class="cart__related-counter">
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--minus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--minus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M5 11H19V13H5V11Z" fill="black" />
                                                         </svg>
                                                     </button>
-                                                    <span class="basket__related-counter-value">1</span>
+                                                    <span class="cart__related-counter-value">1</span>
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--plus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--plus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -841,7 +823,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <button class="basket__related-cart-icon" type="button"
+                                                <button class="cart__related-cart-icon" type="button"
                                                     aria-label="В корзине">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -861,28 +843,28 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item">
-                                            <div class="basket__related-image">
+                                        <div class="cart__related-item">
+                                            <div class="cart__related-image">
                                                 <img src="/images/related-product-1.png" alt="Подъездная рампа">
                                             </div>
-                                            <div class="basket__related-info">
-                                                <h4 class="basket__related-name">Подъездная рампа</h4>
-                                                <div class="basket__related-price">23 900 <span>₽</span></div>
+                                            <div class="cart__related-info">
+                                                <h4 class="cart__related-name">Подъездная рампа</h4>
+                                                <div class="cart__related-price">23 900 <span>₽</span></div>
                                             </div>
-                                            <button class="basket__related-btn">Добавить</button>
-                                            <div class="basket__related-actions" style="display: none;">
-                                                <div class="basket__related-counter">
+                                            <button class="cart__related-btn">Добавить</button>
+                                            <div class="cart__related-actions" style="display: none;">
+                                                <div class="cart__related-counter">
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--minus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--minus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M5 11H19V13H5V11Z" fill="black" />
                                                         </svg>
                                                     </button>
-                                                    <span class="basket__related-counter-value">1</span>
+                                                    <span class="cart__related-counter-value">1</span>
                                                     <button
-                                                        class="basket__related-counter-btn basket__related-counter-btn--plus"
+                                                        class="cart__related-counter-btn cart__related-counter-btn--plus"
                                                         type="button">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -891,7 +873,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <button class="basket__related-cart-icon" type="button"
+                                                <button class="cart__related-cart-icon" type="button"
                                                     aria-label="В корзине">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -911,7 +893,7 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="basket__related-item basket__related-item-last">
+                                        <div class="cart__related-item cart__related-item-last">
                                             <span>
                                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -927,7 +909,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="basket-divider"></div>
+                    <div class="cart-divider"></div>
 
                     <div class="product__card-slider">
                         <div class="product__card-header">
@@ -1488,7 +1470,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="module" src="/main.js"></script>
-    <script type="module" src="./basket-script.js"></script>
+    <script type="module" src="./cart-script.js"></script>
 </body>
 
 </html>

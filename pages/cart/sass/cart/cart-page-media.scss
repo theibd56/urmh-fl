@@ -1,11 +1,11 @@
-@media (max-width: 1680px) {
-  .basket { &-list_content {
+@media (max-width: 1700px) {
+  .cart { &-list_content {
         flex-wrap: wrap;
         padding: 24px;
       }}}
 
-@media (max-width: 1300px) {
-  .basket {
+@media (max-width: 1350px) {
+  .cart {
     &-list {
       &_content {
         flex-direction: column;
@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 920px) {
-  .basket {
+  .cart {
     &-order {
       flex-direction: column;
     }
@@ -41,11 +41,14 @@
         margin: 0 auto;
       }
     }
+    &__availability-dropdown {
+      max-width: none;
+    }
   }
 } 
 
 @media (max-width: 768px) {
-  .basket {
+  .cart {
     padding-bottom: 16px;
     gap: 16px;
     &-head {
@@ -105,41 +108,39 @@
       &-wrapper {
         gap: 8px;
       }
+      &_meta {
+        gap: 6px;
+        &-price {
+          p {
+            font-size: 12px;
+          }
+          span {
+            font-size: 10px;
+          }
+        }
+        &-city  {
+          font-size: 14px;
+        }
+      }
+      &_status {
+        &-badge {
+          font-size: 14px;
+        }
+      }
     }
     &__availability-toggle {
       padding: 12px 23px 12px 20px;
       height: 40px;
     }
-    &__meta {
-      gap: 6px;
-      &-price {
-        p {
-          font-size: 12px;
-        }
-        span {
-          font-size: 10px;
-        }
-      }
-    }
-    &__city  {
-      font-size: 14px;
-    }
     &__availability-item {
-      .basket__city {
+      .cart__availability_meta-city {
           font-size: 14px;
-
       }
     }
     &__availability-selected {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 8px;
-    }
-    &__status {
-      &-badge {
-        font-size: 14px;
-      }
     }
     &__availability-arrow {
       right: 5px;
@@ -173,6 +174,11 @@
       &__related-title {
         font-size: 18px;
       }
+      &__related-wrapper {
+        .swiper {
+          overflow: visible;
+        }
+      }
       &__related-nav {
         display: none;
       }
@@ -199,14 +205,21 @@
   }
 } 
 
-@media (max-width: 330px) {
-  .basket {
+@media (max-width: 345px) {
+  .cart {
     &__quantity {
       width: 100%;
     }
     &__quantity-actions {
       flex-direction: column-reverse;
       gap: 8px;
+    }
+    &__availability {
+      &_status {
+        &-badge {
+          font-size: 12px;
+        }
+      }
     }
   }
 }

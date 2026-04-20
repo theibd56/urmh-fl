@@ -3,11 +3,12 @@ import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from '
 
 Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
+document.addEventListener('DOMContentLoaded', () => {
 
-document.querySelectorAll('.basket-list_product').forEach(product => { 
-    const quantityInput = product.querySelector('.basket__quantity-input');
-    const quantityMinusBtn = product.querySelector('.basket__quantity-btn--minus');
-    const quantityPlusBtn = product.querySelector('.basket__quantity-btn--plus');
+document.querySelectorAll('.cart-list_product').forEach(product => { 
+    const quantityInput = product.querySelector('.cart__quantity-input');
+    const quantityMinusBtn = product.querySelector('.cart__quantity-btn--minus');
+    const quantityPlusBtn = product.querySelector('.cart__quantity-btn--plus');
 
             if (quantityInput && quantityMinusBtn && quantityPlusBtn) {
                 // Функция обновления состояния кнопок
@@ -15,10 +16,10 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
                     const currentValue = parseInt(quantityInput.value, 10) || 1;
                     if (currentValue <= 1) {
                         quantityMinusBtn.disabled = true;
-                        quantityMinusBtn.classList.add('basket__quantity-btn--disabled');
+                        quantityMinusBtn.classList.add('cart__quantity-btn--disabled');
                     } else {
                         quantityMinusBtn.disabled = false;
-                        quantityMinusBtn.classList.remove('basket__quantity-btn--disabled');
+                        quantityMinusBtn.classList.remove('cart__quantity-btn--disabled');
                     }
                 };
 
@@ -33,7 +34,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
                     updateButtonsState();
                 };
 
-                const activeItem = product.querySelector('.basket__availability-item[aria-selected="true"]');
+                const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
 
                 if (activeItem) {
                     updateAvailabilityBadge(
@@ -42,7 +43,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
                             status: activeItem.dataset.status,
                             quantity: parseInt(quantityInput.value, 10)
                         },
-                        product.querySelector('.basket__availability-toggle .basket__status')
+                        product.querySelector('.cart__availability-toggle .cart__availability_status')
                     );
                 }
 
@@ -108,7 +109,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
             // expected — ничего не добавляем
             if (status === 'expected') {
                 const badge = document.createElement('div');
-                badge.className = 'basket__status-badge basket__status-badge--expected';
+                badge.className = 'cart__availability_status-badge cart__availability_status-badge--expected';
                 badge.innerHTML = '<span>Ожидается к поступлению</span>';
                 container.appendChild(badge);
                 return;
@@ -117,7 +118,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
             // количество 1 — оставляем "как есть"
             if (quantity <= 1 && amount > 0) {
                 const badge = document.createElement('div');
-                badge.className = 'basket__status-badge basket__status-badge--in-stock';
+                badge.className = 'cart__availability_status-badge cart__availability_status-badge--in-stock';
                 badge.innerHTML = '<span>В наличии</span>';
                 container.appendChild(badge);
                 return;
@@ -126,7 +127,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
             // data-amount = 0 → всё под заказ
             if (amount === 0) {
                 const badge = document.createElement('div');
-                badge.className = 'basket__status-badge basket__status-badge--order';
+                badge.className = 'cart__availability_status-badge cart__availability_status-badge--order';
                 badge.innerHTML = `<span>Под заказ ${quantity} шт</span>`;
                 container.appendChild(badge);
                 return;
@@ -135,7 +136,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
             // хватает на складе
             if (quantity <= amount) {
                 const badge = document.createElement('div');
-                badge.className = 'basket__status-badge basket__status-badge--in-stock';
+                badge.className = 'cart__availability_status-badge cart__availability_status-badge--in-stock';
                 badge.innerHTML = `<span>В наличии ${quantity} шт</span>`;
                 container.appendChild(badge);
                 return;
@@ -146,19 +147,19 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
             const orderQty = quantity - amount;
 
             const inStockBadge = document.createElement('div');
-            inStockBadge.className = 'basket__status-badge basket__status-badge--in-stock';
+            inStockBadge.className = 'cart__availability_status-badge cart__availability_status-badge--in-stock';
             inStockBadge.innerHTML = `<span>В наличии ${inStockQty} шт</span>`;
 
             const orderBadge = document.createElement('div');
-            orderBadge.className = 'basket__status-badge basket__status-badge--order';
+            orderBadge.className = 'cart__availability_status-badge cart__availability_status-badge--order';
             orderBadge.innerHTML = `<span>Под заказ ${orderQty} шт</span>`;
 
             container.append(inStockBadge, orderBadge);
         }
 
         function refreshAvailabilityFromQuantity(product, quantity) {
-            const activeItem = product.querySelector('.basket__availability-item[aria-selected="true"]');
-            const statusContainer = product.querySelector('.basket__availability-toggle .basket__status');
+            const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
+            const statusContainer = product.querySelector('.cart__availability-toggle .cart__availability_status');
 
             if (!activeItem || !statusContainer) return;
 
@@ -175,7 +176,7 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
         function updateAvailabilityItemBadge(item, quantity) {
             const status = item.dataset.status;
             const amount = parseInt(item.dataset.amount, 10);
-            const statusContainer = item.querySelector('.basket__status');
+            const statusContainer = item.querySelector('.cart__availability_status');
 
             if (!statusContainer) return;
 
@@ -190,14 +191,14 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
         }
 
             function refreshAllAvailabilityItems(product, quantity) {
-                product.querySelectorAll('.basket__availability-item').forEach(item => {
+                product.querySelectorAll('.cart__availability-item').forEach(item => {
                     updateAvailabilityItemBadge(item, quantity);
                 });
             }
-        product.querySelectorAll('.basket__availability').forEach(container => {
-            const toggle = container.querySelector('.basket__availability-toggle');
-            const dropdown = container.querySelector('.basket__availability-dropdown');
-            const items = container.querySelectorAll('.basket__availability-item');
+        product.querySelectorAll('.cart__availability').forEach(container => {
+            const toggle = container.querySelector('.cart__availability-toggle');
+            const dropdown = container.querySelector('.cart__availability-dropdown');
+            const items = container.querySelectorAll('.cart__availability-item');
 
             if (!toggle || !dropdown) return;
 
@@ -217,8 +218,8 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
                     const amount = parseInt(item.dataset.amount, 10);
                     const status = item.dataset.status;
 
-                    const selectedCity = toggle.querySelector('.basket__city');
-                    const selectedStatusWrapper = toggle.querySelector('.basket__status');
+                    const selectedCity = toggle.querySelector('.cart__availability_meta-city');
+                    const selectedStatusWrapper = toggle.querySelector('.cart__availability_status');
 
                     updateAvailabilityBadge(
                         {
@@ -253,13 +254,13 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
     });
 
     //slider__related
-    const relatedProductSwiper = new Swiper('.basket__related-slider', {
+    const relatedProductSwiper = new Swiper('.cart__related-slider', {
         slidesPerView: 3,
         spaceBetween: 16,
 
         navigation: {
-            nextEl: '.basket__related-nav-btn--next',
-            prevEl: '.basket__related-nav-btn--prev',
+            nextEl: '.cart__related-nav-btn--next',
+            prevEl: '.cart__related-nav-btn--prev',
         },
         breakpoints:{
             0:{
@@ -285,12 +286,12 @@ document.querySelectorAll('.basket-list_product').forEach(product => {
         }
     })
 
-const relatedBtns = document.querySelectorAll('.basket__related-btn');
+const relatedBtns = document.querySelectorAll('.cart__related-btn');
 
 relatedBtns.forEach(btn => {
     btn.addEventListener('click', function() {
-        const relatedItem = this.closest('.basket__related-item');
-        const actionsContainer = relatedItem.querySelector('.basket__related-actions');
+        const relatedItem = this.closest('.cart__related-item');
+        const actionsContainer = relatedItem.querySelector('.cart__related-actions');
 
         if (!actionsContainer) return;
 
@@ -302,9 +303,9 @@ relatedBtns.forEach(btn => {
 
 // Делегирование событий для счетчика
 document.addEventListener('click', function(e) {
-    if (e.target.closest('.basket__related-counter-btn--minus')) {
-        const counter = e.target.closest('.basket__related-counter');
-        const counterValue = counter.querySelector('.basket__related-counter-value');
+    if (e.target.closest('.cart__related-counter-btn--minus')) {
+        const counter = e.target.closest('.cart__related-counter');
+        const counterValue = counter.querySelector('.cart__related-counter-value');
         let value = parseInt(counterValue.textContent, 10);
         if (value > 1) {
             value--;
@@ -312,16 +313,16 @@ document.addEventListener('click', function(e) {
         }
     }
 
-    if (e.target.closest('.basket__related-counter-btn--plus')) {
-        const counter = e.target.closest('.basket__related-counter');
-        const counterValue = counter.querySelector('.basket__related-counter-value');
+    if (e.target.closest('.cart__related-counter-btn--plus')) {
+        const counter = e.target.closest('.cart__related-counter');
+        const counterValue = counter.querySelector('.cart__related-counter-value');
         let value = parseInt(counterValue.textContent, 10);
         value++;
         counterValue.textContent = value;
     }
 
-    if (e.target.closest('.basket__related-cart-icon')) {
-        const cartIcon = e.target.closest('.basket__related-cart-icon');
+    if (e.target.closest('.cart__related-cart-icon')) {
+        const cartIcon = e.target.closest('.cart__related-cart-icon');
         cartIcon.classList.toggle('active');
     }
 });
@@ -344,4 +345,5 @@ document.querySelectorAll('.product__card-swiper').forEach((slider) => {
             768: { spaceBetween: 16 }
         }
     });
+});
 });
