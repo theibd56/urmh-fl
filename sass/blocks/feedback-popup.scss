@@ -1,6 +1,6 @@
 .callback-popup,
 .service-popup,
-.basket-popup,
+.cart-popup,
 .subscribe-popup,
 .advantages-popup,
 .feedback-main-popup,
@@ -29,7 +29,7 @@
     }
 }
 
-#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #basket-popup {
+#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup {
     width: 460px;
     border-radius: 24px;
     padding: 40px;
@@ -52,10 +52,10 @@
         margin-top: 0;
         color: #2C3336;
     }
-    .basket-popup_title {
+    .cart-popup_title {
         margin-bottom: 20px;
     }
-    .basket-popup_subtitle {
+    .cart-popup_subtitle {
         margin-bottom: 32px;
     }
     .feedback-popup_subtitle{
@@ -499,7 +499,7 @@
 
 
 @media (max-width: 576px) {
-    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #basket-popup
+    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup
     .datetime-picker{
         line-height: 1.36;
         border-radius: 16px;
@@ -512,10 +512,10 @@
         margin-bottom: 16px;
     }
     .feedback-popup {
-    .basket-popup_title {
+    .cart-popup_title {
         margin-bottom: 8px;
     }
-    .basket-popup_subtitle {
+    .cart-popup_subtitle {
         margin-bottom: 16px;
     }
     .feedback-popup_subtitle{

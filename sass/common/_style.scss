@@ -103,8 +103,8 @@ body {
   padding: 0 32.5px; // было 34px
   &.faq__container, &.assets__container, &.leasing__container,
   &.about__container, &.dealers__container, &.service__container, 
-  &.search__container, &.searchempty__container, &.basket__container, 
-  &.basketEmpty__container {
+  &.search__container, &.searchempty__container, &.cart__container, 
+  &.cartEmpty__container {
     padding: 0 40px;
   }
 }
@@ -112,7 +112,7 @@ body {
 .main:not(
 .main_faq, .leasing-main, .about-main, 
 .dealers-main, .service-main, .search__main, 
-.searchempty__main, .basketEmpty__main) {
+.searchempty__main, .cartEmpty__main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
@@ -354,7 +354,7 @@ b {
   h2, .page__title_xl{
     font-size: 22px;
   }
-  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .basketEmpty h4){
+  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4){
     font-size: 14px;
   }
   .page__title {

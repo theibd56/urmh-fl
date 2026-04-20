@@ -478,14 +478,14 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-//dsfds
+// ----------------------------cart-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const servicePopup = document.querySelector('.basket-popup')
-    const servicePopupShowBtns = document.querySelectorAll('.show-basket-popup')
-    const serviceCloseFormBtn = document.querySelector('.basket-popup .close-popup')
-    const serviceForm = document.querySelector('#basket-popup form')
-    const serviceSuccess = document.querySelector('.basket-popup .feedback-success')
-    const serviceSuccessBtn = document.querySelector('.basket-popup .success-btn')
+    const servicePopup = document.querySelector('.cart-popup')
+    const servicePopupShowBtns = document.querySelectorAll('.show-cart-popup')
+    const serviceCloseFormBtn = document.querySelector('.cart-popup .close-popup')
+    const serviceForm = document.querySelector('#cart-popup form')
+    const serviceSuccess = document.querySelector('.cart-popup .feedback-success')
+    const serviceSuccessBtn = document.querySelector('.cart-popup .success-btn')
     
     // Обработчики для открытия service-popup
     servicePopupShowBtns.forEach(item => {
