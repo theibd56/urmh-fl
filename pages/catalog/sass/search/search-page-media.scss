@@ -4,7 +4,7 @@
   .search {
     &-aside {
       position: fixed;
-      z-index: 99999;
+      z-index: 98;
       max-width: 100%;
       inset: 0;
       opacity: 0;
@@ -12,9 +12,9 @@
       pointer-events: none;
 
       transition:
-              opacity .25s ease,
-              transform .25s ease,
-              visibility .25s;
+          opacity .25s ease,
+          transform .25s ease,
+          visibility .25s;
       &__wrapper {
         width: 100%;
         max-width: 328px;
@@ -44,7 +44,6 @@
       &__ads {
         width: 100%;
         border-radius: 0 0 16px 16px;
-        margin-top: -2px;
         img {
           width: 100%;
           object-fit: cover;
@@ -91,24 +90,6 @@
             font-size: 14px;
         }
       }
-      &-categories {
-      &__info {
-        h3 {
-          font-size: 18px;
-          margin-bottom: 16px;
-          &:not(:first-child) {
-            margin-top: 16px;
-          }
-        }
-        p, li {
-          font-size: 14px;
-        }
-      }
-      &__toggle {
-        margin-top: 16px;
-        font-size: 14px;
-      }
-    }
     &-divider {
       margin: 16px 0;
     }
@@ -167,6 +148,7 @@
 
         a {
           font-size: 14px;
+
         }
       }
       &__products {
@@ -215,6 +197,18 @@
         .product__card {
           width: calc(50% - 4px);
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .search {
+    &-sort {
+      font-size: 12px;
+      &::before {
+      content: '';
+      height: 250%;
       }
     }
   }

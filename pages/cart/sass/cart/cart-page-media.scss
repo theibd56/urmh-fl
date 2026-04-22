@@ -27,6 +27,9 @@
         max-width: none;
       }
     }
+    &__availability-dropdown {
+      max-width: none;
+    }
   }
 }
 
@@ -40,9 +43,6 @@
       &_total {
         margin: 0 auto;
       }
-    }
-    &__availability-dropdown {
-      max-width: none;
     }
   }
 } 

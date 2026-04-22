@@ -82,6 +82,9 @@
                 height: 140px;
             }
         }
+        &__aside {
+            order: 3;
+        }
         &-faq {
             gap: 8px;
 
@@ -96,11 +99,11 @@
     }                       
 }
 
-@media  (max-width: 400px) {
+@media  (max-width: 450px) {
     .service {
         &__link {
             &-image {
-                top: 0;
+                top: 25px;
                 left: 70%;
             }
         }

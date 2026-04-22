@@ -19,8 +19,14 @@
         }
     }
     &_arrow {
-        color: #2C3336;
         transition: transform 0.35s ease, color 0.35s ease;
+    }
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
     }
 
     &_text {
