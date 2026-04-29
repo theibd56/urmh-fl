@@ -16,6 +16,7 @@
     }
     &-order {
         display: flex;
+        align-items: flex-start;
         gap: 16px;
     }
 
@@ -41,17 +42,13 @@
                 height: 100%;
                 object-fit: contain;
             }
-            &-sticker {
-                position:absolute;
-                top: 8px;
-                left: 8px;
-            }
         }
         &_info {
             display: flex;
             flex-direction: column;
             gap: 8px;
             max-width: 410px;
+            word-break: break-word; 
             h4 {
                 font-size: 18px;
             }
@@ -64,7 +61,10 @@
             padding: 0 24px;
         }
         &_price {
-            span {
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            span:not(.price-new, .price-old) {
                 font-size: 24px;
                 font-weight: 100;
             }
@@ -81,23 +81,14 @@
         gap: 8px;
         background: #F7F7F8;
         border-radius: 16px;
-        padding: 17px 12px;
-        height: 60px;
-        justify-content: space-between;
+        padding: 18px 12px;
         &-input {
-        width: auto;
-        min-width: 20px;
-        max-width: 52px;
-        height: auto;
-        text-align: center;
+        padding: 0;
         border: none;
         background: transparent;
-        font-size: 18px;
-        font-weight: 400;
-        color: #232426;
-        appearance: textfield;
+        max-width: 52px;
+        text-align: center;
         -moz-appearance: textfield;
-        padding: 0;
 
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
@@ -110,25 +101,10 @@
                 align-items: center;
                 gap: 32px;
 
-                
                 button {
-                    flex-shrink: 0;
-                    width: 60px;
-                    height: 60px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 16px;
-                    text-decoration: none;
-                    transition: opacity 0.2s ease;
-                    position: relative;
-                    border: none;
-                    cursor: pointer;
-
                     svg {
                         width: 24px;
                         height: 24px;
-                        flex-shrink: 0;
                     }
                 }
             }
@@ -165,16 +141,12 @@
         flex-direction: column;
         gap: 16px;
 
-        max-height: 245px;
         width: 100%;
         max-width: 293px;
         border-radius: 16px;
         padding: 24px;
         background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
         &_total {
-            display: flex;
-            align-items:flex-start;
-            flex-direction: column;
             p {
                 font-size: 16px;
             }
@@ -195,10 +167,9 @@
 
                 border-radius: 16px;
                 border: none;
-                padding: 12px 16px;
+                padding: 14px;
                 background: #f7f7f8;
 
-                height: 48px;
                 font-weight: 400;
                 font-size: 16px;
                 color: #70828a;
@@ -206,6 +177,10 @@
                 &:hover {
                     background: #0071E3;
                     color: #fff;
+                }
+                &:last-child {
+                    justify-content: flex-start;    
+                    padding: 13px;
                 }
                 &:first-child {
                     background: #0071e3;
@@ -243,9 +218,10 @@
                 display: flex;
                 align-items:center;
                 gap: 8px;
-                p {
+                div {
                     white-space: nowrap;
                     font-size: 14px;
+                    color: #70828a;
                     line-height: 0.71;
                 }
                 span {
@@ -267,7 +243,7 @@
             flex-direction: column;
             &:has(.cart__availability_status-badge:nth-child(2)) {
             align-items: flex-start;
-            padding: 4px 8px;
+            // word-break: break-word;
             gap: 3px;
             .cart__availability_status-badge {
                 height: auto;
@@ -282,7 +258,6 @@
             &-badge {
                 display: inline-flex;
                 align-items: center;
-                padding: 4px 8px;
                 border-radius: 8px;
                 font-size: 16px;
                 font-weight: 500;
@@ -316,21 +291,50 @@
     }
 
 
-    &__availability-toggle {
+    &__availability-toggle,
+    &__availability-item {
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 12px 48px 12px 20px;
+        cursor: pointer;
+    }
+
+    &__availability-toggle {
+        padding: 10px 48px 12px 20px;
         background: white;
         border: 1px solid #E1E1E5;
+        height: auto;
+        width: auto;
         border-radius: 16px;
-        height: 60px;
-        width: 100%;
-        max-width: 360px;
-        cursor: pointer;
         transition: all 0.2s ease;
+        position: relative;
+        min-width: 360px;
+        max-width: 360px;
+    }
 
-      position: relative;
+    &__availability-item {
+        justify-content: space-between;
+        padding: 12px 12px 12px 16px;
+        background: transparent;
+        border: none;
+        text-align: left;
+        width: 100%;
+
+        &:hover {
+            .cart__availability_meta-city {
+                color: #0071E3;
+            }
+        }
+
+
+        .cart__availability_meta-city {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2C3336;
+            line-height: 0.72;
+            transition:  0.3s ease;
+
+        }
     }
 
     &__availability-selected {
@@ -342,11 +346,9 @@
     }
 
     &__availability-arrow {
-        flex-shrink: 0;
         width: 28px;
         height: 28px;
         transition: transform 0.2s ease;
-        color: #2C3336;
 
       position: absolute;
       right: 12px;
@@ -374,35 +376,6 @@
 
     &__availability[aria-expanded="true"] &__availability-dropdown {
         display: flex;
-    }
-
-    &__availability-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        padding: 12px 12px 12px 16px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        text-align: left;
-        width: 100%;
-
-        &:hover {
-            .cart__availability_meta-city {
-                color: #0071E3;
-            }
-        }
-
-
-        .cart__availability_meta-city {
-            font-size: 18px;
-            font-weight: 500;
-            color: #2C3336;
-            line-height: 0.72;
-            transition:  0.3s ease;
-
-        }
     }
 
     &-divider {
@@ -462,17 +435,12 @@
     }
 
     &__related-slider {
-        flex: 1;
-        width: 100%;
-       
         .swiper-slide{
-            width: 100%;
             height: auto;
         }
     }
 
     &__related-item {
-        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -480,7 +448,6 @@
         border-radius: 16px;
         padding: 24px;
         gap: 16px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     &__related-item-last{
         align-items: center;
@@ -510,30 +477,19 @@
         }
     }
 
-    &__related-info {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
     &__related-name {
         font-size: 18px;
         font-weight: 400;
         color: #70828A;
-        margin: 0;
         line-height: 23px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     &__related-price {
         font-size: 24px;
         font-weight: 600;
-        color: #2C3336;
         line-height: 1.275em;
-        margin-top: 0;
 
         span{
             font-weight: 250;
@@ -542,8 +498,7 @@
     }
 
     &__related-btn {
-        padding: 17px 16px;
-        height: 40px;
+        padding: 8px 16px;
         border: 1px solid rgba(0, 113, 227, 0.2);
         border-radius: 16px;
         background: transparent;
@@ -611,7 +566,6 @@
         svg {
             width: 24px;
             height: 24px;
-            flex-shrink: 0;
             color: #2C3336;
 
             path {
@@ -625,7 +579,6 @@
         text-align: center;
         font-size: 18px;
         font-weight: 400;
-        color: #2C3336;
         line-height: 140%;
     }
 
@@ -663,7 +616,6 @@
         svg {
             width: 24px;
             height: 24px;
-            flex-shrink: 0;
             color: #2C3336;
 
             path {

@@ -1,5 +1,5 @@
 .cartEmpty {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -10,11 +10,11 @@
     }
   }
   &__content {
-    padding: 100px 0 180px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    margin: auto;
   }
   &__icon {
     height: 192px;

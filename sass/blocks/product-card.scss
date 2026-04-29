@@ -94,21 +94,6 @@
       max-height: 100%;
       object-fit: contain;
     }
-    .product__card-sticker {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-
-      width: 56px;
-      height: 24px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        border-radius: 8px;
-      }
-    }
   }
   &__card-name {
     font-size: 18px;
@@ -181,40 +166,6 @@
     gap: 8px;
   }
 
-  &__card-compare,
-  &__card-favorite,
-  &__card-delete {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 16px;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    padding: 0;
-    &:hover{
-      svg {
-        color: #0071E3;
-      }
-    }
-    &.active {
-      svg {
-        color: #0071E3;
-      }
-    }
-
-    svg {
-      width: 24px;
-      height: 24px;
-      color: #E3E3E4;
-      transition: color 0.2s ease;
-    }
-  }
-
-
   &__card-cart {
     width: 40px;
     height: 40px;
@@ -249,5 +200,57 @@
       color: #2C3336;
       transition: color 0.2s ease;
     }
+  }
+}
+
+  .product__card-compare,
+  .product__card-favorite,
+  .product__card-delete,
+  .card__action {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 16px;
+    background: transparent;
+    padding: 0;
+    &:hover{
+      svg {
+        color: #0071E3;
+      }
+    }
+    &.active {
+      svg {
+        color: #0071E3;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: #E3E3E4;
+      transition: color 0.2s ease;
+    }
+}
+
+.product__card-sticker {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 56px;
+  height: 24px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 8px;
+  }
+  svg {
+      width: 24px;
+      height: 24px;
   }
 }

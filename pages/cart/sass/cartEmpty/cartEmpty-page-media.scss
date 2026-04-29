@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
   .cartEmpty {
-    padding-bottom: 16px;
+    padding-bottom: 24px;
     gap: 0;
     &__head {
       h1 {
@@ -8,7 +8,7 @@
       }
     }
     &__content {
-      padding: 60px 0 60px;
+      padding: 15px 0 16px;
       gap: 24px;
     }
     &__icon {

@@ -134,6 +134,12 @@ body {
   display: none;
 }
 
+// input:not(.cart-popup input) {
+//   padding: 0;
+//   border: none;
+//   background: transparent;
+// }
+
 .swiper-button-lock {
   display: none !important;
 }
@@ -144,7 +150,6 @@ a {
 
 b {
   font-weight: 600;
-  color: #2c3336;
 }
 
 ul {
@@ -166,11 +171,6 @@ p{
   font-weight: 400;
   font-size: 18px;
   color: #70828A;
-}
-
-b {
-  font-weight: 600;
-  color: #2c3336; 
 }
 
 .kroshki {
@@ -311,7 +311,7 @@ b {
   h2, .page__title_xl{
     font-size: 32px;
   }
-  h4{
+  h4:not(.cart h4){
     font-size: 18px;
   }
   .page__title {
@@ -354,7 +354,7 @@ b {
   h2, .page__title_xl{
     font-size: 22px;
   }
-  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4){
+  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4){
     font-size: 14px;
   }
   .page__title {

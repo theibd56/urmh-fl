@@ -5,7 +5,8 @@
 .advantages-popup,
 .feedback-main-popup,
 .product-cheaper-popup,
-.test-popup {
+.test-popup,
+.popup-benefits {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -29,7 +30,7 @@
     }
 }
 
-#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup {
+#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits {
     width: 460px;
     border-radius: 24px;
     padding: 40px;
@@ -497,6 +498,82 @@
     }
 }
 
+.popup-benefits {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
+        border-radius: 24px;
+        padding: 40px;
+        max-width: 460px;
+
+        .feedback-popup_title {
+            margin-bottom: 0;
+        }
+    }
+    &_icon {
+        width: 30px;
+        height: 30px;
+    }
+    &_list {
+        ul {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            li {
+                display: flex;
+                gap: 16px;
+                font-size: 18px;
+                p {
+                    line-height: 1.28;
+                }
+                b {
+                    color: #2c3336;
+                    font-weight: 600;
+                }
+                svg {
+                    width: 30px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+    &_btn {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .btn {
+            margin: 0;
+        }
+        span {
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        color: #70828a;
+        }
+    }
+    &_link {
+        margin-top: 8px;
+        border: 1px solid #0071e3;
+        border-radius: 16px;
+        padding: 17.5px;
+        background-color: transparent;
+        transition: .3s ease;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #0071e3;
+        &:hover{
+            background: #0071e3;
+            color: #fff;
+        }
+    }
+}
+
+
 
 @media (max-width: 576px) {
     #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup
@@ -623,5 +700,29 @@
         height: 40px;
         padding: 10px 32px;
         font-size: 14px;
+    }
+    .popup-benefits {
+        &-content {
+            gap: 16px;
+            border-radius: 16px;
+            padding: 16px;
+        }
+        &_list {
+            ul {
+                gap: 12px;
+            }
+        }
+        &_btn {
+            .btn {
+                margin: 0;
+            }
+            span {
+            font-size: 13px;
+            }
+        }
+        &_link {
+            padding: 9.5px;
+            font-size: 14px;
+        }
     }
 }

@@ -5,6 +5,48 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    function formatPrice(price) {
+    return price.toLocaleString('ru-RU');
+}
+
+function updateProductPrice(product) {
+    const priceContainer = product.querySelector('.cart-list_price');
+    const priceElement = priceContainer.querySelector('b');
+
+    const basePrice = parseInt(priceContainer.dataset.price, 10);
+    const quantity = parseInt(product.querySelector('.cart__quantity-input').value, 10) || 1;
+
+    const total = basePrice * quantity;
+
+    priceElement.textContent = formatPrice(total);
+}
+
+function updateCartSummary() {
+    const products = document.querySelectorAll('.cart-list_product');
+
+    let totalSum = 0;
+    let totalCount = 0;
+
+    products.forEach(product => {
+        const priceContainer = product.querySelector('.cart-list_price');
+        const basePrice = parseInt(priceContainer.dataset.price, 10);
+
+        const quantity = parseInt(product.querySelector('.cart__quantity-input').value, 10) || 1;
+
+        totalSum += basePrice * quantity;
+        totalCount += quantity;
+    });
+
+    const summary = document.querySelector('.cart-summary');
+    if (!summary) return;
+
+    const totalText = summary.querySelector('.cart-summary_total p');
+    const totalPrice = summary.querySelector('.cart-summary_total b');
+
+    totalText.textContent = `В корзине ${totalCount} товаров`;
+    totalPrice.textContent = formatPrice(totalSum);
+}
+
 document.querySelectorAll('.cart-list_product').forEach(product => { 
     const quantityInput = product.querySelector('.cart__quantity-input');
     const quantityMinusBtn = product.querySelector('.cart__quantity-btn--minus');
@@ -16,10 +58,10 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                     const currentValue = parseInt(quantityInput.value, 10) || 1;
                     if (currentValue <= 1) {
                         quantityMinusBtn.disabled = true;
-                        quantityMinusBtn.classList.add('cart__quantity-btn--disabled');
+                        quantityMinusBtn.classList.add('is-disabled');
                     } else {
                         quantityMinusBtn.disabled = false;
-                        quantityMinusBtn.classList.remove('cart__quantity-btn--disabled');
+                        quantityMinusBtn.classList.remove('is-disabled');
                     }
                 };
 
@@ -32,6 +74,7 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                         quantityInput.value = numValue;
                     }
                     updateButtonsState();
+                    updateProductPrice(product);
                 };
 
                 const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
@@ -54,6 +97,7 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                     updateQuantity(newValue);
                     refreshAvailabilityFromQuantity(product, newValue);
                     refreshAllAvailabilityItems(product, newValue);
+                    updateCartSummary(); 
                 });
 
 
@@ -65,15 +109,17 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                         updateQuantity(newValue);
                         refreshAvailabilityFromQuantity(product, newValue);
                         refreshAllAvailabilityItems(product, newValue);
+                        updateCartSummary();
                     }
                 });
 
                 quantityInput.addEventListener('change', () => {
                     const value = parseInt(quantityInput.value, 10) || 1;
 
-                    updateQuantity(value);
-                    refreshAvailabilityFromQuantity(value);
-                    refreshAllAvailabilityItems(value);
+                    updateQuantity(newValue);
+                    refreshAvailabilityFromQuantity(product, value);
+                    refreshAllAvailabilityItems(product, value);
+                    updateCartSummary();
                 });
 
                 // Обработчик ввода в input (валидация в реальном времени)
@@ -88,6 +134,7 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                         quantityInput.value = '';
                     }
                     updateButtonsState();
+                    updateProductPrice(product);
                 });
 
                 // Обработчик потери фокуса - устанавливаем минимум 1
@@ -97,10 +144,12 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                         quantityInput.value = 1;
                     }
                     updateButtonsState();
+                    updateProductPrice(product);
                 });
 
                 // Инициализация состояния кнопок при загрузке
                 updateButtonsState();
+                updateProductPrice(product);
             }
 
         function updateAvailabilityBadge({ amount, status, quantity }, container) {
@@ -268,7 +317,7 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                 spaceBetween: 8
             },
             320: {
-                slidesPerView: 1.8,
+                slidesPerView: 1.5,
                 spaceBetween: 8,
             },
             500: {
@@ -280,7 +329,7 @@ document.querySelectorAll('.cart-list_product').forEach(product => {
                 spaceBetween: 8,
             },
             1400: {
-                slidesPerView: 5,
+                slidesPerView: 6,
                 spaceBetween: 16,
             }
         }

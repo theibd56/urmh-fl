@@ -480,75 +480,120 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ----------------------------cart-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const servicePopup = document.querySelector('.cart-popup')
-    const servicePopupShowBtns = document.querySelectorAll('.show-cart-popup')
-    const serviceCloseFormBtn = document.querySelector('.cart-popup .close-popup')
-    const serviceForm = document.querySelector('#cart-popup form')
-    const serviceSuccess = document.querySelector('.cart-popup .feedback-success')
-    const serviceSuccessBtn = document.querySelector('.cart-popup .success-btn')
+    const cartPopup = document.querySelector('.cart-popup')
+    const cartPopupShowBtns = document.querySelectorAll('.show-cart-popup')
+    const cartCloseFormBtn = document.querySelector('.cart-popup .close-popup')
+    const cartForm = document.querySelector('#cart-popup form')
+    const cartSuccess = document.querySelector('.cart-popup .feedback-success')
+    const cartSuccessBtn = document.querySelector('.cart-popup .success-btn')
     
-    // Обработчики для открытия service-popup
-    servicePopupShowBtns.forEach(item => {
+    // Обработчики для открытия cart-popup
+    cartPopupShowBtns.forEach(item => {
         item.addEventListener('click', () => {
-            servicePopup.classList.add('active')
+            cartPopup.classList.add('active')
             document.body.classList.add('no-scroll')
         })
     })
     
     // Обработчик закрытия по крестику
-    serviceCloseFormBtn.addEventListener('click', () => {
+    cartCloseFormBtn.addEventListener('click', () => {
         // Сначала сбрасываем форму
-        serviceForm.reset()
+        cartForm.reset()
         // Затем скрываем popup
-        servicePopup.classList.remove('active')
+        cartPopup.classList.remove('active')
         document.body.classList.remove('no-scroll')
         // И только после закрытия возвращаем исходное состояние формы
         setTimeout(() => {
-            serviceForm.style.display = 'block'
-            serviceSuccess.style.display = 'none'
+            cartForm.style.display = 'block'
+            cartSuccess.style.display = 'none'
         }, 300) // Задержка, соответствующая времени анимации закрытия попапа
     })
     
     // Обработчик отправки формы сервиса
-    serviceForm.addEventListener('submit', (event) => {
+    cartForm.addEventListener('submit', (event) => {
         event.preventDefault() // Предотвращаем стандартную отправку формы
         
         // Скрываем форму и показываем блок успеха
-        serviceForm.style.display = 'none'
-        serviceSuccess.style.display = 'block'
+        cartForm.style.display = 'none'
+        cartSuccess.style.display = 'block'
     })
     
     // Обработчик кнопки "Хорошо" в блоке успеха сервиса
-    serviceSuccessBtn.addEventListener('click', () => {
+    cartSuccessBtn.addEventListener('click', () => {
         // Сначала сбрасываем состояние для следующего использования
-        serviceForm.reset() // Очищаем форму
+        cartForm.reset() // Очищаем форму
         setTimeout(() => {
             // Затем скрываем popup
-            servicePopup.classList.remove('active')
+            cartPopup.classList.remove('active')
             document.body.classList.remove('no-scroll')
             // И только после этого возвращаем исходное состояние формы
             setTimeout(() => {
-                serviceForm.style.display = 'block'
-                serviceSuccess.style.display = 'none'
+                cartForm.style.display = 'block'
+                cartSuccess.style.display = 'none'
             }, 300) // Задержка, соответствующая времени анимации закрытия попапа
         }, 0)
     })
     
     // Закрытие по клику вне формы
     document.addEventListener('click', (event) => {
-        if (event.target === servicePopup) {
+        if (event.target === cartPopup) {
             // Сначала сбрасываем форму
-            serviceForm.reset()
+            cartForm.reset()
             // Затем скрываем popup
-            servicePopup.classList.remove('active')
+            cartPopup.classList.remove('active')
             document.body.classList.remove('no-scroll')
             // И только после закрытия возвращаем исходное состояние формы
             setTimeout(() => {
-                serviceForm.style.display = 'block'
-                serviceSuccess.style.display = 'none'
+                cartForm.style.display = 'block'
+                cartSuccess.style.display = 'none'
             }, 300) // Задержка, соответствующая времени анимации закрытия попапа
         }
     });
+});
+
+// ----------------------------benefits-popup----------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const benefitsPopup = document.querySelector('.popup-benefits');
+    const openBtns = document.querySelectorAll('.show-benefits-popup');
+    const closeBtn = document.querySelector('.popup-benefits .close-popup');
+    const continueBtn = document.querySelector('.popup-benefits_link');
+    const cartPopup = document.querySelector('.cart-popup');
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            benefitsPopup.classList.add('active');
+            document.body.classList.add('no-scroll');
+        });
+    });
+
+    if (continueBtn && cartPopup) {
+        continueBtn.addEventListener('click', () => {
+            // закрываем текущий попап
+            benefitsPopup.classList.remove('active');
+
+            // открываем следующий
+            cartPopup.classList.add('active');
+        });
+    }
+
+        closeBtn.addEventListener('click', closePopup);
+
+    benefitsPopup.addEventListener('click', (e) => {
+        if (e.target === benefitsPopup) {
+            closePopup();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && benefitsPopup.classList.contains('active')) {
+            closePopup();
+        }
+    });
+
+    function closePopup() {
+        benefitsPopup.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
 });
 
 // ----------------------------subscribe-popup----------------------------

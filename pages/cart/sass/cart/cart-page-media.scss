@@ -2,9 +2,13 @@
   .cart { &-list_content {
         flex-wrap: wrap;
         padding: 24px;
-      }}}
+      }
+      .product__card-slider { .swiper {
+      overflow: visible;
+      }
+    }}}
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .cart {
     &-list {
       &_content {
@@ -24,7 +28,9 @@
           align-items: flex-end;
       }
       &-toggle {
-        max-width: none;
+      min-width: stretch;
+      max-width: 0px;
+
       }
     }
     &__availability-dropdown {
@@ -33,7 +39,7 @@
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 990px) {
   .cart {
     &-order {
       flex-direction: column;
@@ -42,6 +48,13 @@
       max-width: none;
       &_total {
         margin: 0 auto;
+      }
+      &_links {
+        button {
+          &:last-child {
+            justify-content: center;
+          }
+        }
       }
     }
   }
@@ -93,12 +106,12 @@
       }
     }
     &__quantity {
-      height: 40px;
+      padding: 8px 12px;
       &-actions {
         width: 100%;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin-top: 24px;
+        margin-top: 30px;
       }
       input {
         font-size: 14px;
@@ -129,18 +142,12 @@
       }
     }
     &__availability-toggle {
-      padding: 12px 23px 12px 20px;
-      height: 40px;
+      padding: 5.5px 44px 5.5px 16px;
     }
     &__availability-item {
       .cart__availability_meta-city {
           font-size: 14px;
       }
-    }
-    &__availability-selected {
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
     &__availability-arrow {
       right: 5px;
@@ -158,9 +165,11 @@
       &_links {
         gap: 8px;
         button {
-          padding: 8px 12px ;
+          padding: 11px;
           font-size: 14px;
-          height: 40px;
+          &:last-child {
+            padding: 8px 12px;
+          }
           svg {
             width: 24px;
             height: 24px;
@@ -185,6 +194,9 @@
     &__related-item {
         padding: 16px;
         gap: 8px;
+    }
+    &__related-name {
+      font-size: 14px;
     }
     &__related-price {
       font-size: 18px;
@@ -219,6 +231,9 @@
         &-badge {
           font-size: 12px;
         }
+      }
+      &-toggle {
+        padding: 5.5px 22px 5.5px 16px;
       }
     }
   }

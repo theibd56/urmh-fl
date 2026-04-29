@@ -194,12 +194,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-        .product__card-sticker {
-            svg {
-                width: 24px;
-                height: 24px;
-            }
-        }
         &.grid {
             .product__card {
             width: 100%;
