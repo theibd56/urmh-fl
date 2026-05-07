@@ -90,4 +90,10 @@ document.addEventListener('click', e => {
     }
 });
 });
+
+new Swiper('.search-categories', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  freeMode: true,
+});
 })

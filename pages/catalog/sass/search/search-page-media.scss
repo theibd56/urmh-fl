@@ -3,11 +3,17 @@
 @media (max-width: 1024px) {
   .search {
     &-aside {
-      position: fixed;
-      z-index: 98;
-      max-width: 100%;
-      inset: 0;
+        content: '';
+        inset: 0;
+
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(68px);
+
       opacity: 0;
+      transition: opacity .25s ease;
+      position: fixed;
+      z-index: 100;
+      max-width: 100%;
       visibility: hidden;
       pointer-events: none;
 
@@ -28,35 +34,15 @@
         transform: translateX(-50%);
         border-radius: 16px;
       }
-      &__jalousie {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(68px);
-
-        opacity: 0;
-        transition: opacity .25s ease;
-      }
 
       &__ads {
         width: 100%;
         border-radius: 0 0 16px 16px;
-        img {
-          width: 100%;
-          object-fit: cover;
-        }
       }
       &.active {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-
-        .search-aside__jalousie {
-          opacity: 1;
-        }
       }
     }
     &-filter {
