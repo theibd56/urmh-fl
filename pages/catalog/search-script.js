@@ -1,3 +1,8 @@
+import Swiper from 'swiper';
+import {Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs} from 'swiper/modules';
+
+Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
+
 document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('.search-filter__item_header').forEach(header => {
     header.addEventListener('click', () => {
@@ -33,7 +38,7 @@ if (products && btnGrid && btnRow) {
     const html = document.documentElement
 
 
-    if (!openBtn || !closeBtn || !aside) return;
+if (openBtn && closeBtn && aside) {
 
     const open = () => {
         aside.classList.add('active');
@@ -47,14 +52,17 @@ if (products && btnGrid && btnRow) {
 
     openBtn.addEventListener('click', open);
     closeBtn.addEventListener('click', close);
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') close();
     });
+
     aside.addEventListener('click', (e) => {
         if (e.target === aside) {
             close();
         }
     });
+}
 
 document.querySelectorAll('.js-search-sort').forEach(sort => {
 const current = sort.querySelector('.search-sort__current');
@@ -91,9 +99,10 @@ document.addEventListener('click', e => {
 });
 });
 
-new Swiper('.search-categories', {
+const categoriesSlider = new Swiper('.search-categories_mobile', {
   slidesPerView: 'auto',
   spaceBetween: 8,
   freeMode: true,
+  grabCursor: true,
 });
 })

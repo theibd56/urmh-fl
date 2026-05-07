@@ -2,6 +2,7 @@
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
+    flex: 1;
     gap: 32px;
     &__head {
         h1 {
@@ -10,7 +11,8 @@
         }
     }
     &__content {
-        padding: 204px 0 204px;
+        padding: 30px 0;
+        flex: 1;
         display: flex;
         align-items: center;
         flex-direction: column;
