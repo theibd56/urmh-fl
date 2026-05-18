@@ -1,3 +1,9 @@
+@media (max-width: 1750px) {
+  .cart__availability-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 1700px) {
   .cart { &-list_content {
         flex-wrap: wrap;

@@ -371,7 +371,7 @@ p{
   p:not(.about p, .cart p){
     font-size: 14px;
   }
-  .btn{
+  .btn:not(.cartEmpty a) {
     padding: 11px 16px;
   }
 }
