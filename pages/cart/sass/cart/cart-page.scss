@@ -58,7 +58,7 @@
             display: flex;
             align-items: center;
             gap: 32px;
-            padding: 0 24px;
+            padding: 24px;
         }
         &_price {
             white-space: nowrap;
@@ -151,6 +151,7 @@
                 font-size: 16px;
             }
             span {
+                word-wrap: break-word;
                 font-weight: 100;
                 font-size: 32px;
             }

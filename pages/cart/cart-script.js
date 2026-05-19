@@ -47,35 +47,66 @@ function updateCartSummary() {
     totalPrice.textContent = formatPrice(totalSum);
 }
 
+
 document.querySelectorAll('.cart-list_product').forEach(product => { 
-    const quantityInput = product.querySelector('.cart__quantity-input');
-    const quantityMinusBtn = product.querySelector('.cart__quantity-btn--minus');
-    const quantityPlusBtn = product.querySelector('.cart__quantity-btn--plus');
+const MAX_QUANTITY = 1000;
+const quantityInput = product.querySelector('.cart__quantity-input');
+const quantityMinusBtn = product.querySelector('.cart__quantity-btn--minus');
+const quantityPlusBtn = product.querySelector('.cart__quantity-btn--plus');
 
-            if (quantityInput && quantityMinusBtn && quantityPlusBtn) {
-                // Функция обновления состояния кнопок
-                const updateButtonsState = () => {
-                    const currentValue = parseInt(quantityInput.value, 10) || 1;
-                    if (currentValue <= 1) {
-                        quantityMinusBtn.disabled = true;
-                        quantityMinusBtn.classList.add('is-disabled');
-                    } else {
-                        quantityMinusBtn.disabled = false;
-                        quantityMinusBtn.classList.remove('is-disabled');
-                    }
-                };
+if (quantityInput && quantityMinusBtn && quantityPlusBtn) {
+    // Функция обновления состояния кнопок
+    const updateButtonsState = () => {
+        const currentValue = parseInt(quantityInput.value, 10) || 1;
+        if (currentValue <= 1) {
+            quantityMinusBtn.disabled = true;
+            quantityMinusBtn.classList.add('is-disabled');
+        } else {
+            quantityMinusBtn.disabled = false;
+            quantityMinusBtn.classList.remove('is-disabled');
+        }
+        if (currentValue >= MAX_QUANTITY) {
+            quantityPlusBtn.disabled = true;
+            quantityPlusBtn.classList.add('is-disabled');
+        } else {
+            quantityPlusBtn.disabled = false;
+            quantityPlusBtn.classList.remove('is-disabled');
+        }
+    };
 
-                // Функция обновления значения
-                const updateQuantity = (value) => {
-                    const numValue = parseInt(value, 10);
-                    if (isNaN(numValue) || numValue < 1) {
-                        quantityInput.value = 1;
-                    } else {
-                        quantityInput.value = numValue;
-                    }
-                    updateButtonsState();
-                    updateProductPrice(product);
-                };
+quantityInput.addEventListener('input', () => {
+    let value = parseInt(quantityInput.value, 10);
+    if (quantityInput.value === '') {
+        updateButtonsState();
+        return;
+    }
+    if (!isNaN(value) && value > MAX_QUANTITY) {
+        quantityInput.value = MAX_QUANTITY;
+    }
+    if (!isNaN(value) && value < 1) {
+        quantityInput.value = 1;
+    }
+
+    updateButtonsState();
+    updateProductPrice(product);
+});
+
+    // Функция обновления значения
+    const updateQuantity = (value) => {
+        let numValue = parseInt(value, 10);
+
+        if (isNaN(numValue) || numValue < 1) {
+            numValue = 1;
+        }
+        if (numValue > MAX_QUANTITY) {
+            numValue = MAX_QUANTITY;
+        }
+
+        quantityInput.value = numValue;
+
+        updateButtonsState();
+        updateProductPrice(product);
+    };
 
                 const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
 
