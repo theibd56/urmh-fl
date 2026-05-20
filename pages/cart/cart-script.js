@@ -88,7 +88,7 @@ quantityInput.addEventListener('input', () => {
     }
 
     updateButtonsState();
-    updateProductPrice(product);
+    
 });
 
     // Функция обновления значения
@@ -108,80 +108,77 @@ quantityInput.addEventListener('input', () => {
         updateProductPrice(product);
     };
 
-                const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
+    const activeItem = product.querySelector('.cart__availability-item[aria-selected="true"]');
 
-                if (activeItem) {
-                    updateAvailabilityBadge(
-                        {
-                            amount: parseInt(activeItem.dataset.amount, 10),
-                            status: activeItem.dataset.status,
-                            quantity: parseInt(quantityInput.value, 10)
-                        },
-                        product.querySelector('.cart__availability-toggle .cart__availability_status')
-                    );
-                }
+    if (activeItem) {
+        updateAvailabilityBadge(
+            {
+                amount: parseInt(activeItem.dataset.amount, 10),
+                status: activeItem.dataset.status,
+                quantity: parseInt(quantityInput.value, 10)
+            },
+            product.querySelector('.cart__availability-toggle .cart__availability_status')
+        );
+    }
 
-                quantityPlusBtn.addEventListener('click', () => {
-                    const currentValue = parseInt(quantityInput.value, 10) || 1;
-                    const newValue = currentValue + 1;
+    quantityPlusBtn.addEventListener('click', () => {
+        const currentValue = parseInt(quantityInput.value, 10) || 1;
+        const newValue = currentValue + 1;
 
-                    updateQuantity(newValue);
-                    refreshAvailabilityFromQuantity(product, newValue);
-                    refreshAllAvailabilityItems(product, newValue);
-                    updateCartSummary(); 
-                });
+        updateQuantity(newValue);
+        refreshAvailabilityFromQuantity(product, newValue);
+        refreshAllAvailabilityItems(product, newValue);
+        updateCartSummary(); 
+    });
 
 
-                quantityMinusBtn.addEventListener('click', () => {
-                    const currentValue = parseInt(quantityInput.value, 10) || 1;
-                    if (currentValue > 1) {
-                        const newValue = currentValue - 1;
+    quantityMinusBtn.addEventListener('click', () => {
+        const currentValue = parseInt(quantityInput.value, 10) || 1;
+        if (currentValue > 1) {
+            const newValue = currentValue - 1;
 
-                        updateQuantity(newValue);
-                        refreshAvailabilityFromQuantity(product, newValue);
-                        refreshAllAvailabilityItems(product, newValue);
-                        updateCartSummary();
-                    }
-                });
+            updateQuantity(newValue);
+            refreshAvailabilityFromQuantity(product, newValue);
+            refreshAllAvailabilityItems(product, newValue);
+            updateCartSummary();
+        }
+    });
 
-                quantityInput.addEventListener('change', () => {
-                    const value = parseInt(quantityInput.value, 10) || 1;
+    quantityInput.addEventListener('change', () => {
+        const value = parseInt(quantityInput.value, 10) || 1;
 
-                    updateQuantity(newValue);
-                    refreshAvailabilityFromQuantity(product, value);
-                    refreshAllAvailabilityItems(product, value);
-                    updateCartSummary();
-                });
+        updateQuantity(value);
+        refreshAvailabilityFromQuantity(product, value);
+        refreshAllAvailabilityItems(product, value);
+        updateCartSummary();
+    });
 
-                // Обработчик ввода в input (валидация в реальном времени)
-                quantityInput.addEventListener('input', () => {
-                    const value = quantityInput.value;
-                    if (value === '' || value === '0') {
-                        updateButtonsState();
-                        return; // Разрешаем пустое значение или 0 во время ввода
-                    }
-                    const numValue = parseInt(value, 10);
-                    if (!isNaN(numValue) && numValue < 1) {
-                        quantityInput.value = '';
-                    }
-                    updateButtonsState();
-                    updateProductPrice(product);
-                });
+    // Обработчик ввода в input 
+    quantityInput.addEventListener('input', () => {
+        const value = quantityInput.value;
+        if (value === '' || value === '0') {
+            updateButtonsState();
+            return;
+        }
+        const numValue = parseInt(value, 10);
+        if (!isNaN(numValue) && numValue < 1) {
+            quantityInput.value = '';
+        }
+        updateButtonsState();
+        
+    });
 
-                // Обработчик потери фокуса - устанавливаем минимум 1
-                quantityInput.addEventListener('blur', () => {
-                    const value = quantityInput.value;
-                    if (value === '' || parseInt(value, 10) < 1) {
-                        quantityInput.value = 1;
-                    }
-                    updateButtonsState();
-                    updateProductPrice(product);
-                });
+    quantityInput.addEventListener('blur', () => {
+        const value = quantityInput.value;
+        if (value === '' || parseInt(value, 10) < 1) {
+            quantityInput.value = 1;
+        }
+        updateButtonsState();
+        updateProductPrice(product);
+    });
 
-                // Инициализация состояния кнопок при загрузке
-                updateButtonsState();
-                updateProductPrice(product);
-            }
+    updateButtonsState();
+}
 
         function updateAvailabilityBadge({ amount, status, quantity }, container) {
             container.innerHTML = '';
@@ -195,7 +192,6 @@ quantityInput.addEventListener('input', () => {
                 return;
             }
 
-            // количество 1 — оставляем "как есть"
             if (quantity <= 1 && amount > 0) {
                 const badge = document.createElement('div');
                 badge.className = 'cart__availability_status-badge cart__availability_status-badge--in-stock';
@@ -204,7 +200,6 @@ quantityInput.addEventListener('input', () => {
                 return;
             }
 
-            // data-amount = 0 → всё под заказ
             if (amount === 0) {
                 const badge = document.createElement('div');
                 badge.className = 'cart__availability_status-badge cart__availability_status-badge--order';
@@ -213,7 +208,6 @@ quantityInput.addEventListener('input', () => {
                 return;
             }
 
-            // хватает на складе
             if (quantity <= amount) {
                 const badge = document.createElement('div');
                 badge.className = 'cart__availability_status-badge cart__availability_status-badge--in-stock';
@@ -222,7 +216,6 @@ quantityInput.addEventListener('input', () => {
                 return;
             }
 
-            // не хватает — делим
             const inStockQty = amount;
             const orderQty = quantity - amount;
 
@@ -375,13 +368,11 @@ relatedBtns.forEach(btn => {
 
         if (!actionsContainer) return;
 
-        // Скрываем кнопку и показываем контейнер с счетчиком и корзиной
         this.style.display = 'none';
         actionsContainer.style.display = 'flex';
     });
 });
 
-// Делегирование событий для счетчика
 document.addEventListener('click', function(e) {
     if (e.target.closest('.cart__related-counter-btn--minus')) {
         const counter = e.target.closest('.cart__related-counter');
