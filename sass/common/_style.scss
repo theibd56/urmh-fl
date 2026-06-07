@@ -296,7 +296,7 @@ p{
  h2{
   font-size: 46px;
  }
- h4{
+ h4:not(.calculator__content-items h4, .result__content-calculation h4 ){
   font-size: 20px;
  }
   .kroshki {
@@ -311,7 +311,7 @@ p{
   h2, .page__title_xl{
     font-size: 32px;
   }
-  h4:not(.cart h4){
+  h4:not(.cart h4, .calculator__content-items h4, .result__content-calculation h4,.result__content-banner h4){
     font-size: 18px;
   }
   .page__title {
@@ -354,7 +354,7 @@ p{
   h2, .page__title_xl{
     font-size: 22px;
   }
-  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4){
+  h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4, .calculator__content-items h4, .result__content-calculation h4, .result__content-banner h4){
     font-size: 14px;
   }
   .page__title {
@@ -368,7 +368,7 @@ p{
   .swiper-pagination{
     gap: 8px;
   }
-  p:not(.about p, .cart p){
+  p:not(.about p, .cart p, .catalog-aside__calculator p){
     font-size: 14px;
   }
   .btn:not(.cartEmpty a) {

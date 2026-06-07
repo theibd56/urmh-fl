@@ -73,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
         html.classList.remove('lock');
     };
 
+    const testBtn = document.querySelector('.show-test-popup');
+    const calculatorBtn = document.querySelector('.show-calculator-popup');
+
+    testBtn?.addEventListener('click', () => {
+        close();
+    });
+
+    calculatorBtn?.addEventListener('click', () => {
+        close();
+    });
+
     openBtn.addEventListener('click', open);
     closeBtn.addEventListener('click', close);
 

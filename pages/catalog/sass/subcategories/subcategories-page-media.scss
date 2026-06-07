@@ -1,3 +1,56 @@
+@media screen and (max-width: 1300px) {
+  .calculator__content {
+    max-width: none;
+  &-items {
+    padding: 24px 160px 24px 24px;
+    h4 {
+    }
+  }
+  &-data {
+    ul {
+      li {
+        white-space: nowrap;
+      }
+    }
+  }
+  &-form {
+    max-width: 400px; 
+  }
+  &-image {
+    left: 25%;
+    top: 225px;  
+    width: 408px;
+    height: 408px;
+  }
+  }
+
+  .result__content {
+    &-item {
+      h4 {
+        text-align: center;
+        white-space: wrap;
+      }
+    }
+    &-info_wrapper {
+      flex: 1;
+    }
+    &-banner {
+      overflow: hidden;
+      h4 {
+        min-width: auto;
+      }
+      &_price {
+        p {
+          white-space: nowrap;
+        }
+      }
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1020px) {
   .catalog {
     &-aside {
@@ -39,9 +92,10 @@
       }
 
       &__ads {
+        max-height: 140px;
         width: 100%;
-        border-radius: 0 0 16px 16px;
-        margin-top: -2px;
+        border-radius: 0;
+        top: 10%;
         img {
           width: 100%;
           object-fit: cover;
@@ -56,6 +110,21 @@
         .catalog-aside__jalousie {
           opacity: 1;
         }
+      }
+      &__calculator { 
+        max-height: 140px;
+        padding: 16px;
+        p {
+          font-size: 18px;
+        }
+        img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+      }
+      &__links {
+        gap: 0;
       }
     }
     &-filter {
@@ -79,6 +148,39 @@
         overflow: visible !important;
       }
     }
+  }
+
+  .calculator__content {
+  &-items {
+    padding: 24px 125px 24px 24px;
+  }
+  &-image {
+    left: 28%;
+    top: 260px;  
+    width: 353px;
+    height: 353px;
+  }
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .calculator__content {
+  &-items {
+    padding: 24px;
+  }
+  &-image {
+    display: none;
+  }
+  }
+
+  .result__content {
+  &-items {
+    width: 100%;
+    flex-direction: column;
+  }
+  &-item {
+    max-width: none;
+  }
   }
 }
 
@@ -213,6 +315,125 @@
           font-size: 14px;
         }
       }
+    }
+  }
+
+  .calculator__content  {
+    gap: 16px;
+    border-radius: px;
+    padding: 16px;
+    &-head {
+      h1 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+    &-settings {
+      flex-direction: column;
+    }
+    &-items {
+      gap: 16px;
+      padding: 16px;
+      h4 {
+        white-space: wrap;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    &-data {
+      max-width: none;
+      ul {
+        li {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &-consumption {
+      b {
+        font-size: 16px;
+      }
+      ul {
+        li {
+          span {
+            font-size: 14px;
+          }
+          b {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &-form {
+      padding: 16px;
+      max-width: none;
+      form {
+        gap: 8px;
+        label {
+          font-size: 14px;
+        }
+        input {
+          padding: 11px 16px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .result__content {
+    gap: 16px;
+    &-calculation {
+      gap: 16px;
+      padding: 16px;
+    }
+    &-head {
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    &-item {
+      padding: 16px;
+      h4 {
+        font-size: 14px;  
+        line-height: normal;
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+    &-info {
+      &_wrapper {
+      gap: 8px;
+      border-radius: 12px;
+      }
+    }
+    &-price {
+      span {
+        font-size: 20px;
+      }
+    }
+    &-banner {
+      flex-direction: column;
+      padding: 16px;
+      h4 {
+        font-weight: 600;
+      }
+      &_wrap {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+      }
+      &_price {
+        padding: 8px 16px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    .btn {
+      margin: 0;
     }
   }
 }

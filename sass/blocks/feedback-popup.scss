@@ -6,6 +6,7 @@
 .feedback-main-popup,
 .product-cheaper-popup,
 .test-popup,
+.calculator-popup,
 .popup-benefits {
     position: fixed;
     top: 0px;
@@ -30,7 +31,7 @@
     }
 }
 
-#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits {
+#feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits, #calculator-popup{
     width: 460px;
     border-radius: 24px;
     padding: 40px;
@@ -574,6 +575,11 @@
 }
 
 
+@media (max-width: 1024px) {
+    #calculator-popup {
+        padding: 16px;
+    }
+}
 
 @media (max-width: 576px) {
     #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup
