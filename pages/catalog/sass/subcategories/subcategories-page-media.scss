@@ -94,11 +94,12 @@
       &__ads {
         max-height: 140px;
         width: 100%;
+        padding: 16px;
         border-radius: 0;
         top: 10%;
-        img {
-          width: 100%;
-          object-fit: cover;
+        p {
+          margin-top: 75px;
+          font-size: 18px;
         }
       }
       &.active {
@@ -112,15 +113,9 @@
         }
       }
       &__calculator { 
-        max-height: 140px;
-        padding: 16px;
-        p {
-          font-size: 18px;
-        }
+        border-radius: 0 0 16px 16px;
         img {
-          position: absolute;
-          top: 0px;
-          left: 0px;
+          left: 35px;
         }
       }
       &__links {
