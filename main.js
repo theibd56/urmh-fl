@@ -1591,6 +1591,117 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
+// ----------------------------offer-calculator-popup----------------------------
+document.addEventListener('DOMContentLoaded', function(){
+    const offerCalculatorPopup = document.querySelector('.offer_calculator-popup')
+    const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-offer-calculator-popup')
+    const offerCalculatorCloseFormBtn = document.querySelector('.offer_calculator-popup .close-popup')
+    const offerCalculatorForm = document.querySelector('#offer_calculator-popup form')
+    const offerCalculatorSuccess = document.querySelector('.offer_calculator-popup .feedback-success')
+    const offerCalculatorSuccessBtn = document.querySelector('.offer_calculator-popup .success-btn')
+
+    offerCalculatorPopupShowBtns.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            offerCalculatorPopup.classList.add('active')
+            document.body.classList.add('no-scroll')
+        })
+    })
+
+    offerCalculatorCloseFormBtn.addEventListener('click', () => {
+        // Сначала сбрасываем форму
+        offerCalculatorForm.reset()
+        // Затем скрываем popup
+        offerCalculatorPopup.classList.remove('active')
+        document.body.classList.remove('no-scroll')
+        // И только после закрытия возвращаем исходное состояние формы
+        setTimeout(() => {
+            offerCalculatorForm.style.display = 'block'
+            offerCalculatorSuccess.style.display = 'none'
+        }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+    })
+
+    // Обработчик отправки формы тестирования
+    offerCalculatorForm.addEventListener('submit', (event) => {
+        event.preventDefault() // Предотвращаем стандартную отправку формы
+
+        // Скрываем форму и показываем блок успеха
+        offerCalculatorForm.style.display = 'none'
+        offerCalculatorSuccess.style.display = 'block'
+    })
+
+    // Обработчик кнопки "Хорошо" в блоке успеха тестирования
+    offerCalculatorSuccessBtn.addEventListener('click', () => {
+        // Сначала сбрасываем состояние для следующего использования
+        offerCalculatorForm.reset() // Очищаем форму
+        setTimeout(() => {
+            // Затем скрываем popup
+            offerCalculatorPopup.classList.remove('active')
+            document.body.classList.remove('no-scroll')
+            // И только после этого возвращаем исходное состояние формы
+            setTimeout(() => {
+                offerCalculatorForm.style.display = 'block'
+                offerCalculatorSuccess.style.display = 'none'
+            }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+        }, 0)
+    })
+
+    // Закрытие по клику вне формы
+    document.addEventListener('click', (event) => {
+        if (event.target === offerCalculatorPopup) {
+            // Сначала сбрасываем форму
+            offerCalculatorForm.reset()
+            // Затем скрываем popup
+            offerCalculatorPopup.classList.remove('active')
+            document.body.classList.remove('no-scroll')
+            // И только после закрытия возвращаем исходное состояние формы
+            setTimeout(() => {
+                offerCalculatorForm.style.display = 'block'
+                offerCalculatorSuccess.style.display = 'none'
+            }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+        }
+    });
+});
+
+// ----------------------------clear-popup----------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const clearPopup = document.querySelector('.clear-popup');
+    const clearPopupShowBtns = document.querySelectorAll('.show-clear-popup');
+    const clearPopupCloseBtn = document.querySelector('.clear-popup .close-popup');
+    const cancelBtn = document.querySelector('.clear-popup_buttons .btn:last-child');
+
+    // Открытие
+    clearPopupShowBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            clearPopup.classList.add('active');
+            document.body.classList.add('no-scroll');
+        });
+    });
+
+    // Функция закрытия
+    function closePopup() {
+        clearPopup.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+
+    // Крестик
+    if (clearPopupCloseBtn) {
+        clearPopupCloseBtn.addEventListener('click', closePopup);
+    }
+
+    // Кнопка "Отмена"
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', closePopup);
+    }
+
+    // Клик по фону
+    clearPopup.addEventListener('click', (e) => {
+        if (e.target === clearPopup) {
+            closePopup();
+        }
+    });
+});
 // ----------------------------accordion----------------------------
 const items = document.querySelectorAll('.accordion-item');
 
@@ -1646,7 +1757,7 @@ calculateBtn.addEventListener('click', () => {
         document.body.classList.remove('no-scroll')
         // И только после закрытия возвращаем исходное состояние формы
         setTimeout(() => {
-            calculatorForm.style.display = 'block'
+            calculatorForm.style.display = 'flex'
             calculatorSuccess.style.display = 'none'
         }, 300) // Задержка, соответствующая времени анимации закрытия попапа
     })
@@ -1670,7 +1781,7 @@ calculateBtn.addEventListener('click', () => {
             document.body.classList.remove('no-scroll')
             // И только после этого возвращаем исходное состояние формы
             setTimeout(() => {
-                calculatorForm.style.display = 'block'
+                calculatorForm.style.display = 'flex'
                 calculatorSuccess.style.display = 'none'
             }, 300) // Задержка, соответствующая времени анимации закрытия попапа
         }, 0)
@@ -1687,7 +1798,7 @@ calculateBtn.addEventListener('click', () => {
             resultContent.classList.remove('active')
             // И только после закрытия возвращаем исходное состояние формы
             setTimeout(() => {
-                calculatorForm.style.display = 'block'
+                calculatorForm.style.display = 'flex'
                 calculatorSuccess.style.display = 'none'
             }, 300) // Задержка, соответствующая времени анимации закрытия попапа
         }

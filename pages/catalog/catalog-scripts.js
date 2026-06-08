@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const testBtn = document.querySelector('.show-test-popup');
+    const offerCalculatorBtn = document.querySelector('.show-offer-calculator-popup');
     const calculatorBtn = document.querySelector('.show-calculator-popup');
 
     testBtn?.addEventListener('click', () => {
