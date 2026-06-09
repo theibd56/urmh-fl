@@ -751,10 +751,17 @@
     }
   }
   &-consumption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     b {
       font-size: 18px;
     }
     ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
       li {
         display: flex;
         align-items: center;
