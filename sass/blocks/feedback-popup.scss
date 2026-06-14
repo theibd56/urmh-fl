@@ -9,7 +9,7 @@
 .calculator-popup,
 .popup-benefits,
 .offer_calculator-popup,
-.clear-popup {
+.clear-popup{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -34,7 +34,7 @@
 }
 
 #feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits, 
-#calculator-popup, #offer_calculator-popup, #clear-popup {
+ #offer_calculator-popup, #clear-popup {
     width: 460px;
     border-radius: 24px;
     padding: 40px;

@@ -7,7 +7,7 @@
       width: 100%;
       padding-top: 40px;
     }
-    &:hover {
+    &:not(.product__card_remote):hover {
       .product__card-name {
         color: #0071E3;
       }
@@ -179,7 +179,7 @@
     transition: all 0.2s ease;
     padding: 0;
 
-    &:hover,
+    &:not(.product__card_remote):hover,
     &:active,
     &.active {
       background: #0071E3;

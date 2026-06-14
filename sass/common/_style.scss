@@ -96,6 +96,9 @@ body {
   font-optical-sizing: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 
 .container {
   max-width: 1920px;
@@ -296,7 +299,8 @@ p{
  h2{
   font-size: 46px;
  }
- h4:not(.calculator__content-items h4, .result__content-calculation h4, .calculator__content-form h4, .calculator__content-form h4 ){
+ h4:not(.calculator__content-items h4, .result__content-calculation h4, .calculator__content-form h4, .calculator__content-form h4,
+ .solution__banner h4 ){
   font-size: 20px;
  }
   .kroshki {
@@ -311,27 +315,28 @@ p{
   h2, .page__title_xl{
     font-size: 32px;
   }
-  h4:not(.cart h4, .calculator__content-items h4, .result__content-calculation h4,.result__content-banner h4, .calculator__content-form h4){
+  h4:not(.cart h4, .calculator__content-items h4, .result__content-calculation h4,.result__content-banner h4, .calculator__content-form h4,
+  .solution__banner h4){
     font-size: 18px;
   }
   .page__title {
     font-size: 36px;
   }
   .view-all-btn{
-      height: 36px;
-            gap: 8px;
-            border-radius: 16px;
-            border: 1px solid #0071E333;
-            font-size: 14px;
-            font-weight: 500;
-            padding: 9px 15px;
+    height: 36px;
+    gap: 8px;
+    border-radius: 16px;
+    border: 1px solid #0071E333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 15px;
 
-            svg{
-                width: 6px;
-                height: 11px;
-            }
+    svg{
+        width: 6px;
+        height: 11px;
+    }
   }
-  .btn:not(.service button) {
+  .btn:not(.service button, .solution__banner .btn) {
     font-size: 14px;
     padding: 10px 20px;
     height: 40px;
@@ -355,7 +360,7 @@ p{
     font-size: 22px;
   }
   h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4, .calculator__content-items h4, .result__content-calculation h4,
-   .result__content-banner h4, .calculator__content-form h4){
+   .result__content-banner h4, .calculator__content-form h4, .solution__info_link h4, .solution__products_left h4, .solution__banner h4){
     font-size: 14px;
   }
   .page__title {
@@ -369,10 +374,10 @@ p{
   .swiper-pagination{
     gap: 8px;
   }
-  p:not(.about p, .cart p, .catalog-aside__calculator p){
+  p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p){
     font-size: 14px;
   }
-  .btn:not(.cartEmpty a) {
+  .btn:not(.cartEmpty a, .solution__banner .btn) {
     padding: 11px 16px;
   }
 }
