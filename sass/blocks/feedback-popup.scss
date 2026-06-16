@@ -9,7 +9,8 @@
 .calculator-popup,
 .popup-benefits,
 .offer_calculator-popup,
-.clear-popup{
+.clear-popup,
+.popup-main-popup{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -34,21 +35,28 @@
 }
 
 #feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits, 
- #offer_calculator-popup, #clear-popup {
+ #offer_calculator-popup, #clear-popup, #popup-main-popup {
     width: 460px;
     border-radius: 24px;
     padding: 40px;
     background: linear-gradient(181.01deg, #F0F1F4 1.88%, #C5C7D3 55.56%);
 }
 
+.close-popup{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.popup-main-popup {
+    .feedback-popup_title {
+        margin-bottom: 20px;
+    }
+}
+
 .feedback-popup{
     position: relative;
-    .close-popup{
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        cursor: pointer;
-    }
     &_title{
         font-weight: 600;
         font-size: 28px;
@@ -577,6 +585,15 @@
     }
 }
 
+.feedback-success {
+    .feedback-popup_title {
+        margin-bottom: 32px;
+    }
+    .btn {
+        padding: 10px 32px;
+    }
+}
+
 .clear-popup {
     .feedback-success {
     display: flex;
@@ -656,7 +673,8 @@
 }
 
 @media (max-width: 576px) {
-    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #offer_calculator-popup, 
+    #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, 
+    #cart-popup, #offer_calculator-popup, #popup-main-popup,
     .clear-popup
     .datetime-picker{
         line-height: 1.36;
@@ -664,7 +682,11 @@
         padding: 16px;
         width: 328px;
     }
-
+    .popup-main-popup {
+        .feedback-popup_title {
+            margin-bottom: 8px;
+        }
+    }
     .feedback-popup_title{
         font-size: 20px;
         margin-bottom: 16px;
@@ -804,6 +826,11 @@
         &_link {
             padding: 9.5px;
             font-size: 14px;
+        }
+    }
+    .feedback-success {
+        .feedback-popup_title {
+            margin-bottom: 16px;
         }
     }
     .offer_calculator-popup {

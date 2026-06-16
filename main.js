@@ -1593,12 +1593,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ----------------------------offer-calculator-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const offerCalculatorPopup = document.querySelector('.offer_calculator-popup')
-    const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-offer-calculator-popup')
-    const offerCalculatorCloseFormBtn = document.querySelector('.offer_calculator-popup .close-popup')
-    const offerCalculatorForm = document.querySelector('#offer_calculator-popup form')
-    const offerCalculatorSuccess = document.querySelector('.offer_calculator-popup .feedback-success')
-    const offerCalculatorSuccessBtn = document.querySelector('.offer_calculator-popup .success-btn')
+    const offerCalculatorPopup = document.querySelector('.popup-main-popup')
+    const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main-popup')
+    const offerCalculatorCloseFormBtn = document.querySelector('.popup-main-popup .close-popup')
+    const offerCalculatorForm = document.querySelector('#popup-main-popup form')
+    const offerCalculatorSuccess = document.querySelector('.popup-main-popup .feedback-success')
+    const offerCalculatorSuccessBtn = document.querySelector('.popup-main-popup .success-btn')
 
     offerCalculatorPopupShowBtns.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -1729,17 +1729,6 @@ document.addEventListener('DOMContentLoaded', function(){
     const calculateBtn = document.querySelector('.show-result-popup')
     const resultContent = document.querySelector('.result__content')
 
-calculateBtn.addEventListener('click', () => {
-    resultContent.classList.add('active');
-
-    setTimeout(() => {
-        resultContent.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }, 150);
-});
-
     calculatorPopupShowBtns.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
@@ -1763,13 +1752,18 @@ calculateBtn.addEventListener('click', () => {
     })
 
     // Обработчик отправки формы тестирования
-    calculatorForm.addEventListener('submit', (event) => {
-        event.preventDefault() // Предотвращаем стандартную отправку формы
+calculatorForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-        // Скрываем форму и показываем блок успеха
-        calculatorForm.style.display = 'none'
-        calculatorSuccess.style.display = 'block'
-    })
+    resultContent.classList.add('active');
+
+    setTimeout(() => {
+        resultContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }, 150);
+});
 
     // Обработчик кнопки "Хорошо" в блоке успеха тестирования
     calculatorSuccessBtn.addEventListener('click', () => {

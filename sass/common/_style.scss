@@ -244,7 +244,6 @@ p{
   border: none;
   transition: .3s ease;
   white-space: nowrap;
-  height: 52px;
   cursor: pointer;
 
   &:hover{
@@ -261,7 +260,6 @@ p{
   line-height: 23px;
   transition: .3s ease;
   white-space: nowrap;
-  height: 52px;
   cursor: pointer;
 
   &:hover{
@@ -336,17 +334,15 @@ p{
         height: 11px;
     }
   }
-  .btn:not(.service button, .solution__banner .btn) {
+  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn) {
     font-size: 14px;
-    padding: 10px 20px;
-    height: 40px;
+    padding: 8px 20px;
     line-height: normal;
   }
   .primary-btn{
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 8px 20px;
     line-height: normal;
-    height: 40px;
   }
   .kroshki {
     &-error {
@@ -377,7 +373,7 @@ p{
   p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p){
     font-size: 14px;
   }
-  .btn:not(.cartEmpty a, .solution__banner .btn) {
+  .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn) {
     padding: 11px 16px;
   }
 }

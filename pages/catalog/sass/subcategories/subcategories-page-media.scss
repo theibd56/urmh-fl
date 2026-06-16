@@ -1,6 +1,5 @@
 @media screen and (max-width: 1300px) {
   .calculator__content {
-    max-width: none;
   &-items {
     padding: 24px 160px 24px 24px;
     h4 {
@@ -315,12 +314,14 @@
 
   .calculator__content  {
     gap: 16px;
-    border-radius: px;
-    padding: 16px;
+    border-radius: 16px;
+    padding: 16px 16px 0;
     &-head {
       h1 {
         font-weight: 600;
-        font-size: 20px;
+        margin: 0;
+        white-space: nowrap;  
+        width: fit-content;
       }
     }
     &-settings {
@@ -424,11 +425,9 @@
       }
     }
     &-banner {
+      align-items: flex-start;
       flex-direction: column;
       padding: 16px;
-      h4 {
-        font-weight: 600;
-      }
       &_wrap {
         width: 100%;
         flex-direction: column;
@@ -445,7 +444,7 @@
       }
     }
     .btn {
-      margin: 0;
+      margin: 0 0 16px;
     }
   }
 }
@@ -464,6 +463,9 @@
 
 @media screen and (max-width: 450px) {
   .calculator__content-head {
-    max-width: 293px;
+    h1 {
+      max-width: 293px;
+      white-space: normal;
+    }
   }
 }

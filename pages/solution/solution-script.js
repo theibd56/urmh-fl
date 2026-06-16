@@ -180,4 +180,20 @@ cards.forEach(card => {
     card.classList.remove('product__card_remote');
   });
 });
+
+const cartBtns = document.querySelectorAll('.solution__info_buttons button');
+
+cartBtns.forEach(btn => {
+  const text = btn.querySelector('.solution__info_buttons-text');
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+
+    if (btn.classList.contains('active')) {
+      text.textContent = 'Добавлено в корзину';
+    } else {
+      text.textContent = 'Добавить в корзину';
+    }
+  });
+});
   });
