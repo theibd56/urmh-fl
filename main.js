@@ -1719,6 +1719,68 @@ if (items.length) {
     });
 }
 
+const accordion = document.querySelector('.feedback-accordion');
+const header = accordion.querySelector('.feedback-accordion_header');
+const content = accordion.querySelector('.feedback-accordion_items');
+const mobileBtn = document.querySelector('.feedback-accordion_mobile');
+const closeBtn = document.querySelector('.feedback-accordion_close');
+
+header.addEventListener('click', () => {
+    const isMobile = window.innerWidth <= 768;
+    const isOpen = accordion.classList.contains('is-active');
+
+    if (isMobile && isOpen) {
+        accordion.classList.remove('is-visible');
+        accordion.classList.remove('is-active');
+        content.style.maxHeight = null;
+        mobileBtn.classList.remove('hidden');
+        return;
+    }
+
+    if (isOpen) {
+        closeAccordion();
+    } else {
+        openAccordion();
+    }
+});
+
+function openAccordion() {
+    accordion.classList.add('is-active');
+    content.style.maxHeight = content.scrollHeight + 'px';
+}
+
+function closeAccordion() {
+    accordion.classList.remove('is-active');
+    content.style.maxHeight = null;
+}
+
+mobileBtn?.addEventListener('click', () => {
+    accordion.classList.add('is-visible');
+    mobileBtn.classList.add('hidden');
+
+    openAccordion();
+});
+
+closeBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    accordion.classList.remove('is-visible');
+    mobileBtn.classList.remove('hidden');
+
+    accordion.classList.remove('is-active');
+    content.style.maxHeight = null;
+});
+
+window.addEventListener('resize', () => {
+    if (accordion.classList.contains('is-active')) {
+        content.style.maxHeight = null;
+
+        requestAnimationFrame(() => {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function(){
     const calculatorPopup = document.querySelector('.calculator-popup')
     const calculatorPopupShowBtns = document.querySelectorAll('.show-calculator-popup')
