@@ -10,14 +10,14 @@
 .popup-benefits,
 .offer_calculator-popup,
 .clear-popup,
-.popup-main-popup{
+.popup-main{
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
 }
 
 #feedback-popup,#service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, #cart-popup, #popup-benefits, 
- #offer_calculator-popup, #clear-popup, #popup-main-popup {
+ #offer_calculator-popup, #clear-popup, #popup-main {
     width: 460px;
     border-radius: 24px;
     padding: 40px;
@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-.popup-main-popup {
+.popup-main {
     .feedback-popup_title {
         margin-bottom: 20px;
     }
@@ -674,7 +674,7 @@
 
 @media (max-width: 576px) {
     #feedback-popup, #service-popup, #subscribe-popup, #advantages-popup, #feedback-main-popup, #product-cheaper-popup, #test-popup, 
-    #cart-popup, #offer_calculator-popup, #popup-main-popup,
+    #cart-popup, #offer_calculator-popup, #popup-main,
     .clear-popup
     .datetime-picker{
         line-height: 1.36;
@@ -682,7 +682,7 @@
         padding: 16px;
         width: 328px;
     }
-    .popup-main-popup {
+    .popup-main {
         .feedback-popup_title {
             margin-bottom: 8px;
         }

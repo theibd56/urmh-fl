@@ -58,7 +58,7 @@
     position: fixed;
     right: 20px;
     bottom: 20px;
-    z-index: 100;
+    z-index: 10;
     border-radius: 16px;
     padding: 24px;
     max-width: 455px;
@@ -211,7 +211,7 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
     &_mobile {
         display: none;
         position: fixed;
-        z-index: 100;
+        z-index: 10;
         align-items: center;
         justify-content: center;
         border-radius: 16px;

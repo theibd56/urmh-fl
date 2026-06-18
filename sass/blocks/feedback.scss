@@ -137,7 +137,7 @@
     .feedback_content{
         width: 100%;
     }
-    .feedback_img{
+    .feedback_img:not(.solution__feedback_img){
         position: static;
     }
 }
@@ -180,7 +180,7 @@
         text-align: left;
         font-weight: 400;
     }
-    .feedback_img{
+    .feedback_img:not(.solution__feedback_img){
         display: none;
     }
 }

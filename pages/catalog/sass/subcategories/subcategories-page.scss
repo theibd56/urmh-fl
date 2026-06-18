@@ -2,7 +2,7 @@
   &-sort {
     position: relative;
     width: 200px;
-    z-index: 50;
+    z-index: 5;
     font-size: 16px;
     color: #2C3336;
 
@@ -692,16 +692,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  // gap: 32px;
   border-radius: 24px;
-  padding: 40px 40px 8px;
+  padding: 40px;
   background: linear-gradient(143deg, #f0f1f4 0%, #c5c7d3 100%);
   max-width: 1200px;
   &-head {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    h1 {
+    h3 {
+      font-size: 32px;
       font-weight: 500; 
     }
   }
@@ -802,9 +803,9 @@
     background: #fff;
     form {
       flex: 1;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 16px;
       
       label {
         font-size: 18px;
@@ -832,18 +833,25 @@
         }
       }
     }
+    &_fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
     &_group {
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
     .btn {
+      margin-top: auto;
       padding: 18px;
     }
   }
 }
 
 .result__content {
+  // margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -858,6 +866,7 @@
   &.active {
   opacity: 1;
   max-height: 3000px;
+  margin-top: 32px;
   }
   .close-popup {
     position: absolute;
@@ -991,7 +1000,7 @@
     }
   }
   .btn {
-    margin: 0 auto 32px ;
+    margin: 8px auto 32px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1007,6 +1016,4 @@
 
 .calculator-popup {
     overflow-y: auto;
-    // align-items: flex-start;
-    padding: 40px 15px;
 }

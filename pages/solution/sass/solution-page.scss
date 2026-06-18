@@ -160,26 +160,26 @@
       padding: 0 278px;
       position: relative;
 
-      &::before{
-          content: '';
-          width: 50px;
-          height: 100%;
-          background: linear-gradient(270deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 98%);
-          position: absolute;
-          top: 0;
-          left: 275px;
-          z-index: 10;
-      }
-      &::after{
-          content: '';
-          width: 50px;
-          height: 100%;
-          background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 98%);
-          position: absolute;
-          top: 0;
-          right: 275px;
-          z-index: 10;
-      }
+      // &::before{
+      //     content: '';
+      //     width: 50px;
+      //     height: 100%;
+      //     background: linear-gradient(270deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 98%);
+      //     position: absolute;
+      //     top: 0;
+      //     left: 275px;
+      //     z-index: 10;
+      // }
+      // &::after{
+      //     content: '';
+      //     width: 50px;
+      //     height: 100%;
+      //     background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 98%);
+      //     position: absolute;
+      //     top: 0;
+      //     right: 275px;
+      //     z-index: 10;
+      // }
   }
   &__slider-thumbs {
       width: 100%;
@@ -231,7 +231,7 @@
       flex-direction: column;
       gap: 16px;
 
-      h3 {
+      h1 {
         font-weight: 600;
         font-size: 40px;
         line-height: 130%;
@@ -532,11 +532,7 @@
           display: none;
         }
         .product__card-sticker {
-          display: none;
-        }
-        .product__card-sticker_remote {
-          display: flex;
-          border: 1px solid #70828a;
+          border-color: #70828a;
           color: #70828a;
         }
       }
@@ -547,18 +543,19 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     li {
-      flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       gap: 16px;
 
       border-radius: 24px;
       padding: 24px;
       background: #fff;
-      min-height: 193px;
       h4 {
+        line-height: 1.28;
         font-size: 18px;
+      }
+      p {
+        line-height: 1.28;
       }
     }
     &_icon {
@@ -825,6 +822,7 @@
     h4 {
       font-weight: 600;
       font-size: 40px;
+      z-index: 10;
       line-height: 130%;
     }
     .btn {
@@ -833,11 +831,17 @@
       justify-content: center;
       gap: 14px;
       padding: 12px 24px 12px 16px;
+      z-index: 10;
     }
-    img {
+    &-img{
       position: absolute;
       top: 0px;
-      left: 30%;
+      left: 35%;
+      height: 164px;
+      // object-fit: contain;
+      &_mobile {
+        display: none;
+      }
     }
   }
 
@@ -850,7 +854,6 @@
         border-radius: 0 0  32px 32px;
         border-top: none;
         padding: 24px;
-        background: #fff;
     }
     &_head {
         display: flex;

@@ -1591,14 +1591,14 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-// ----------------------------offer-calculator-popup----------------------------
+// ----------------------------popup-main----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const offerCalculatorPopup = document.querySelector('.popup-main-popup')
-    const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main-popup')
-    const offerCalculatorCloseFormBtn = document.querySelector('.popup-main-popup .close-popup')
-    const offerCalculatorForm = document.querySelector('#popup-main-popup form')
-    const offerCalculatorSuccess = document.querySelector('.popup-main-popup .feedback-success')
-    const offerCalculatorSuccessBtn = document.querySelector('.popup-main-popup .success-btn')
+    const offerCalculatorPopup = document.querySelector('.popup-main')
+    const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main')
+    const offerCalculatorCloseFormBtn = document.querySelector('.popup-main .close-popup')
+    const offerCalculatorForm = document.querySelector('#popup-main form')
+    const offerCalculatorSuccess = document.querySelector('.popup-main .feedback-success')
+    const offerCalculatorSuccessBtn = document.querySelector('.popup-main .success-btn')
 
     offerCalculatorPopupShowBtns.forEach(item => {
         item.addEventListener('click', (e) => {
