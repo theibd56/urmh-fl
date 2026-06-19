@@ -1719,6 +1719,7 @@ if (items.length) {
     });
 }
 
+// ----------------------------accordion-feedback----------------------------
 const accordion = document.querySelector('.feedback-accordion');
 const header = accordion.querySelector('.feedback-accordion_header');
 const content = accordion.querySelector('.feedback-accordion_items');
@@ -1729,13 +1730,19 @@ header.addEventListener('click', () => {
     const isMobile = window.innerWidth <= 768;
     const isOpen = accordion.classList.contains('is-active');
 
-    if (isMobile && isOpen) {
-        accordion.classList.remove('is-visible');
+if (isMobile && isOpen) {
+    accordion.classList.remove('is-visible');
+    mobileBtn.classList.remove('hidden');
+
+    accordion.addEventListener('transitionend', function handler() {
         accordion.classList.remove('is-active');
         content.style.maxHeight = null;
-        mobileBtn.classList.remove('hidden');
-        return;
-    }
+
+        accordion.removeEventListener('transitionend', handler);
+    });
+
+    return;
+}
 
     if (isOpen) {
         closeAccordion();
@@ -1767,8 +1774,12 @@ closeBtn?.addEventListener('click', (e) => {
     accordion.classList.remove('is-visible');
     mobileBtn.classList.remove('hidden');
 
-    accordion.classList.remove('is-active');
-    content.style.maxHeight = null;
+    accordion.addEventListener('transitionend', function handler() {
+        accordion.classList.remove('is-active');
+        content.style.maxHeight = null;
+
+        accordion.removeEventListener('transitionend', handler);
+    });
 });
 
 window.addEventListener('resize', () => {
@@ -1781,6 +1792,7 @@ window.addEventListener('resize', () => {
     }
 });
 
+// ----------------------------calculator-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
     const calculatorPopup = document.querySelector('.calculator-popup')
     const calculatorPopupShowBtns = document.querySelectorAll('.show-calculator-popup')
