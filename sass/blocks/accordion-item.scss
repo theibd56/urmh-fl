@@ -61,7 +61,7 @@
     z-index: 10;
     border-radius: 16px;
     padding: 24px;
-    max-width: 455px;
+    max-width: 450px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.08), 0 1px 1px 0 rgba(0, 0, 0, 0.01);
     background: #fff;
 
@@ -86,16 +86,29 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
     &_item {
         display: flex;
         flex-direction: column;
+        gap: 0px;
     }
     &_header {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 24px;
         cursor: pointer;
+        h4 {
+            transition: color .3s;
+        }
+        &:hover {
+             .feedback-accordion_icon, h4 {
+                color: #1087fe;
+            }
+        }
     }
     &_icon {
         width: 48px;
         height: 48px;
+        color: #0071E3;
+        transition: color .3s;
+        transition: opacity .3s;
         svg {
             width: 48px;
             height: 48px;
@@ -108,8 +121,13 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
         min-width: 290px;
     }
     &_arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 18px;
-        svg {
+        height: 11px;
+        img {
         width: 18px;
         height: 11px;
         }
@@ -119,13 +137,15 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
             transition: .3s;
         }
     &_close {
-        opacity: 0;
         position: absolute;
-        top: 16px;
-        right: 16px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity .3s;
         width: 18px;
         height: 18px;
-        svg {
+        img {
             width: 18px;
             height: 18px;
         }
@@ -147,6 +167,9 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
             display: flex;
             align-items: center;
             gap: 20px;
+            h4 {
+                transition: color .3s;
+            }
             .standard_icon {
                 display: flex;
                 justify-content: center;
@@ -154,59 +177,69 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
                 border-radius: 16px;
                 padding: 14px;
                 background: #f7f7f8;
+                color: #0071E3;
+                transition: color .3s;
             }
+            &:hover {
+                h4 {
+                    color: #1087fe;
+                }
+                .standard_icon {
+                    color: #1087fe;
+                }
+            }
+        }
+        &:not(:last-child) {
+            padding-bottom: 24px;
+            border-bottom: 1px solid #efefef;
         }
         }
         &-text {
-            text-align: left;
-            min-width: 302px;
+            min-width: 292px;
             p {
                 text-align: left;
             }
         }
         &-icon {
             width: 8px;
-            svg {
+            img {
                 width: 8px;
                 height: 18px;
             }
         }
     }
     &.is-active {
-    .feedback-accordion_arrow {
-        opacity: 0;
-    }
-
     .feedback-accordion {
         &_item {
-            .branch {
-                margin: 24px 0 24px;
-            }
-            
+            gap: 24px;
         }
-        &_items {
-            li {
-                margin: 0 !important;
+        &_header{
+            cursor: unset;
+            &:hover {
+                h4 {
+                    color: #2C3336;
+                }
             }
         }
-    }
-
-    .feedback-accordion_icon {
+        &_arrow {
+        opacity: 0;
+        }
+        &_icon {
         display: none;
+        }
+        &_close {
+            cursor: pointer;
+            opacity: 1;
+        }
     }
-
     .branch {
     opacity: 1;
-    }
-
-    .feedback-accordion_close {
-        opacity: 1;
     }
     }
 
     .hidden {
     display: none !important;
-}
+    }
     
     &_mobile {
         display: none;
@@ -290,16 +323,6 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
         bottom: 73px;
         padding: 16px;
         max-width: 365px;
-        &.is-active {
-            .feedback-accordion {
-                &_item {
-                    .branch {
-                        margin: 16px 0 16px;
-                    }
-                    
-                }
-            }
-        }
         &_text {
             min-width: 200px;
         }
@@ -307,6 +330,16 @@ scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
             gap: 16px;
             &-text {
                 min-width: 200px;
+            }
+            li {
+            &:not(:last-child) {
+                padding-bottom: 16px;
+            }
+            }
+        }
+        &.is-active {
+            .feedback-accordion_item {
+                gap: 16px;
             }
         }
     }

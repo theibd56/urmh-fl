@@ -1593,7 +1593,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ----------------------------popup-main----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const offerCalculatorPopup = document.querySelector('.popup-main')
+    const offerCalculatorPopup = document.querySelector('#popup-main')
     const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main')
     const offerCalculatorCloseFormBtn = document.querySelector('.popup-main .close-popup')
     const offerCalculatorForm = document.querySelector('#popup-main form')
@@ -1726,27 +1726,10 @@ const content = accordion.querySelector('.feedback-accordion_items');
 const mobileBtn = document.querySelector('.feedback-accordion_mobile');
 const closeBtn = document.querySelector('.feedback-accordion_close');
 
-header.addEventListener('click', () => {
-    const isMobile = window.innerWidth <= 768;
-    const isOpen = accordion.classList.contains('is-active');
+header.addEventListener('click', (e) => {
+    if (e.target.closest('.feedback-accordion_close')) return;
 
-if (isMobile && isOpen) {
-    accordion.classList.remove('is-visible');
-    mobileBtn.classList.remove('hidden');
-
-    accordion.addEventListener('transitionend', function handler() {
-        accordion.classList.remove('is-active');
-        content.style.maxHeight = null;
-
-        accordion.removeEventListener('transitionend', handler);
-    });
-
-    return;
-}
-
-    if (isOpen) {
-        closeAccordion();
-    } else {
+    if (!accordion.classList.contains('is-active')) {
         openAccordion();
     }
 });
@@ -1771,15 +1754,9 @@ mobileBtn?.addEventListener('click', () => {
 closeBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
 
+    closeAccordion();
     accordion.classList.remove('is-visible');
     mobileBtn.classList.remove('hidden');
-
-    accordion.addEventListener('transitionend', function handler() {
-        accordion.classList.remove('is-active');
-        content.style.maxHeight = null;
-
-        accordion.removeEventListener('transitionend', handler);
-    });
 });
 
 window.addEventListener('resize', () => {

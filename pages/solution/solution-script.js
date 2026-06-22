@@ -8,9 +8,17 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
     // основной
+const thumbsWrapper = document.querySelector('.solution__slider-thumbs-wrapper');
+
+    function updateGradients(swiper) {
+        thumbsWrapper.classList.toggle('show-left', !swiper.isBeginning);
+        thumbsWrapper.classList.toggle('show-right', !swiper.isEnd);
+    }
+
     const solutionThumbsSwiper = new Swiper('.solution__slider-thumbs', {
-        spaceBetween: 16,
         slidesPerView: 7,
+        spaceBetween: 16,
+
         breakpoints: {
             0: {
                 spaceBetween: 8,
@@ -18,8 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
             768: {
                 spaceBetween: 16,
             },
+        },
+
+        on: {
+            init(swiper) {
+                updateGradients(swiper);
+            },
+            slideChange(swiper) {
+                updateGradients(swiper);
+            },
+            resize(swiper) {
+                updateGradients(swiper);
+            },
+            setTranslate(swiper) {
+                updateGradients(swiper);
+            },
         }
-    })
+    });
 
 // второстепенный
     const solutionMainSwiper = new Swiper(".solution__slider-main", {
