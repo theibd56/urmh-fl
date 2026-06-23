@@ -3,10 +3,10 @@
     &__slider-thumbs-wrapper {
       padding: 0 74px; 
       &::before {
-        left: 75px;
+        left: 74px;
       }
       &::after {
-        right: 75px;
+        right: 74px;
       }
     }
     &__feedback {
@@ -126,7 +126,7 @@
   .solution {
     &__feedback {
       &_content {
-        min-width: stretch;
+        min-width: 100%;
       }
     }
     .feedback_img {

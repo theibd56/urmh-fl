@@ -327,10 +327,11 @@
   }
 
   .calculator__content  {
-    gap: 16px;
+    gap: 0px;
     border-radius: 16px;
-    padding: 16px 16px 0;
+    padding: 16px;
     &-head {
+      margin-bottom: 16px;
       h3 {
         font-weight: 600;
         font-size: 20px;
@@ -391,9 +392,6 @@
           font-size: 14px;
         }
       }
-    }
-    .btn {
-      // margin-top: 8px;
     }
   }
 
@@ -457,7 +455,11 @@
       }
     }
     .btn {
-      margin: 0 0 16px;
+      margin: 0;
+      max-width: none;
+    }
+    &.active {
+    margin-top: 16px;
     }
   }
 }

@@ -1593,12 +1593,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ----------------------------popup-main----------------------------
 document.addEventListener('DOMContentLoaded', function(){
-    const offerCalculatorPopup = document.querySelector('#popup-main')
     const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main')
-    const offerCalculatorCloseFormBtn = document.querySelector('.popup-main .close-popup')
-    const offerCalculatorForm = document.querySelector('#popup-main form')
-    const offerCalculatorSuccess = document.querySelector('.popup-main .feedback-success')
-    const offerCalculatorSuccessBtn = document.querySelector('.popup-main .success-btn')
+    const offerCalculatorPopup = document.querySelector('#popup-main')
+    const offerCalculatorCloseFormBtn =
+        offerCalculatorPopup.querySelector('.close-popup')
+    const offerCalculatorForm =
+        offerCalculatorPopup.querySelector('form')
+    const offerCalculatorSuccess =
+        offerCalculatorPopup.querySelector('.feedback-success')
+    const offerCalculatorSuccessBtn =
+        offerCalculatorPopup.querySelector('.success-btn')  
+    
 
     offerCalculatorPopupShowBtns.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -1770,82 +1775,82 @@ window.addEventListener('resize', () => {
 });
 
 // ----------------------------calculator-popup----------------------------
-document.addEventListener('DOMContentLoaded', function(){
-    const calculatorPopup = document.querySelector('.calculator-popup')
-    const calculatorPopupShowBtns = document.querySelectorAll('.show-calculator-popup')
-    const calculatorCloseFormBtn = document.querySelector('.calculator-popup .close-popup')
-    const calculatorForm = document.querySelector('#calculator-popup form')
-    const calculatorSuccess = document.querySelector('.calculator-popup .feedback-success')
-    const calculatorSuccessBtn = document.querySelector('.calculator-popup .success-btn')
-    const calculateBtn = document.querySelector('.show-result-popup')
-    const resultContent = document.querySelector('.result__content')
+    document.addEventListener('DOMContentLoaded', function(){
+        const calculatorPopup = document.querySelector('.calculator-popup')
+        const calculatorPopupShowBtns = document.querySelectorAll('.show-calculator-popup')
+        const calculatorCloseFormBtn = document.querySelector('.calculator-popup .close-popup')
+        const calculatorForm = document.querySelector('#calculator-popup form')
+        const calculatorSuccess = document.querySelector('.calculator-popup .feedback-success')
+        const calculatorSuccessBtn = document.querySelector('.calculator-popup .success-btn')
+        const calculateBtn = document.querySelector('.show-result-popup')
+        const resultContent = document.querySelector('.result__content')
 
-    calculatorPopupShowBtns.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            resultContent.classList.remove('active')
-            calculatorPopup.classList.add('active')
-            document.body.classList.add('no-scroll')
+        calculatorPopupShowBtns.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                resultContent.classList.remove('active')
+                calculatorPopup.classList.add('active')
+                document.body.classList.add('no-scroll')
+            })
         })
-    })
 
-    calculatorCloseFormBtn.addEventListener('click', () => {
-        // Сначала сбрасываем форму
-        calculatorForm.reset()
-        // Затем скрываем popup
-        calculatorPopup.classList.remove('active')
-        document.body.classList.remove('no-scroll')
-        // И только после закрытия возвращаем исходное состояние формы
-        setTimeout(() => {
-            calculatorForm.style.display = 'flex'
-            calculatorSuccess.style.display = 'none'
-        }, 300) // Задержка, соответствующая времени анимации закрытия попапа
-    })
-
-    // Обработчик отправки формы тестирования
-calculatorForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    resultContent.classList.add('active');
-
-    setTimeout(() => {
-        resultContent.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }, 150);
-});
-
-    // Обработчик кнопки "Хорошо" в блоке успеха тестирования
-    calculatorSuccessBtn.addEventListener('click', () => {
-        // Сначала сбрасываем состояние для следующего использования
-        calculatorForm.reset() // Очищаем форму
-        setTimeout(() => {
-            // Затем скрываем popup
-            calculatorPopup.classList.remove('active')
-            document.body.classList.remove('no-scroll')
-            // И только после этого возвращаем исходное состояние формы
-            setTimeout(() => {
-                calculatorForm.style.display = 'flex'
-                calculatorSuccess.style.display = 'none'
-            }, 300) // Задержка, соответствующая времени анимации закрытия попапа
-        }, 0)
-    })
-
-    // Закрытие по клику вне формы
-    document.addEventListener('click', (event) => {
-        if (event.target === calculatorPopup) {
+        calculatorCloseFormBtn.addEventListener('click', () => {
             // Сначала сбрасываем форму
             calculatorForm.reset()
             // Затем скрываем popup
             calculatorPopup.classList.remove('active')
             document.body.classList.remove('no-scroll')
-            resultContent.classList.remove('active')
             // И только после закрытия возвращаем исходное состояние формы
             setTimeout(() => {
                 calculatorForm.style.display = 'flex'
                 calculatorSuccess.style.display = 'none'
             }, 300) // Задержка, соответствующая времени анимации закрытия попапа
-        }
+        })
+
+        // Обработчик отправки формы тестирования
+    calculatorForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        resultContent.classList.add('active');
+
+        setTimeout(() => {
+            resultContent.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 150);
     });
-});
+
+        // Обработчик кнопки "Хорошо" в блоке успеха тестирования
+        calculatorSuccessBtn.addEventListener('click', () => {
+            // Сначала сбрасываем состояние для следующего использования
+            calculatorForm.reset() // Очищаем форму
+            setTimeout(() => {
+                // Затем скрываем popup
+                calculatorPopup.classList.remove('active')
+                document.body.classList.remove('no-scroll')
+                // И только после этого возвращаем исходное состояние формы
+                setTimeout(() => {
+                    calculatorForm.style.display = 'flex'
+                    calculatorSuccess.style.display = 'none'
+                }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+            }, 0)
+        })
+
+        // Закрытие по клику вне формы
+        document.addEventListener('click', (event) => {
+            if (event.target === calculatorPopup) {
+                // Сначала сбрасываем форму
+                calculatorForm.reset()
+                // Затем скрываем popup
+                calculatorPopup.classList.remove('active')
+                document.body.classList.remove('no-scroll')
+                resultContent.classList.remove('active')
+                // И только после закрытия возвращаем исходное состояние формы
+                setTimeout(() => {
+                    calculatorForm.style.display = 'flex'
+                    calculatorSuccess.style.display = 'none'
+                }, 300) // Задержка, соответствующая времени анимации закрытия попапа
+            }
+        });
+    });
